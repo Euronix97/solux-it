@@ -36,28 +36,39 @@
 </head>
 <body class="bg-white text-slate-800 font-sans antialiased selection:bg-solux-blue selection:text-white">
 
-  <!-- HEADER / NAVIGATION MIT DEINEM ORIGINAL-LOGO -->
+    <!-- HEADER / NAVIGATION MIT DEINEM ORIGINAL-LOGO -->
   <header class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-      <a href="index.html" class="flex items-center gap-3">
-        <!-- Dein exaktes Vektor-Logo -->
-        <svg class="w-10 h-10 shadow-sm rounded-full" viewBox="0 0 70 70" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="35" cy="35" r="34" fill="#0F172A"/>
-          <path d="M35 16 A 18 18 0 0 1 49 42" stroke="#38BDF8" stroke-width="5" stroke-linecap="round" fill="none"/>
-          <path d="M35 54 A 18 18 0 0 1 21 28" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" fill="none"/>
-          <line x1="35" y1="23" x2="35" y2="47" stroke="#38BDF8" stroke-width="4.5" stroke-linecap="round"/>
-        </svg>
-        <div>
-          <span class="text-xl font-extrabold tracking-tight text-solux-dark block leading-none">Solux IT</span>
-          <span class="text-xs text-slate-500 font-medium">Systems & Service</span>
-        </div>
-      </a>
       
-      <a href="index.html" class="inline-flex items-center gap-2 text-sm font-semibold text-solux-blue hover:text-solux-cyan transition">
+      <a href="index.html" class="flex items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 90" class="h-12 w-auto">
+          <defs>
+            <linearGradient id="softBg" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#FFFFFF" />
+              <stop offset="100%" stop-color="#F0F9FF" />
+            </linearGradient>
+          </defs>
+          <rect width="460" height="90" rx="12" fill="url(#softBg)" stroke="#E0F2FE" stroke-width="1" />
+          <g transform="translate(10, 10)">
+            <circle cx="35" cy="35" r="34" fill="#0F172A" />
+            <circle cx="35" cy="35" r="30.5" fill="none" stroke="#334155" stroke-width="1.5" />
+            <path d="M35 16 A 18 18 0 0 1 49 42" stroke="#38BDF8" stroke-width="5" stroke-linecap="round" fill="none" />
+            <path d="M35 54 A 18 18 0 0 1 21 28" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" fill="none" />
+            <line x1="35" y1="23" x2="35" y2="47" stroke="#38BDF8" stroke-width="4.5" stroke-linecap="round" />
+          </g>
+          <text x="100" y="51" font-family="'Plus Jakarta Sans', sans-serif" font-size="34" font-weight="800" fill="#0F172A" letter-spacing="0.5">SOLUX</text>
+          <rect x="242" y="27" width="2" height="30" fill="#BAE6FD" rx="1" />
+          <text x="258" y="51" font-family="'Plus Jakarta Sans', sans-serif" font-size="30" font-weight="800" fill="#0284C7" letter-spacing="1.5">IT</text>
+          <text x="101" y="70" font-family="'Plus Jakarta Sans', sans-serif" font-size="10.5" font-weight="700" fill="#0284C7" letter-spacing="3.2">SYSTEMS &amp; SERVICE</text>
+        </svg>
+      </a>
+
+      <a href="index.html" class="inline-flex items-center gap-2 text-sm font-semibold text-sky-600 hover:text-sky-500 transition">
         <span>←</span> Zurück zur Startseite
       </a>
     </div>
   </header>
+
 
   <!-- CONTENT -->
   <main class="max-w-4xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
