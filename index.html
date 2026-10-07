@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Solux IT | Professioneller IT-Service & Systemintegration</title>
-  <meta name="description" content="Schneller Vor-Ort-Service, PC- & Notebook-Reparatur, Netzwerk- und Systemtechnik.">
-  
-  <!-- Favicon (Das Stempel-Siegel) -->
+  <title>Solux IT | Professionelle IT-Infrastruktur, Support & Systemservice</title>
+  <meta name="description" content="Ihr zuverlässiger IT-Dienstleister für Systemintegration, Netzwerktechnik, Hardware-Reparatur und Notfall-Support für KMU und Privatkunden.">
+
+  <!-- Original Favicon -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 70 70'><circle cx='35' cy='35' r='34' fill='%230F172A'/><path d='M35 16 A 18 18 0 0 1 49 42' stroke='%2338BDF8' stroke-width='5' stroke-linecap='round' fill='none'/><path d='M35 54 A 18 18 0 0 1 21 28' stroke='%23FFFFFF' stroke-width='5' stroke-linecap='round' fill='none'/><line x1='35' y1='23' x2='35' y2='47' stroke='%2338BDF8' stroke-width='4.5' stroke-linecap='round'/></svg>">
-  
+
   <!-- Plus Jakarta Sans Font & Tailwind CDN -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,6 +28,7 @@
               cyan: '#06B6D4',
               sky: '#38BDF8',
               soft: '#F0F9FF',
+              light: '#F8FAFC'
             }
           }
         }
@@ -35,15 +36,30 @@
     }
   </script>
 </head>
-<body class="bg-slate-50 text-slate-900 font-sans antialiased selection:bg-sky-500 selection:text-white">
+<body class="bg-white text-slate-800 font-sans antialiased selection:bg-solux-blue selection:text-white">
 
-  <!-- Header / Navigation -->
-  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
+  <!-- TOP-BAR / TRUST-INDICATOR -->
+  <div class="bg-solux-dark text-slate-300 text-xs py-2 px-4 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+      <div class="flex items-center gap-2">
+        <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span class="text-slate-200 font-medium">Bereit für Support-Anfragen &amp; Vor-Ort-Einsätze</span>
+      </div>
+      <div class="flex items-center gap-6">
+        <span>⏱️ Schnelle Reaktionszeiten</span>
+        <span>🛡️ DSGVO-konforme Datenbehandlung</span>
+        <a href="#contact" class="text-solux-sky hover:underline font-semibold">Direktkontakt anfordern →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVIGATION -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       
-      <!-- Dein Logo -->
-      <a href="#" class="flex items-center">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 90" class="h-12 w-auto">
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 90" class="h-11 sm:h-12 w-auto">
           <defs>
             <linearGradient id="softBg" x1="0%" y1="0%" x2="100%" y2="100%">
               <stop offset="0%" stop-color="#FFFFFF" />
@@ -65,200 +81,379 @@
         </svg>
       </a>
 
-      <!-- Desktop Links -->
-      <nav class="hidden md:flex items-center gap-8 font-medium text-slate-600">
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
         <a href="#services" class="hover:text-solux-blue transition">Leistungen</a>
-        <a href="#vorteile" class="hover:text-solux-blue transition">Warum Solux?</a>
-        <a href="#kontakt" class="hover:text-solux-blue transition">Kontakt</a>
+        <a href="#workflow" class="hover:text-solux-blue transition">Ablauf</a>
+        <a href="#about" class="hover:text-solux-blue transition">Über Solux</a>
+        <a href="#faq" class="hover:text-solux-blue transition">FAQ</a>
       </nav>
 
       <!-- CTA Button -->
-      <div>
-        <a href="#kontakt" class="inline-flex items-center justify-center px-5 py-2.5 rounded-lg bg-solux-dark text-white font-semibold hover:bg-slate-800 transition shadow-sm">
-          Termin anfragen
-        </a>
-      </div>
+      <a href="#contact" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-xl font-bold text-sm text-white bg-solux-dark hover:bg-slate-800 transition shadow-sm border border-slate-700">
+        Jetzt anfragen
+      </a>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="relative pt-16 pb-24 lg:pt-28 lg:pb-32 overflow-hidden bg-gradient-to-b from-white via-solux-soft/40 to-slate-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-100/80 border border-sky-200 text-solux-blue text-xs font-bold uppercase tracking-wider mb-6">
-        <span class="w-2 h-2 rounded-full bg-solux-blue animate-pulse"></span>
-        Direkter Vor-Ort- & Werkstatt-Support
-      </div>
-      <h1 class="text-4xl sm:text-6xl font-extrabold text-solux-dark tracking-tight max-w-4xl mx-auto leading-tight">
-        Zuverlässige IT-Lösungen & schnelle Systemreparaturen.
-      </h1>
-      <p class="mt-6 text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto">
-        Ob defekter Arbeitsplatz-PC, instabiles Heimnetzwerk oder professionelle Datenrettung: Wir lösen IT-Probleme transparent, pragmatisch und direkt.
-      </p>
-      <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="#kontakt" class="px-8 py-3.5 rounded-xl bg-solux-blue text-white font-bold hover:bg-sky-600 transition shadow-md shadow-sky-500/20">
-          Jetzt Problem schildern
-        </a>
-        <a href="#services" class="px-8 py-3.5 rounded-xl bg-white border border-slate-200 text-slate-700 font-semibold hover:bg-slate-50 transition">
-          Leistungen entdecken
-        </a>
+  <!-- HERO SECTION -->
+  <section class="relative overflow-hidden pt-12 pb-20 lg:pt-20 lg:pb-28 bg-gradient-to-b from-solux-soft via-white to-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left: Pitch & Buttons -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-sky-200 text-solux-blue text-xs font-bold shadow-sm">
+            <span>⚡ Zuverlässiger IT-Partner für Unternehmen &amp; Privatanwender</span>
+          </div>
+
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-solux-dark tracking-tight leading-[1.15]">
+            Ihre IT muss funktionieren. <br class="hidden sm:inline">
+            <span class="bg-gradient-to-r from-solux-blue to-solux-cyan bg-clip-text text-transparent">Ohne Ausfälle. Ohne Frust.</span>
+          </h1>
+
+          <p class="text-base sm:text-lg text-slate-600 max-w-2xl leading-relaxed">
+            Von der Netzwerk- und Serverinfrastruktur über Vor-Ort-Reparaturen bis zum akuten Notfallsupport. Wir sichern Ihre Systeme ab und lösen Störungen direkt und verständlich.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-4 pt-2">
+            <a href="#contact" class="inline-flex justify-center items-center px-7 py-3.5 rounded-xl font-bold text-white bg-solux-blue hover:bg-sky-700 transition shadow-lg shadow-sky-600/20 text-center">
+              Kostenlose Erstberatung vereinbaren
+            </a>
+            <a href="#services" class="inline-flex justify-center items-center px-7 py-3.5 rounded-xl font-bold text-solux-dark bg-white hover:bg-slate-100 transition border border-slate-200 text-center shadow-sm">
+              Leistungsübersicht ansehen
+            </a>
+          </div>
+
+          <!-- Trust Badges Bar -->
+          <div class="pt-6 border-t border-slate-200 grid grid-cols-3 gap-4 text-xs font-semibold text-slate-600">
+            <div class="flex items-center gap-2">
+              <span class="text-emerald-500 font-bold text-base">✓</span>
+              <span>Transparente Festpreise möglich</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-emerald-500 font-bold text-base">✓</span>
+              <span>Vor-Ort &amp; schnelle Fernwartung</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-emerald-500 font-bold text-base">✓</span>
+              <span>Hardware- &amp; Systemcheck</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Modern Tech Card Visual (kein generisches Stockfoto) -->
+        <div class="lg:col-span-5">
+          <div class="bg-solux-dark rounded-2xl p-6 sm:p-8 text-white shadow-2xl border border-slate-800 relative">
+            
+            <div class="flex justify-between items-center pb-4 border-b border-slate-800">
+              <div class="flex items-center gap-2">
+                <span class="w-3 h-3 rounded-full bg-rose-500"></span>
+                <span class="w-3 h-3 rounded-full bg-amber-500"></span>
+                <span class="w-3 h-3 rounded-full bg-emerald-500"></span>
+              </div>
+              <span class="text-xs font-mono text-slate-400">system_monitor.sh</span>
+            </div>
+
+            <div class="space-y-4 my-6 font-mono text-xs">
+              <div class="p-3 bg-slate-900 rounded-lg border border-slate-800 flex justify-between items-center">
+                <span class="text-slate-400">Netzwerk &amp; Routing:</span>
+                <span class="text-emerald-400 font-bold">100% OK / Gesichert</span>
+              </div>
+              <div class="p-3 bg-slate-900 rounded-lg border border-slate-800 flex justify-between items-center">
+                <span class="text-slate-400">Backup-Strategie:</span>
+                <span class="text-emerald-400 font-bold">Aktiv (3-2-1 Regel)</span>
+              </div>
+              <div class="p-3 bg-slate-900 rounded-lg border border-slate-800 flex justify-between items-center">
+                <span class="text-slate-400">Reaktionszeit-Status:</span>
+                <span class="text-sky-400 font-bold">&lt; 2h bei Notfällen</span>
+              </div>
+            </div>
+
+            <div class="bg-gradient-to-r from-sky-950 to-slate-900 p-4 rounded-xl border border-sky-800/60">
+              <p class="text-xs text-sky-200 font-medium">
+                💡 <strong>Ihr Vorteil:</strong> Keine teuren Systemhaus-Vertragsfallen. Sie zahlen nur den Service, den Sie wirklich benötigen.
+              </p>
+            </div>
+
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- SERVICES SECTION START -->
-<section id="services" class="py-20 bg-slate-900 text-slate-100">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    
-    <div class="text-center max-w-3xl mx-auto mb-16">
-      <h2 class="text-xs font-semibold text-emerald-400 uppercase tracking-widest">Leistungsportfolio</h2>
-      <p class="mt-2 text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
-        Maßgeschneiderte IT-Lösungen & digitale Systeme
-      </p>
-      <p class="mt-4 text-base text-slate-400">
-        Direkte Vor-Ort-Hilfe, moderne Web-Präsenzen und automatisierte Geschäftsprozesse – transparent kalkuliert ohne versteckte Kosten.
-      </p>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-
-      <!-- Card 1: PC & Hardware-Service -->
-      <div class="bg-slate-800/80 rounded-2xl p-8 border border-slate-700/60 shadow-xl flex flex-col justify-between hover:border-slate-500 transition-all">
-        <div>
-          <div class="w-12 h-12 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center text-2xl mb-6">
-            🛠️
-          </div>
-          <h3 class="text-xl font-bold text-white mb-2">PC- & Hardwareservice</h3>
-          <p class="text-sm text-slate-400 mb-6">
-            Schnelle Fehlerdiagnose, Reparaturen und gezielte Aufrüstungen für Laptops und Desktop-PCs direkt vor Ort oder auf der Werkbank.
-          </p>
-          <ul class="space-y-3 text-sm text-slate-300">
-            <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> SSD- & RAM-Upgrades (Klonen ohne Datenverlust)</li>
-            <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> Windows 11 Neuinstallation & Systemoptimierung</li>
-            <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> Gründliche Innenreinigung & Thermal-Paste Tausch</li>
-            <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> Heimnetzwerk-, WLAN- & Mesh-Einrichtung</li>
-          </ul>
-        </div>
-        <div class="mt-8 pt-6 border-t border-slate-700">
-          <div class="text-xs text-slate-400">Pakete ab</div>
-          <div class="text-2xl font-bold text-white mb-4">49 € <span class="text-xs font-normal text-slate-400">/ Auftrag</span></div>
-          <a href="#contact" class="block w-full py-2.5 px-4 text-center rounded-lg bg-slate-700 hover:bg-slate-600 text-white text-sm font-semibold transition">
-            Reparatur anfragen
-          </a>
-        </div>
+  <!-- LEISTUNGEN (SERVICES) -->
+  <section id="services" class="py-20 bg-slate-50 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs font-bold uppercase tracking-wider text-solux-blue bg-white px-3 py-1 rounded-full border border-sky-200">Fachkompetenz</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-solux-dark mt-3 tracking-tight">Klar definierte IT-Services</h2>
+        <p class="text-slate-600 mt-3 text-base">Ob Einzelplatz, Büronetzwerk oder Serverbetrieb – wir bieten passgenaue Lösungen ohne Fachchinesisch.</p>
       </div>
 
-      <!-- Card 2: Webdesign -->
-      <div class="bg-slate-800 rounded-2xl p-8 border-2 border-emerald-500 shadow-2xl relative flex flex-col justify-between transform md:-translate-y-2">
-        <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-emerald-500 text-slate-950 text-xs font-bold py-1 px-3 rounded-full uppercase tracking-wider">
-          Beliebt bei lokalen Betrieben
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Card 1 -->
+        <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition">
+          <div class="w-12 h-12 rounded-xl bg-sky-50 text-solux-blue flex items-center justify-center font-bold text-2xl mb-6">
+            🖥️
+          </div>
+          <h3 class="text-xl font-bold text-solux-dark mb-2">Hardware- &amp; PC-Service</h3>
+          <p class="text-slate-600 text-sm leading-relaxed mb-4">
+            Fehlerdiagnose bei Abstürzen, Austausch defekter Komponenten, Upgrades (SSD, RAM, GPU) und individuelle Workstation- &amp; PC-Zusammenstellungen.
+          </p>
+          <ul class="text-xs text-slate-500 space-y-1.5 font-medium">
+            <li>• Express-Reparaturen &amp; Reinigung</li>
+            <li>• Treiber- &amp; Windows-Fehlerbehebung</li>
+            <li>• Arbeitsplatz-Einrichtung vor Ort</li>
+          </ul>
         </div>
-        <div>
-          <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-2xl mb-6">
+
+        <!-- Card 2 -->
+        <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition">
+          <div class="w-12 h-12 rounded-xl bg-sky-50 text-solux-blue flex items-center justify-center font-bold text-2xl mb-6">
             🌐
           </div>
-          <h3 class="text-xl font-bold text-white mb-2">Webdesign & Web-Präsenzen</h3>
-          <p class="text-sm text-slate-400 mb-6">
-            Moderne, mobil optimierte Websites für Selbstständige und lokale Unternehmen zur verlässlichen Neukundengewinnung.
+          <h3 class="text-xl font-bold text-solux-dark mb-2">Netzwerk &amp; WLAN-Optimierung</h3>
+          <p class="text-slate-600 text-sm leading-relaxed mb-4">
+            Stabiles und sicheres Internet für Büro und Zuhause. Konfiguration von Routern, Switches, Access Points, VPN-Tunneln und VLANs.
           </p>
-          <ul class="space-y-3 text-sm text-slate-300">
-            <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> Responsiver One-Pager / Visitenkarten-Website</li>
-            <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> DSGVO-konforme Umsetzung (Impressum/Datenschutz)</li>
-            <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> Google Maps & Unternehmensprofil-Anbindung</li>
-            <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> Kontaktformular & Schnell-Anruffunktion</li>
+          <ul class="text-xs text-slate-500 space-y-1.5 font-medium">
+            <li>• Ausleuchtung &amp; Beseitigung von WLAN-Löchern</li>
+            <li>• Sichere Homeoffice-Anbindung (VPN)</li>
+            <li>• Firewall-Konfiguration &amp; Gastnetzwerke</li>
           </ul>
         </div>
-        <div class="mt-8 pt-6 border-t border-slate-700">
-          <div class="text-xs text-slate-400">Festpreis ab</div>
-          <div class="text-2xl font-bold text-white mb-4">350 € <span class="text-xs font-normal text-slate-400">/ Projekt</span></div>
-          <a href="#contact" class="block w-full py-2.5 px-4 text-center rounded-lg bg-emerald-500 hover:bg-emerald-400 text-slate-950 text-sm font-bold transition">
-            Projekt anfragen
-          </a>
-        </div>
-      </div>
 
-      <!-- Card 3: Workflow Automation -->
-      <div class="bg-slate-800/80 rounded-2xl p-8 border border-slate-700/60 shadow-xl flex flex-col justify-between hover:border-slate-500 transition-all">
-        <div>
-          <div class="w-12 h-12 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center text-2xl mb-6">
-            ⚡
+        <!-- Card 3 -->
+        <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition">
+          <div class="w-12 h-12 rounded-xl bg-sky-50 text-solux-blue flex items-center justify-center font-bold text-2xl mb-6">
+            🗄️
           </div>
-          <h3 class="text-xl font-bold text-white mb-2">Automatisierte Workflows</h3>
-          <p class="text-sm text-slate-400 mb-6">
-            Schluss mit manueller Zettelwirtschaft: Verbinde deine Tools und automatisiere Anfragen, Termine und Belege.
+          <h3 class="text-xl font-bold text-solux-dark mb-2">Server &amp; Virtualisierung</h3>
+          <p class="text-slate-600 text-sm leading-relaxed mb-4">
+            Konzeption und Wartung von lokalen Servern, Storage-Systemen (NAS) und Virtualisierungsumgebungen (Hyper-V / Proxmox).
           </p>
-          <ul class="space-y-3 text-sm text-slate-300">
-            <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> Automatische Online-Terminbuchung (z.B. Calendly)</li>
-            <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> Lead-Sync: Website-Formular direkt ins CRM/Mail</li>
-            <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> Automatisierte PDF-Rechnungs- & Bestätigungsmails</li>
-            <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> Tool-Verknüpfung via Webhooks & Schnittstellen</li>
+          <ul class="text-xs text-slate-500 space-y-1.5 font-medium">
+            <li>• Zentrale Dateifreigaben &amp; Rechteverwaltung</li>
+            <li>• Virtualisierte Server &amp; Golden Images</li>
+            <li>• Monitoring und Systemaktualisierung</li>
           </ul>
         </div>
-        <div class="mt-8 pt-6 border-t border-slate-700">
-          <div class="text-xs text-slate-400">Integration ab</div>
-          <div class="text-2xl font-bold text-white mb-4">120 € <span class="text-xs font-normal text-slate-400">/ Workflow</span></div>
-          <a href="#contact" class="block w-full py-2.5 px-4 text-center rounded-lg bg-slate-700 hover:bg-slate-600 text-white text-sm font-semibold transition">
-            Workflow optimieren
-          </a>
+
+        <!-- Card 4 -->
+        <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition">
+          <div class="w-12 h-12 rounded-xl bg-sky-50 text-solux-blue flex items-center justify-center font-bold text-2xl mb-6">
+            💾
+          </div>
+          <h3 class="text-xl font-bold text-solux-dark mb-2">Datensicherung &amp; Recovery</h3>
+          <p class="text-slate-600 text-sm leading-relaxed mb-4">
+            Automatisierte Backups schützen vor Ransomware und Plattendefekten. Schnelle Wiederherstellung im Ernstfall ohne Datenverlust.
+          </p>
+          <ul class="text-xs text-slate-500 space-y-1.5 font-medium">
+            <li>• 3-2-1 Backup-Konzepte (Lokal + Cloud)</li>
+            <li>• Rettung versehentlich gelöschter Daten</li>
+            <li>• Schutz vor Krypto-Trojanern</li>
+          </ul>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition">
+          <div class="w-12 h-12 rounded-xl bg-sky-50 text-solux-blue flex items-center justify-center font-bold text-2xl mb-6">
+            🎧
+          </div>
+          <h3 class="text-xl font-bold text-solux-dark mb-2">Remote- &amp; Notfall-Support</h3>
+          <p class="text-slate-600 text-sm leading-relaxed mb-4">
+            Keine Zeit für lange Anfahrten? Viele Software-, E-Mail- und Druckerprobleme lösen wir in wenigen Minuten unkompliziert per Fernwartung.
+          </p>
+          <ul class="text-xs text-slate-500 space-y-1.5 font-medium">
+            <li>• Schnelle Hilfe via TeamViewer / AnyDesk</li>
+            <li>• Microsoft 365 &amp; E-Mail-Einrichtung</li>
+            <li>• Keine Grundgebühr, faire Taktung</li>
+          </ul>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition">
+          <div class="w-12 h-12 rounded-xl bg-sky-50 text-solux-blue flex items-center justify-center font-bold text-2xl mb-6">
+            🔒
+          </div>
+          <h3 class="text-xl font-bold text-solux-dark mb-2">Sicherheits-Audit &amp; Beratung</h3>
+          <p class="text-slate-600 text-sm leading-relaxed mb-4">
+            Unabhängige Prüfung Ihrer IT auf Schwachstellen. Wir beraten Sie ehrlich, welche Upgrades Sinn machen und worauf Sie verzichten können.
+          </p>
+          <ul class="text-xs text-slate-500 space-y-1.5 font-medium">
+            <li>• Ist-Zustands-Analyse Ihrer Systeme</li>
+            <li>• Passwort-Manager &amp; 2FA-Konzepte</li>
+            <li>• Schulung gegen Phishing &amp; Social Engineering</li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SO ARBEITEN WIR (WORKFLOW) -->
+  <section id="workflow" class="py-20 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs font-bold uppercase tracking-wider text-solux-blue bg-solux-soft px-3 py-1 rounded-full border border-sky-200">Transparenz</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-solux-dark mt-3 tracking-tight">In 3 Schritten zu funktionierender IT</h2>
+        <p class="text-slate-600 mt-2 text-base">Kein Bürokratie-Dschungel. Wir packen das Problem an der Wurzel.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="relative p-6 rounded-2xl border border-slate-200 bg-slate-50">
+          <div class="text-4xl font-black text-sky-200 mb-4">01</div>
+          <h3 class="text-lg font-bold text-solux-dark mb-2">Anfrage &amp; Diagnose</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Sie schildern Ihr Problem per Formular, Telefon oder WhatsApp. Wir analysieren die Ursache und schätzen Aufwand und Kosten direkt ehrlich ein.
+          </p>
+        </div>
+
+        <div class="relative p-6 rounded-2xl border border-slate-200 bg-slate-50">
+          <div class="text-4xl font-black text-sky-200 mb-4">02</div>
+          <h3 class="text-lg font-bold text-solux-dark mb-2">Umsetzung &amp; Lösung</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Wir beheben den Fehler direkt per Fernwartung, bei uns in der Werkstatt oder direkt bei Ihnen vor Ort – sauber dokumentiert und getestet.
+          </p>
+        </div>
+
+        <div class="relative p-6 rounded-2xl border border-slate-200 bg-slate-50">
+          <div class="text-4xl font-black text-sky-200 mb-4">03</div>
+          <h3 class="text-lg font-bold text-solux-dark mb-2">Absicherung &amp; Übergabe</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Nach erfolgreichem Test übergeben wir das System. Sie erhalten Tipps zur Vorbeugung künftiger Ausfälle und eine transparente Rechnung.
+          </p>
         </div>
       </div>
 
     </div>
+  </section>
 
-    <div class="mt-12 text-center">
-      <p class="text-xs text-slate-500">
-        Alle Preise sind Endpreise. Gemäß § 19 UStG wird keine Umsatzsteuer berechnet (Kleinunternehmerregelung).
-      </p>
-    </div>
+  <!-- FAQ SECTION -->
+  <section id="faq" class="py-20 bg-slate-50 border-b border-slate-200">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      
+      <div class="text-center mb-12">
+        <span class="text-xs font-bold uppercase tracking-wider text-solux-blue bg-white px-3 py-1 rounded-full border border-sky-200">Häufige Fragen</span>
+        <h2 class="text-3xl font-extrabold text-solux-dark mt-3 tracking-tight">Fragen vor der Beauftragung?</h2>
+      </div>
 
-  </div>
-</section>
-<!-- SERVICES SECTION END -->
-
-
-  <!-- Kontakt & Anfrage -->
-  <section id="kontakt" class="py-20 bg-slate-50">
-    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="bg-white p-8 sm:p-10 rounded-2xl border border-slate-200 shadow-sm">
-        <h2 class="text-2xl sm:text-3xl font-extrabold text-solux-dark text-center">Unverbindliche Anfrage</h2>
-        <p class="mt-2 text-sm text-slate-600 text-center">Beschreiben Sie Ihr Anliegen kurz – wir melden uns schnellstmöglich zurück.</p>
+      <div class="space-y-4">
         
-        <form class="mt-8 space-y-5" onsubmit="event.preventDefault(); alert('Vielen Dank! Ihre Anfrage wird verarbeitet.');">
-          <div>
-            <label class="block text-sm font-semibold text-slate-700">Name / Firma</label>
-            <input type="text" required placeholder="Ihr Name" class="mt-1.5 w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-solux-blue">
-          </div>
-          <div>
-            <label class="block text-sm font-semibold text-slate-700">E-Mail-Adresse</label>
-            <input type="email" required placeholder="kontakt@beispiel.de" class="mt-1.5 w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-solux-blue">
-          </div>
-          <div>
-            <label class="block text-sm font-semibold text-slate-700">Wie können wir helfen?</label>
-            <textarea rows="4" required placeholder="z. B. PC startet nicht mehr, WLAN-Probleme im Büro..." class="mt-1.5 w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-solux-blue"></textarea>
-          </div>
-          <button type="submit" class="w-full py-4 rounded-xl bg-solux-dark text-white font-bold hover:bg-slate-800 transition shadow">
-            Anfrage absenden
-          </button>
-        </form>
+        <details class="bg-white border border-slate-200 rounded-xl p-5 group open:ring-1 open:ring-solux-blue transition">
+          <summary class="font-bold text-solux-dark cursor-pointer flex justify-between items-center text-sm">
+            <span>Bieten Sie auch Hilfe bei Notfällen am Wochenende an?</span>
+            <span class="text-solux-blue group-open:rotate-180 transition">▾</span>
+          </summary>
+          <p class="text-slate-600 text-xs sm:text-sm mt-3 leading-relaxed">
+            Ja. Bei kritischen Systemausfällen bieten wir nach vorheriger Absprache Notfalleinsätze an, damit Ihr Geschäftsbetrieb nicht stillsteht.
+          </p>
+        </details>
+
+        <details class="bg-white border border-slate-200 rounded-xl p-5 group open:ring-1 open:ring-solux-blue transition">
+          <summary class="font-bold text-solux-dark cursor-pointer flex justify-between items-center text-sm">
+            <span>Wie läuft die Abrechnung ab?</span>
+            <summary class="hidden"></summary>
+            <span class="text-solux-blue group-open:rotate-180 transition">▾</span>
+          </summary>
+          <p class="text-slate-600 text-xs sm:text-sm mt-3 leading-relaxed">
+            Absolut transparent. Vor Beginn der Arbeiten erhalten Sie eine realistische Einschätzung. Kleinere Reparaturen rechnen wir nach fairen Zeittakten oder als vereinbarten Festpreis ab. Gemäß § 19 UStG (Kleinunternehmer) fällt keine Mehrwertsteuer an.
+          </p>
+        </details>
+
+        <details class="bg-white border border-slate-200 rounded-xl p-5 group open:ring-1 open:ring-solux-blue transition">
+          <summary class="font-bold text-solux-dark cursor-pointer flex justify-between items-center text-sm">
+            <span>Muss ich meinen PC vorbeibringen oder kommen Sie vorbei?</span>
+            <span class="text-solux-blue group-open:rotate-180 transition">▾</span>
+          </summary>
+          <p class="text-slate-600 text-xs sm:text-sm mt-3 leading-relaxed">
+            Beides ist möglich! Viele Probleme lösen wir per Fernwartung oder Vor-Ort-Termin. Bei zeitintensiven Reparaturen oder Systemprüfungen können Geräte auch nach Absprache übergeben werden.
+          </p>
+        </details>
+
       </div>
     </div>
   </section>
 
-    <!-- FOOTER -->
-  <footer class="bg-slate-950 border-t border-slate-800 py-10">
+  <!-- KONTAKTFORMULAR -->
+  <section id="contact" class="py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      
+      <div class="bg-slate-900 border border-slate-800 rounded-3xl p-8 sm:p-12 text-white shadow-2xl">
+        <div class="max-w-2xl mb-8">
+          <span class="text-xs font-bold uppercase tracking-wider text-solux-sky">Kontakt &amp; Support</span>
+          <h2 class="text-3xl font-extrabold text-white mt-2">IT-Problem lösen lassen</h2>
+          <p class="text-slate-400 text-sm mt-2">Beschreiben Sie Ihr Anliegen kurz. Wir melden uns zeitnah mit einem Lösungsvorschlag.</p>
+        </div>
+
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-5">
+          
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-bold text-slate-300 mb-1">Ihr Name *</label>
+              <input type="text" name="name" required placeholder="z. B. Max Mustermann" class="w-full px-4 py-3 rounded-xl bg-slate-800/80 border border-slate-700 text-white text-sm focus:outline-none focus:border-solux-sky">
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-slate-300 mb-1">E-Mail-Adresse *</label>
+              <input type="email" name="email" required placeholder="max@unternehmen.de" class="w-full px-4 py-3 rounded-xl bg-slate-800/80 border border-slate-700 text-white text-sm focus:outline-none focus:border-solux-sky">
+            </div>
+          </div>
+
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-bold text-slate-300 mb-1">Telefonnummer (optional)</label>
+              <input type="tel" name="phone" placeholder="Für schnellen Rückruf" class="w-full px-4 py-3 rounded-xl bg-slate-800/80 border border-slate-700 text-white text-sm focus:outline-none focus:border-solux-sky">
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-slate-300 mb-1">Bereich des Problems</label>
+              <select name="kategorie" class="w-full px-4 py-3 rounded-xl bg-slate-800/80 border border-slate-700 text-slate-200 text-sm focus:outline-none focus:border-solux-sky">
+                <option value="hardware">Hardware / PC fährt nicht hoch</option>
+                <option value="netzwerk">Netzwerk / WLAN / Internet-Störung</option>
+                <option value="server">Server / Datensicherung / Backup</option>
+                <option value="remote">Fernwartung / Schnelle Softwarehilfe</option>
+                <option value="beratung">Individuelle Beratung / Neuanschaffung</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-slate-300 mb-1">Problembeschreibung *</label>
+            <textarea name="message" rows="4" required placeholder="Beschreiben Sie kurz, worum es geht (Fehlermeldungen, Symptome)..." class="w-full px-4 py-3 rounded-xl bg-slate-800/80 border border-slate-700 text-white text-sm focus:outline-none focus:border-solux-sky"></textarea>
+          </div>
+
+          <div class="flex items-start gap-3 pt-2">
+            <input type="checkbox" id="privacy" required class="mt-1 rounded bg-slate-800 border-slate-700 text-solux-blue focus:ring-0">
+            <label for="privacy" class="text-xs text-slate-400">
+              Ich habe die <a href="datenschutz.html" class="text-solux-sky hover:underline">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Angaben zu.
+            </label>
+          </div>
+
+          <button type="submit" class="w-full py-4 rounded-xl font-extrabold text-solux-dark bg-solux-sky hover:bg-sky-300 transition shadow-lg text-sm uppercase tracking-wider">
+            Anfrage jetzt absenden
+          </button>
+
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-white border-t border-slate-200 py-10">
     <div class="max-w-7xl mx-auto px-4 text-center text-slate-500 text-xs">
       <p>© 2026 Solux IT - Systems & Service. Alle Rechte vorbehalten.</p>
-      <div class="mt-3 flex justify-center gap-6 text-xs text-slate-400">
-        <a href="impressum.html" class="hover:text-emerald-400 transition underline">
-          Impressum
-        </a>
-        <a href="datenschutz.html" class="hover:text-emerald-400 transition underline">
-          Datenschutz
-        </a>
+      <div class="mt-3 flex justify-center gap-6 text-xs text-slate-600">
+        <a href="impressum.html" class="hover:underline hover:text-solux-blue transition">Impressum</a>
+        <a href="datenschutz.html" class="hover:underline hover:text-solux-blue transition">Datenschutz</a>
       </div>
     </div>
   </footer>
 
 </body>
 </html>
-
-    
