@@ -13,14 +13,13 @@
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 70 70'><circle cx='35' cy='35' r='34' fill='%230F172A'/><path d='M35 16 A 18 18 0 0 1 49 42' stroke='%2338BDF8' stroke-width='5' stroke-linecap='round' fill='none'/><path d='M35 54 A 18 18 0 0 1 21 28' stroke='%23FFFFFF' stroke-width='5' stroke-linecap='round' fill='none'/><line x1='35' y1='23' x2='35' y2='47' stroke='%2338BDF8' stroke-width='4.5' stroke-linecap='round'/></svg>">
 
-    <!-- Font & Tailwind via CDN (Sofort betriebsbereit ohne output.css) -->
+    <!-- Font & Tailwind via CDN -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
-        darkMode: 'class',
         theme: {
           extend: {
             fontFamily: {
@@ -40,14 +39,14 @@
       }
     </script>
 </head>
-<body class="bg-white text-slate-800 font-sans antialiased">
+<body class="bg-white text-slate-800 font-sans antialiased selection:bg-solux-blue selection:text-white">
 
     <!-- HEADER -->
     <header class="fixed w-full z-50 top-0 left-0 bg-white/95 backdrop-blur border-b border-gray-200">
         <nav class="py-3">
             <div class="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
                 
-                <!-- Original Solux IT Logo -->
+                <!-- Solux IT Logo -->
                 <a href="index.html" class="flex items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 90" class="h-10 sm:h-11 w-auto">
                       <defs>
@@ -105,7 +104,7 @@
         </nav>
     </header>
 
-    <!-- HERO SECTION (Hell & Zentriert) -->
+    <!-- HERO SECTION (Komplett hell, modern & ohne Kasten) -->
     <section class="bg-gradient-to-b from-solux-soft via-white to-white pt-28 pb-16 lg:pt-36 lg:pb-24 border-b border-gray-100">
         <div class="max-w-4xl px-4 mx-auto text-center">
             <span class="inline-flex items-center gap-2 px-3.5 py-1.5 mb-6 text-xs font-bold text-solux-blue bg-white border border-sky-200 rounded-full shadow-sm">
@@ -129,40 +128,6 @@
         </div>
     </section>
 
-
-            <!-- Terminal / System-Box Mockup -->
-            <div class="mt-10 lg:mt-0 lg:col-span-5 flex justify-center">
-                <div class="w-full max-w-md bg-solux-dark rounded-2xl p-6 text-white shadow-2xl border border-slate-800">
-                    <div class="flex items-center justify-between pb-3 border-b border-slate-800 text-xs font-mono text-slate-400">
-                        <div class="flex space-x-2">
-                            <span class="w-3 h-3 rounded-full bg-rose-500 inline-block"></span>
-                            <span class="w-3 h-3 rounded-full bg-amber-500 inline-block"></span>
-                            <span class="w-3 h-3 rounded-full bg-emerald-500 inline-block"></span>
-                        </div>
-                        <span>solux_healthcheck.sh</span>
-                    </div>
-                    <div class="py-5 font-mono text-xs space-y-3">
-                        <div class="flex justify-between items-center bg-slate-900/80 p-3 rounded-lg border border-slate-800">
-                            <span class="text-slate-400">Netzwerk-Routing:</span>
-                            <span class="text-emerald-400 font-bold">100% Bereit</span>
-                        </div>
-                        <div class="flex justify-between items-center bg-slate-900/80 p-3 rounded-lg border border-slate-800">
-                            <span class="text-slate-400">Datensicherung (3-2-1):</span>
-                            <span class="text-emerald-400 font-bold">Aktiv &amp; Geprüft</span>
-                        </div>
-                        <div class="flex justify-between items-center bg-slate-900/80 p-3 rounded-lg border border-slate-800">
-                            <span class="text-slate-400">Reaktionszeit-Ziel:</span>
-                            <span class="text-solux-sky font-bold">&lt; 2 Std. Express</span>
-                        </div>
-                    </div>
-                    <p class="text-xs text-sky-200/80 italic text-center pt-2">
-                        Kompetente Unterstützung ohne überteuerte Systemhaus-Vertragsbindungen.
-                    </p>
-                </div>
-            </div>                
-        </div>
-    </section>
-
     <!-- TRUST-BADGES -->
     <section class="bg-white py-8 border-b border-gray-100">
         <div class="max-w-screen-xl px-4 mx-auto">
@@ -175,7 +140,7 @@
         </div>
     </section>
 
-    <!-- SERVICES BLOCK (LANDWIND FEATURE ROW 1) -->
+    <!-- SERVICES BLOCK 1 -->
     <section id="services" class="bg-slate-50 py-16 lg:py-24 border-b border-gray-200">
         <div class="max-w-screen-xl px-4 mx-auto space-y-16">
             
@@ -211,7 +176,7 @@
                 </div>
             </div>
 
-            <!-- SERVICES BLOCK ROW 2 -->
+            <!-- SERVICES BLOCK 2 -->
             <div id="infrastructure" class="items-center gap-12 lg:grid lg:grid-cols-2 pt-12 border-t border-gray-200">
                 <div class="bg-white p-8 rounded-2xl border border-gray-200 shadow-sm order-2 lg:order-1">
                     <h3 class="text-lg font-bold text-solux-dark mb-4">Netzwerk &amp; Sicherheit im Überblick:</h3>
@@ -243,7 +208,7 @@
                         </li>
                         <li class="flex items-center space-x-3 text-slate-700">
                             <svg class="w-5 h-5 text-solux-blue shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                            <span>Zentraler Netzwerkspeicher (Synology, QNAP) &amp; automatisierte Cloud-Backups</span>
+                            <span>Zentraler Netzwerkspeicher (Synology, QNAP) &amp; automatisierte Backups</span>
                         </li>
                         <li class="flex items-center space-x-3 text-slate-700">
                             <svg class="w-5 h-5 text-solux-blue shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
@@ -285,7 +250,7 @@
                 <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100">
                     <div class="text-3xl font-extrabold text-solux-blue mb-1">Flexibel</div>
                     <h3 class="text-sm font-bold text-solux-dark">Remote &amp; Vor-Ort</h3>
-                    <p class="text-xs text-slate-500 mt-1">Direkte Fernwartung oder Einsatz am Standort</p>
+                    <p class="text-xs text-slate-500 mt-1">Direkte Fernwartung oder Vor-Ort-Einsatz</p>
                 </div>
                 <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100">
                     <div class="text-3xl font-extrabold text-solux-blue mb-1">§ 19 UStG</div>
@@ -324,7 +289,7 @@
                     <a href="#contact" class="mt-auto text-center font-bold text-xs py-3 px-4 rounded-xl bg-slate-100 hover:bg-slate-200 text-solux-dark transition">Anfrage stellen</a>
                 </div>
 
-                <!-- Card 2 (Hervorgehoben) -->
+                <!-- Card 2 -->
                 <div class="flex flex-col p-6 mx-auto text-left bg-white border-2 border-solux-blue rounded-2xl shadow-md xl:p-8 w-full relative">
                     <span class="absolute -top-3 right-6 bg-solux-blue text-white text-[10px] font-bold uppercase tracking-wider py-1 px-3 rounded-full">Beliebt</span>
                     <h3 class="text-xl font-bold text-solux-dark">Vor-Ort &amp; Reparatur</h3>
@@ -352,7 +317,7 @@
                     <ul class="mb-8 space-y-3 text-xs text-slate-600">
                         <li class="flex items-center space-x-2"><span>✓ Planung &amp; Montage von Netzwerken</span></li>
                         <li class="flex items-center space-x-2"><span>✓ NAS-Server &amp; Backup-Konzepte</span></li>
-                        <li class="flex items-center space-x-2"><span>✓ Sicherheitsaudit &amp; Schulung</span></li>
+                        <li class="flex items-center space-x-2"><span>✓ Sicherheitsaudit &amp; Beratung</span></li>
                         <li class="flex items-center space-x-2"><span>✓ Verbindliches Festpreis-Angebot</span></li>
                     </ul>
                     <a href="#contact" class="mt-auto text-center font-bold text-xs py-3 px-4 rounded-xl bg-slate-100 hover:bg-slate-200 text-solux-dark transition">Projekt besprechen</a>
@@ -365,7 +330,7 @@
         </div>
     </section>
 
-    <!-- FAQ BLOCK (Mit echtem Flowbite-Akkordeon) -->
+    <!-- FAQ BLOCK -->
     <section id="faq" class="bg-white py-16 lg:py-24 border-b border-gray-200">
         <div class="max-w-screen-xl px-4 mx-auto">
             <h2 class="mb-8 text-3xl font-extrabold tracking-tight text-center text-solux-dark">Häufig gestellte Fragen</h2>
@@ -413,7 +378,7 @@
         </div>
     </section>
 
-      <!-- KONTAKTFORMULAR (Hell, Modern & Sauber) -->
+    <!-- KONTAKTFORMULAR (Hell, Modern & Übersichtlich) -->
     <section id="contact" class="bg-slate-50 py-16 lg:py-24">
         <div class="max-w-screen-md px-4 mx-auto">
             <div class="bg-white rounded-3xl p-8 sm:p-12 text-slate-800 shadow-sm border border-gray-200">
@@ -464,8 +429,7 @@
         </div>
     </section>
 
-
-    <!-- FOOTER MIT ECHTEN RECHTSLINKS -->
+    <!-- FOOTER -->
     <footer class="bg-white border-t border-gray-200 py-10">
         <div class="max-w-screen-xl p-4 mx-auto text-center">
             <div class="flex justify-center mb-4">
