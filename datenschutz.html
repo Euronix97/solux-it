@@ -4,36 +4,56 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Datenschutzerklärung | Solux IT - Systems & Service</title>
+  
+  <!-- Original Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 70 70'><circle cx='35' cy='35' r='34' fill='%230F172A'/><path d='M35 16 A 18 18 0 0 1 49 42' stroke='%2338BDF8' stroke-width='5' stroke-linecap='round' fill='none'/><path d='M35 54 A 18 18 0 0 1 21 28' stroke='%23FFFFFF' stroke-width='5' stroke-linecap='round' fill='none'/><line x1='35' y1='23' x2='35' y2='47' stroke='%2338BDF8' stroke-width='4.5' stroke-linecap='round'/></svg>">
+  
+  <!-- Plus Jakarta Sans Font & Tailwind CDN -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+          },
           colors: {
-            'solux-dark': '#0f172a',
-            'solux-blue': '#2563eb',
-            'solux-blue-hover': '#1d4ed8',
+            solux: {
+              dark: '#0F172A',
+              blue: '#0284C7',
+              cyan: '#06B6D4',
+              sky: '#38BDF8',
+              soft: '#F0F9FF',
+            }
           }
         }
       }
     }
   </script>
 </head>
-<body class="bg-white text-slate-800 font-sans antialiased selection:bg-blue-600 selection:text-white">
+<body class="bg-white text-slate-800 font-sans antialiased selection:bg-solux-blue selection:text-white">
 
-  <!-- HEADER / NAVIGATION (Exakt wie Startseite) -->
+  <!-- HEADER / NAVIGATION MIT DEINEM ORIGINAL-LOGO -->
   <header class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       <a href="index.html" class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-xl bg-solux-dark text-white flex items-center justify-center font-black text-xl shadow-sm">
-          S
-        </div>
+        <!-- Dein exaktes Vektor-Logo -->
+        <svg class="w-10 h-10 shadow-sm rounded-full" viewBox="0 0 70 70" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="35" cy="35" r="34" fill="#0F172A"/>
+          <path d="M35 16 A 18 18 0 0 1 49 42" stroke="#38BDF8" stroke-width="5" stroke-linecap="round" fill="none"/>
+          <path d="M35 54 A 18 18 0 0 1 21 28" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" fill="none"/>
+          <line x1="35" y1="23" x2="35" y2="47" stroke="#38BDF8" stroke-width="4.5" stroke-linecap="round"/>
+        </svg>
         <div>
           <span class="text-xl font-extrabold tracking-tight text-solux-dark block leading-none">Solux IT</span>
           <span class="text-xs text-slate-500 font-medium">Systems & Service</span>
         </div>
       </a>
-      <a href="index.html" class="inline-flex items-center gap-2 text-sm font-semibold text-solux-blue hover:text-solux-blue-hover transition">
+      
+      <a href="index.html" class="inline-flex items-center gap-2 text-sm font-semibold text-solux-blue hover:text-solux-cyan transition">
         <span>←</span> Zurück zur Startseite
       </a>
     </div>
@@ -44,9 +64,9 @@
     
     <!-- Title Header -->
     <div class="mb-10 pb-6 border-b border-slate-200">
-      <span class="text-xs font-bold uppercase tracking-wider text-solux-blue">Rechtliches</span>
-      <h1 class="text-3xl sm:text-4xl font-extrabold text-solux-dark mt-2 tracking-tight">Datenschutzerklärung</h1>
-      <p class="text-sm text-slate-500 mt-2">Stand: Oktober 2026 | Nach den Vorgaben der DSGVO, des BDSG und des TDDDG</p>
+      <span class="text-xs font-bold uppercase tracking-wider text-solux-blue bg-solux-soft px-3 py-1 rounded-full border border-sky-100">Rechtliches</span>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-solux-dark mt-3 tracking-tight">Datenschutzerklärung</h1>
+      <p class="text-sm text-slate-500 mt-2">Stand: Oktober 2026 | Gemäß den Bestimmungen der DSGVO, des BDSG und des TDDDG</p>
     </div>
 
     <div class="space-y-10 text-sm leading-relaxed text-slate-700">
@@ -55,12 +75,12 @@
       <section class="bg-slate-50 border border-slate-200 rounded-2xl p-6 sm:p-8">
         <h2 class="text-lg font-bold text-solux-dark mb-3">1. Name und Kontaktdaten des Verantwortlichen</h2>
         <p class="mb-4">Verantwortlicher im Sinne der Datenschutz-Grundverordnung (DSGVO) und anderer nationaler Datenschutzgesetze ist:</p>
-        <div class="pl-4 border-l-4 border-solux-blue text-slate-800 space-y-1">
-          <p class="font-bold text-solux-dark">[Dein Vor- und Nachname]</p>
+        <div class="pl-4 border-l-4 border-solux-blue text-slate-800 space-y-1 font-medium">
+          <p class="font-bold text-solux-dark text-base">[Dein Vor- und Nachname]</p>
           <p>Solux IT - Systems & Service</p>
           <p>[Deine Straße und Hausnummer]</p>
           <p>[PLZ und Ort]</p>
-          <p>E-Mail: <a href="mailto:[Deine E-Mail-Adresse]" class="text-solux-blue hover:underline">[Deine E-Mail-Adresse]</a></p>
+          <p class="pt-2">E-Mail: <a href="mailto:[Deine E-Mail-Adresse]" class="text-solux-blue hover:underline">[Deine E-Mail-Adresse]</a></p>
           <p>Telefon: [Deine Telefonnummer]</p>
         </div>
       </section>
@@ -68,74 +88,74 @@
       <!-- 2. Bereitstellung Website & Hosting -->
       <section>
         <h2 class="text-lg font-bold text-solux-dark mb-3">2. Hosting & Bereitstellung der Website</h2>
-        <p>Diese Website wird über <strong>GitHub Pages</strong> bereitgestellt. Dienstanbieter ist die <em>GitHub Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA</em> (eine Tochtergesellschaft der Microsoft Corporation).</p>
-        <p class="mt-3 text-slate-600">Bei jedem Zugriff auf unsere Website erfasst das System automatisiert Daten und Informationen vom Computersystem des aufrufenden Rechners (Server-Logfiles):</p>
+        <p>Diese Website wird über <strong>GitHub Pages</strong> bereitgestellt. Dienstanbieter ist die <em>GitHub Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA</em> (Tochtergesellschaft der Microsoft Corporation).</p>
+        <p class="mt-3 text-slate-600">Bei jedem Zugriff auf unsere Website erfasst das System automatisiert Daten und Informationen vom Computersystem des aufrufenden Nutzers (Server-Logfiles):</p>
         <ul class="list-disc list-inside mt-2 space-y-1 text-slate-600 pl-2">
           <li>IP-Adresse des zugreifenden Geräts</li>
           <li>Datum und Uhrzeit des Zugriffs</li>
           <li>Übertragene Datenmenge und HTTP-Statuscode</li>
-          <li>Referrer-URL (zuvor besuchte Seite)</li>
+          <li>Referrer-URL (die zuvor besuchte Seite)</li>
           <li>Browsertyp, Version und Betriebssystem</li>
         </ul>
-        <p class="mt-3"><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der technisch fehlerfreien, stabilen und sicheren Bereitstellung der Webpräsenz). Soweit Daten in den USA verarbeitet werden, stützt sich die Übermittlung auf das EU-US Data Privacy Framework (DPF) bzw. Standardvertragsklauseln der EU-Kommission.</p>
+        <p class="mt-3"><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der technisch fehlerfreien, stabilen und sicheren Bereitstellung der Website). Soweit Daten in den USA verarbeitet werden, stützt sich die Übermittlung auf das EU-US Data Privacy Framework (DPF) bzw. Standardvertragsklauseln der EU-Kommission.</p>
       </section>
 
       <!-- 3. Kontaktaufnahme -->
       <section>
         <h2 class="text-lg font-bold text-solux-dark mb-3">3. Kontaktaufnahme (Formular & E-Mail)</h2>
-        <p>Wenn Sie uns per Anfrageformular oder E-Mail kontaktieren, werden die von Ihnen übermittelten Angaben (wie Name, E-Mail-Adresse, Problembeschreibung) zur Bearbeitung der Anfrage und für eventuelle Rückfragen gespeichert.</p>
-        <p class="mt-3"><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO (Durchführung vorvertraglicher Maßnahmen oder Erfüllung eines Vertrags) bzw. Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Kundenkommunikation).</p>
-        <p class="mt-2 text-slate-600">Die Daten werden gelöscht, sobald die Anfrage abschließend geklärt ist und keine gesetzlichen Aufbewahrungspflichten entgegenstehen.</p>
+        <p>Wenn Sie uns per Anfrageformular oder E-Mail kontaktieren, werden Ihre übermittelten Daten (wie Name, E-Mail-Adresse, Problembeschreibung) zur Bearbeitung der Anfrage und für eventuelle Rückfragen verarbeitet und gespeichert.</p>
+        <p class="mt-3"><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung oder Durchführung vorvertraglicher Maßnahmen) bzw. Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Bearbeitung von Kundenanliegen).</p>
+        <p class="mt-2 text-slate-600">Die Daten verbleiben bei uns, bis der Zweck für die Datenspeicherung entfällt oder Sie uns zur Löschung auffordern, sofern keine gesetzlichen Aufbewahrungsfristen entgegenstehen.</p>
       </section>
 
-      <!-- 4. Bibliotheken / CDNs -->
+      <!-- 4. Bibliotheken & CDNs -->
       <section>
-        <h2 class="text-lg font-bold text-solux-dark mb-3">4. Content Delivery Networks (Tailwind CSS)</h2>
-        <p>Diese Website bindet zur einheitlichen und performanten visuellen Darstellung Stylesheets über das Content Delivery Network von Tailwind ein. Beim Laden der Seite stellt Ihr Browser eine Verbindung zu den Servern des CDN-Betreibers her, wodurch Ihre IP-Adresse technisch bedingt übermittelt wird.</p>
-        <p class="mt-3"><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einer performanten Darstellung unseres Webauftritts).</p>
+        <h2 class="text-lg font-bold text-solux-dark mb-3">4. Content Delivery Networks (Tailwind & Webfonts)</h2>
+        <p>Diese Website bindet zur performanten und typografisch sauberen Darstellung Schriften über Google Fonts und Stylesheets über Tailwind CDN ein. Beim Aufruf der Seite baut Ihr Browser eine Verbindung zu den entsprechenden Servern auf, wodurch Ihre IP-Adresse technisch bedingt übermittelt wird.</p>
+        <p class="mt-3"><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einer schnellen, visuell ansprechenden und einheitlichen Darstellung des Webauftritts).</p>
       </section>
 
       <!-- 5. Cookies & Tracking -->
       <section>
-        <h2 class="text-lg font-bold text-solux-dark mb-3">5. Cookies & Web-Analyse</h2>
-        <p>Diese Website verwendet <strong>keine Tracking-Cookies</strong>, keine Analyse-Dienste (wie Google Analytics) und keine Werbetracker. Ein zustimmungspflichtiger Cookie-Banner nach TDDDG ist daher nicht erforderlich.</p>
+        <h2 class="text-lg font-bold text-solux-dark mb-3">5. Cookies & Tracking</h2>
+        <p>Diese Website verwendet <strong>keine Tracking-Cookies</strong>, keine zustimmungspflichtigen Analysedienste (wie Google Analytics) und keine Werbenetzwerke dritter Anbieter. Ein Cookie-Banner nach TDDDG ist daher nicht erforderlich.</p>
       </section>
 
       <!-- 6. TLS-Verschlüsselung -->
       <section>
         <h2 class="text-lg font-bold text-solux-dark mb-3">6. SSL- bzw. TLS-Verschlüsselung</h2>
-        <p>Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte eine TLS-Verschlüsselung (HTTPS). Eine verschlüsselte Verbindung erkennen Sie an dem Schloss-Symbol in Ihrer Browserzeile.</p>
+        <p>Diese Seite nutzt aus Sicherheitsgründen und zum Schutz vertraulicher Inhalte eine TLS-Verschlüsselung (HTTPS). Eine gesicherte Verbindung erkennen Sie an dem Präfix „https://“ sowie dem Schloss-Symbol in der Adresszeile Ihres Browsers.</p>
       </section>
 
       <!-- 7. Betroffenenrechte -->
       <section class="bg-slate-50 border border-slate-200 rounded-2xl p-6 sm:p-8">
         <h2 class="text-lg font-bold text-solux-dark mb-3">7. Ihre Rechte als betroffene Person</h2>
-        <p class="mb-3">Nach der DSGVO stehen Ihnen folgende Rechte zu:</p>
+        <p class="mb-3">Ihnen stehen im Rahmen der gesetzlichen Bestimmungen folgende Betroffenenrechte zu:</p>
         <ul class="space-y-2 text-slate-700">
-          <li><strong>Auskunft (Art. 15 DSGVO):</strong> Sie können Auskunft über Ihre von uns verarbeiteten Daten verlangen.</li>
-          <li><strong>Berichtigung (Art. 16 DSGVO):</strong> Sie können die Vervollständigung oder Berichtigung falscher Daten einfordern.</li>
-          <li><strong>Löschung (Art. 17 DSGVO):</strong> Sie haben das Recht auf Löschung („Recht auf Vergessenwerden“).</li>
-          <li><strong>Einschränkung (Art. 18 DSGVO):</strong> Sie können die Einschränkung der Datenverarbeitung verlangen.</li>
-          <li><strong>Datenübertragbarkeit (Art. 20 DSGVO):</strong> Sie haben das Recht auf Herausgabe Ihrer Daten in maschinenlesbarem Format.</li>
-          <li><strong>Widerspruchsrecht (Art. 21 DSGVO):</strong> Sie können Verarbeitungen auf Basis berechtigter Interessen jederzeit widersprechen.</li>
+          <li><strong>Auskunft (Art. 15 DSGVO):</strong> Recht auf Auskunft über Ihre von uns verarbeiteten Daten.</li>
+          <li><strong>Berichtigung (Art. 16 DSGVO):</strong> Recht auf unverzügliche Berichtigung falscher oder unvollständiger Daten.</li>
+          <li><strong>Löschung (Art. 17 DSGVO):</strong> Recht auf Löschung („Recht auf Vergessenwerden“).</li>
+          <li><strong>Einschränkung der Verarbeitung (Art. 18 DSGVO):</strong> Recht auf Einschränkung bei ungeklärten Rechtslagen.</li>
+          <li><strong>Datenübertragbarkeit (Art. 20 DSGVO):</strong> Recht auf Übertragung in maschinenlesbarem Format.</li>
+          <li><strong>Widerspruchsrecht (Art. 21 DSGVO):</strong> Recht auf Widerspruch gegen Verarbeitungen auf Basis berechtigter Interessen.</li>
         </ul>
       </section>
 
       <!-- 8. Beschwerderecht Aufsichtsbehörde -->
       <section>
-        <h2 class="text-lg font-bold text-solux-dark mb-3">8. Beschwerderecht bei der zuständigen Aufsichtsbehörde</h2>
-        <p>Im Falle von Verstößen gegen die DSGVO steht Ihnen ein Beschwerderecht bei der zuständigen Aufsichtsbehörde zu. Für Nordrhein-Westfalen ist dies:</p>
-        <div class="mt-3 pl-4 border-l-2 border-slate-300 text-xs text-slate-600 space-y-1">
+        <h2 class="text-lg font-bold text-solux-dark mb-3">8. Beschwerderecht bei der Aufsichtsbehörde</h2>
+        <p>Sollten Sie der Ansicht sein, dass die Verarbeitung Ihrer Daten gegen Datenschutzrecht verstößt, steht Ihnen ein Beschwerderecht bei einer zuständigen Aufsichtsbehörde zu. Zuständig für Nordrhein-Westfalen ist:</p>
+        <div class="mt-3 pl-4 border-l-2 border-solux-blue text-xs text-slate-600 space-y-1">
           <p class="font-bold text-solux-dark">Landesbeauftragte für Datenschutz und Informationsfreiheit Nordrhein-Westfalen (LDI NRW)</p>
           <p>Kavalleriestraße 2–4, 40213 Düsseldorf</p>
-          <p>Telefon: 0211 / 38424-0 | Web: <a href="https://www.ldi.nrw.de" target="_blank" class="text-solux-blue hover:underline">www.ldi.nrw.de</a></p>
+          <p>Telefon: 0211 / 38424-0 | Internet: <a href="https://www.ldi.nrw.de" target="_blank" class="text-solux-blue hover:underline">www.ldi.nrw.de</a></p>
         </div>
       </section>
 
     </div>
   </main>
 
-  <!-- FOOTER (Exakt wie Startseite) -->
+  <!-- FOOTER -->
   <footer class="bg-white border-t border-slate-200 py-10">
     <div class="max-w-7xl mx-auto px-4 text-center text-slate-500 text-xs">
       <p>© 2026 Solux IT - Systems & Service. Alle Rechte vorbehalten.</p>
