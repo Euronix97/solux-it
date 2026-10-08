@@ -1,525 +1,1317 @@
-<!DOCTYPE html>
-<html lang="de" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <title>Solux-IT Systeme &amp; Service | Ihr persönlicher IT-Partner in Wiehl &amp; Umgebung</title>
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600;700;800&display=swap');
 
-    <!-- Meta SEO -->
-    <meta name="description" content="Schnelle, verständliche IT-Hilfe von Marcel Bux. PC-Reparaturen, WLAN-Optimierung und Vor-Ort-Service im Oberbergischen Kreis sowie Fernwartung.">
-    <meta name="author" content="Marcel Bux - Solux-IT">
+:root {
+  --paper: #f4f1e9;
+  --white: #fcfaf5;
+  --ink: #202e29;
+  --forest: #173d35;
+  --accent: #9c4630;
+  --muted: #61675e;
+  --line: #d6d6c9;
+  --sans: 'Manrope', sans-serif;
+  --serif: 'Fraunces', Georgia, serif;
+  --gutter: clamp(22px, 5.5vw, 92px);
+}
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 70 70'><circle cx='35' cy='35' r='34' fill='%230F172A'/><path d='M35 16 A 18 18 0 0 1 49 42' stroke='%230284C7' stroke-width='5' stroke-linecap='round' fill='none'/><path d='M35 54 A 18 18 0 0 1 21 28' stroke='%23FFFFFF' stroke-width='5' stroke-linecap='round' fill='none'/><line x1='35' y1='23' x2='35' y2='47' stroke='%230284C7' stroke-width='4.5' stroke-linecap='round'/></svg>">
+html[class] {
+  scroll-behavior: smooth;
+  scroll-padding-top: 112px;
+}
 
-    <!-- Schriften & Tailwind CDN -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
-            },
-            colors: {
-              solux: {
-                dark: '#0F172A',
-                blue: '#0284C7',
-                navy: '#1E293B',
-                soft: '#F8FAFC',
-                accent: '#25D366'
-              }
-            }
-          }
-        }
-      }
-    </script>
-</head>
-<body class="bg-white text-slate-800 font-sans antialiased selection:bg-solux-blue selection:text-white overflow-x-hidden">
+body[class] {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 15px;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
 
-    <!-- HEADER -->
-    <header class="fixed w-full z-40 top-0 left-0 bg-white/95 backdrop-blur-md border-b border-slate-200">
-        <nav class="py-2.5 sm:py-3">
-            <div class="flex items-center justify-between max-w-6xl px-4 mx-auto">
-                
-                <!-- Logo -->
-                <a href="index.html" class="flex items-center flex-shrink-0">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 90" class="h-8 sm:h-10 w-auto max-w-[200px] sm:max-w-none">
-                      <rect width="460" height="90" rx="12" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1" />
-                      <g transform="translate(10, 10)">
-                        <circle cx="35" cy="35" r="34" fill="#0F172A" />
-                        <circle cx="35" cy="35" r="30.5" fill="none" stroke="#334155" stroke-width="1.5" />
-                        <path d="M35 16 A 18 18 0 0 1 49 42" stroke="#38BDF8" stroke-width="5" stroke-linecap="round" fill="none" />
-                        <path d="M35 54 A 18 18 0 0 1 21 28" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" fill="none" />
-                        <line x1="35" y1="23" x2="35" y2="47" stroke="#38BDF8" stroke-width="4.5" stroke-linecap="round" />
-                      </g>
-                      <text x="100" y="51" font-family="'Plus Jakarta Sans', sans-serif" font-size="34" font-weight="800" fill="#0F172A" letter-spacing="0.5">SOLUX</text>
-                      <rect x="242" y="27" width="2" height="30" fill="#BAE6FD" rx="1" />
-                      <text x="258" y="51" font-family="'Plus Jakarta Sans', sans-serif" font-size="30" font-weight="800" fill="#0284C7" letter-spacing="1.5">IT</text>
-                      <text x="101" y="70" font-family="'Plus Jakarta Sans', sans-serif" font-size="10.5" font-weight="700" fill="#0284C7" letter-spacing="3.2">SYSTEMS &amp; SERVICE</text>
-                    </svg>
-                </a>
+*, *::before, *::after {
+  box-sizing: border-box;
+}
 
-                <!-- Schnellkontakt & Anruf-Button -->
-                <div class="flex items-center gap-2 sm:gap-4">
-                    <a href="tel:+4917663769838" class="hidden sm:inline-flex items-center gap-2 text-slate-700 hover:text-solux-blue font-bold text-sm transition">
-                        <svg class="w-4 h-4 text-solux-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-                        0176 63769838
-                    </a>
+body[class]::selection,
+body[class] *::selection {
+  background: var(--forest);
+  color: var(--white);
+}
 
-                    <a href="#contact" class="text-white bg-solux-dark hover:bg-slate-800 text-xs sm:text-sm font-semibold rounded-lg px-3.5 sm:px-4 py-2 sm:py-2.5 transition">
-                        Nachricht senden
-                    </a>
+a, button, input, select, textarea, summary {
+  -webkit-tap-highlight-color: transparent;
+}
 
-                    <!-- Hamburger Mobile -->
-                    <button id="mobile-toggle-btn" type="button" class="inline-flex items-center justify-center p-2 text-slate-600 rounded-lg lg:hidden hover:bg-slate-100" aria-label="Menü">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-                    </button>
-                </div>
+a, button {
+  transition:
+    color .2s ease,
+    background-color .2s ease,
+    transform .25s ease;
+}
 
-                <!-- Desktop Navigation -->
-                <div class="hidden lg:flex items-center space-x-7 font-semibold text-sm text-slate-600">
-                    <a href="#services" class="hover:text-solux-blue transition">Leistungen</a>
-                    <a href="#region" class="hover:text-solux-blue transition">Einsatzgebiet</a>
-                    <a href="#pricing" class="hover:text-solux-blue transition">Preise</a>
-                    <a href="#faq" class="hover:text-solux-blue transition">FAQ</a>
-                </div>
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 6px;
+}
 
-            </div>
+body .text-solux-dark,
+body .text-slate-900,
+body .text-slate-800 {
+  color: var(--ink);
+}
 
-            <!-- Mobile Menü Dropdown -->
-            <div id="mobile-menu-dropdown" class="hidden lg:hidden w-full border-t border-slate-200 bg-white px-4 py-3 mt-2 shadow-lg">
-                <ul class="flex flex-col space-y-3 font-semibold text-sm text-slate-700">
-                    <li><a href="#services" class="mobile-nav-link block py-1.5 hover:text-solux-blue">Leistungen</a></li>
-                    <li><a href="#region" class="mobile-nav-link block py-1.5 hover:text-solux-blue">Einsatzgebiet</a></li>
-                    <li><a href="#pricing" class="mobile-nav-link block py-1.5 hover:text-solux-blue">Preise</a></li>
-                    <li><a href="#faq" class="mobile-nav-link block py-1.5 hover:text-solux-blue">FAQ</a></li>
-                    <li class="pt-2 border-t border-slate-100">
-                        <a href="tel:+4917663769838" class="flex items-center gap-2 text-solux-blue font-bold py-1.5">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-                            Jetzt anrufen: 0176 63769838
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+body .text-slate-700,
+body .text-slate-600,
+body .text-slate-500,
+body .text-slate-400 {
+  color: var(--muted);
+}
 
-    <!-- HERO SECTION -->
-    <section class="pt-28 pb-14 sm:pt-36 sm:pb-20 bg-slate-50 border-b border-slate-200 px-4">
-        <div class="max-w-4xl mx-auto text-center">
-            
-            <div class="inline-flex items-center gap-2 px-3 py-1 mb-6 text-xs font-semibold text-slate-700 bg-white border border-slate-200 rounded-full shadow-sm">
-                <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
-                Marcel Bux • Vor-Ort-Service &amp; Fernwartung im Oberbergischen Kreis
-            </div>
+body .text-solux-blue {
+  color: var(--accent);
+}
 
-            <h1 class="mb-5 text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight text-solux-dark">
-                Computer- &amp; Netzwerkprobleme? <br>
-                <span class="text-solux-blue">Ich helfe Ihnen persönlich weiter.</span>
-            </h1>
+body svg {
+  flex-shrink: 0;
+}
 
-            <p class="max-w-2xl mx-auto mb-8 text-slate-600 text-sm sm:text-base lg:text-lg leading-relaxed">
-                Der PC streikt, das WLAN bricht ständig ab oder Windows verweigert den Dienst? Keine anonymen Callcenter oder wochenlangen Wartezeiten: Ich analysiere den Fehler bei Ihnen vor Ort oder per Fernwartung und bringe Ihre IT wieder zum Laufen.
-            </p>
+body h1[class],
+body h2[class],
+body h3[class] {
+  font-family: var(--serif);
+  font-weight: 500;
+}
 
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-3 w-full sm:w-auto">
-                <a href="https://wa.me/4917663769838?text=Hallo%20Marcel,%20ich%20habe%20ein%20Problem%20mit%20meinem%20PC/Netzwerk:" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 py-3.5 text-sm sm:text-base font-bold text-white bg-emerald-600 hover:bg-emerald-700 rounded-xl shadow-sm transition">
-                    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-                    Per WhatsApp anfragen
-                </a> 
-                <a href="#services" class="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3.5 text-sm sm:text-base font-bold text-slate-700 bg-white border border-slate-300 rounded-xl hover:bg-slate-50 transition">
-                    Leistungen ansehen
-                </a>
-            </div>
+body h2[class] {
+  font-size: clamp(34px, 4vw, 56px);
+  line-height: 1.12;
+  letter-spacing: -.035em;
+}
 
-            <!-- Fakten-Streifen -->
-            <div class="mt-12 pt-8 border-t border-slate-200 grid grid-cols-2 md:grid-cols-4 gap-4 text-left">
-                <div class="flex items-start gap-3">
-                    <svg class="w-5 h-5 text-solux-blue shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                    <div>
-                        <div class="text-xs font-bold text-slate-900">Schnelle Termine</div>
-                        <div class="text-[11px] text-slate-500">Direkter Rückruf ohne Umwege</div>
-                    </div>
-                </div>
-                <div class="flex items-start gap-3">
-                    <svg class="w-5 h-5 text-solux-blue shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-                    <div>
-                        <div class="text-xs font-bold text-slate-900">Vor Ort &amp; Remote</div>
-                        <div class="text-[11px] text-slate-500">Im Oberbergischen Kreis</div>
-                    </div>
-                </div>
-                <div class="flex items-start gap-3">
-                    <svg class="w-5 h-5 text-solux-blue shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-                    <div>
-                        <div class="text-xs font-bold text-slate-900">Verständlich erklärt</div>
-                        <div class="text-[11px] text-slate-500">Kein Fachchinesisch</div>
-                    </div>
-                </div>
-                <div class="flex items-start gap-3">
-                    <svg class="w-5 h-5 text-solux-blue shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/></svg>
-                    <div>
-                        <div class="text-xs font-bold text-slate-900">Faire Preise</div>
-                        <div class="text-[11px] text-slate-500">Klare Absprache vorab</div>
-                    </div>
-                </div>
-            </div>
+body h3 {
+  line-height: 1.3;
+  letter-spacing: -.025em;
+}
 
-        </div>
-    </section>
+body > section[class] {
+  padding-inline: var(--gutter);
+  border: 0;
+}
 
-    <!-- LEISTUNGEN -->
-    <section id="services" class="py-16 sm:py-20 bg-white border-b border-slate-200 px-4">
-        <div class="max-w-6xl mx-auto">
-            
-            <div class="max-w-2xl mb-12">
-                <span class="text-xs font-bold text-solux-blue uppercase tracking-wider">Praktische Unterstützung</span>
-                <h2 class="text-2xl sm:text-3xl font-extrabold text-solux-dark mt-1">Typische Probleme, bei denen ich helfe</h2>
-                <p class="text-slate-600 text-sm mt-2">Von der zickigen Windows-Installation bis zur strukturierten Netzwerkverkabelung.</p>
-            </div>
+body > section[class] > div {
+  max-width: 1280px;
+  margin-inline: auto;
+}
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                
-                <!-- 1. PC & Hardware -->
-                <div class="p-6 rounded-2xl border border-slate-200 bg-white hover:border-solux-blue/50 transition">
-                    <div class="w-10 h-10 rounded-lg bg-sky-50 text-solux-blue flex items-center justify-center mb-4">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-                    </div>
-                    <h3 class="text-base font-bold text-solux-dark mb-2">PC- &amp; Laptop-Reparaturen</h3>
-                    <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4">
-                        Fehlersuche bei Abstürzen, Bluescreens oder Überhitzung. Austausch von defekten Lüftern, Netzteilen, Akkus und Hardwareteilen.
-                    </p>
-                    <div class="text-xs text-slate-500 space-y-1">
-                        <div>• Beschleunigung durch schnelle SSDs</div>
-                        <div>• Reinigung verstaubter Systeme &amp; Wärmeleitpaste</div>
-                        <div>• Hardware-Aufrüstung nach Maß</div>
-                    </div>
-                </div>
+body section[id] {
+  scroll-margin-top: 24px;
+}
 
-                <!-- 2. Netzwerk & WLAN -->
-                <div class="p-6 rounded-2xl border border-slate-200 bg-white hover:border-solux-blue/50 transition">
-                    <div class="w-10 h-10 rounded-lg bg-sky-50 text-solux-blue flex items-center justify-center mb-4">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0"/></svg>
-                    </div>
-                    <h3 class="text-base font-bold text-solux-dark mb-2">WLAN, Router &amp; Heimnetz</h3>
-                    <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4">
-                        Gleichmäßige Abdeckung im ganzen Haus oder Betrieb. Einrichtung von Fritz!Box, Mesh-Repeatern und Netzwerk-Switches.
-                    </p>
-                    <div class="text-xs text-slate-500 space-y-1">
-                        <div>• Funklöcher beseitigen &amp; Gast-WLAN einrichten</div>
-                        <div>• Sichere VPN-Anbindung fürs Homeoffice</div>
-                        <div>• Netzwerkdosen &amp; Patchkabel-Verlegung</div>
-                    </div>
-                </div>
+body section[id] > div > div:first-child > span,
+body #contact > div > div > span {
+  font-family: var(--sans);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .18em;
+  line-height: 1.6;
+}
 
-                <!-- 3. Fernwartung -->
-                <div class="p-6 rounded-2xl border border-slate-200 bg-white hover:border-solux-blue/50 transition">
-                    <div class="w-10 h-10 rounded-lg bg-sky-50 text-solux-blue flex items-center justify-center mb-4">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"/></svg>
-                    </div>
-                    <h3 class="text-base font-bold text-solux-dark mb-2">Schnelle Fernwartung</h3>
-                    <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4">
-                        Viele Softwareprobleme lassen sich unkompliziert per Bildschirmübertragung über AnyDesk lösen – ohne dass jemand vor Ort sein muss.
-                    </p>
-                    <div class="text-xs text-slate-500 space-y-1">
-                        <div>• E-Mail- &amp; Druckereinrichtung</div>
-                        <div>• Windows-Update- &amp; Treiber-Reparatur</div>
-                        <div>• Entfernung lästiger Werbeprogramme</div>
-                    </div>
-                </div>
+/* Navigation */
 
-                <!-- 4. Neugeräte -->
-                <div class="p-6 rounded-2xl border border-slate-200 bg-white hover:border-solux-blue/50 transition">
-                    <div class="w-10 h-10 rounded-lg bg-sky-50 text-solux-blue flex items-center justify-center mb-4">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/></svg>
-                    </div>
-                    <h3 class="text-base font-bold text-solux-dark mb-2">Ersteinrichtung &amp; Inbetriebnahme</h3>
-                    <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4">
-                        Sie haben sich einen neuen Rechner oder Laptop gekauft? Ich übernehme die komplette fachgerechte Inbetriebnahme und Konfiguration.
-                    </p>
-                    <div class="text-xs text-slate-500 space-y-1">
-                        <div>• Saubere, werbefreie Systeminstallation</div>
-                        <div>• Installation aller benötigten Programme</div>
-                        <div>• Anschluss aller Peripheriegeräte vor Ort</div>
-                    </div>
-                </div>
+body > header[class] {
+  background: rgba(244, 241, 233, .95);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(14px);
+}
 
-                <!-- 5. Beratung -->
-                <div class="p-6 rounded-2xl border border-slate-200 bg-white hover:border-solux-blue/50 transition">
-                    <div class="w-10 h-10 rounded-lg bg-sky-50 text-solux-blue flex items-center justify-center mb-4">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-                    </div>
-                    <h3 class="text-base font-bold text-solux-dark mb-2">Ehrliche Kaufberatung</h3>
-                    <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4">
-                        Ich verkaufe Ihnen keine überteuerten Geräte, die Sie nicht brauchen. Sie erhalten unabhängige Empfehlungen für Ihren Bedarf.
-                    </p>
-                    <div class="text-xs text-slate-500 space-y-1">
-                        <div>• Überprüfung, ob ein Upgrade noch lohnt</div>
-                        <div>• Empfehlungen für Monitore, PCs &amp; Drucker</div>
-                        <div>• Unterstützung bei der Anschaffung</div>
-                    </div>
-                </div>
+body > header nav[class] {
+  padding-block: 18px;
+}
 
-            </div>
-        </div>
-    </section>
+body > header nav > div:first-child {
+  max-width: 1464px;
+  padding-inline: var(--gutter);
+  gap: 24px;
+}
 
-    <!-- REGIONALER BEREICH (Oberbergischer Kreis / Wiehl) -->
-    <section id="region" class="py-14 sm:py-18 bg-slate-50 border-b border-slate-200 px-4">
-        <div class="max-w-4xl mx-auto bg-white p-6 sm:p-10 rounded-3xl border border-slate-200 shadow-sm">
-            <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
-                <div>
-                    <span class="text-xs font-bold text-solux-blue uppercase tracking-wider">Direkt vor Ort</span>
-                    <h2 class="text-2xl font-extrabold text-solux-dark mt-1">Einsatzgebiet &amp; Anfahrt</h2>
-                    <p class="text-slate-600 text-xs sm:text-sm mt-2 max-w-xl leading-relaxed">
-                        Mein Standort ist in <strong>51674 Wiehl</strong>. Ich bin regelmäßig in folgenden Orten direkt bei Kunden vor Ort:
-                    </p>
-                    <div class="flex flex-wrap gap-2 mt-4 text-xs font-semibold text-slate-700">
-                        <span class="px-3 py-1 bg-slate-100 rounded-lg">Wiehl</span>
-                        <span class="px-3 py-1 bg-slate-100 rounded-lg">Gummersbach</span>
-                        <span class="px-3 py-1 bg-slate-100 rounded-lg">Waldbröl</span>
-                        <span class="px-3 py-1 bg-slate-100 rounded-lg">Nümbrecht</span>
-                        <span class="px-3 py-1 bg-slate-100 rounded-lg">Engelskirchen</span>
-                        <span class="px-3 py-1 bg-slate-100 rounded-lg">Reichshof</span>
-                        <span class="px-3 py-1 bg-slate-100 rounded-lg">Bergneustadt</span>
-                    </div>
-                    <p class="text-slate-500 text-[11px] mt-3">
-                        Größere Distanzen bediene ich gerne per Fernwartung oder nach kurzer Absprache.
-                    </p>
-                </div>
-                <div class="w-full sm:w-auto shrink-0">
-                    <a href="https://wa.me/4917663769838?text=Hallo%20Marcel,%20ich%20brauche%20Hilfe%20vor%20Ort%20in%20:" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 px-5 py-3 text-sm font-bold text-white bg-emerald-600 hover:bg-emerald-700 rounded-xl transition">
-                        Termin anfragen
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
+body > header nav > div:first-child > a {
+  order: 0;
+}
 
-    <!-- PREISE -->
-    <section id="pricing" class="py-16 sm:py-20 bg-white border-b border-slate-200 px-4">
-        <div class="max-w-6xl mx-auto">
-            
-            <div class="text-center max-w-2xl mx-auto mb-12">
-                <span class="text-xs font-bold text-solux-blue uppercase tracking-wider">Transparente Abrechnung</span>
-                <h2 class="text-2xl sm:text-3xl font-extrabold text-solux-dark mt-1">Klare Kosten ohne Überraschungen</h2>
-                <p class="text-slate-600 text-xs sm:text-sm mt-2">Vor Beginn jeder Arbeit besprechen wir den voraussichtlichen Aufwand.</p>
-            </div>
+body > header nav > div:first-child > div:first-of-type {
+  order: 2;
+  margin-left: auto;
+  gap: 20px;
+}
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                
-                <!-- 1. Fernwartung -->
-                <div class="p-6 sm:p-7 rounded-2xl border border-slate-200 bg-slate-50 text-left flex flex-col justify-between">
-                    <div>
-                        <div class="text-xs font-bold text-solux-blue uppercase tracking-wider mb-1">Schnelle Hilfe per AnyDesk</div>
-                        <h3 class="text-lg font-bold text-solux-dark">Fernwartung</h3>
-                        <div class="my-4">
-                            <span class="text-3xl font-extrabold text-solux-dark">39 €</span>
-                            <span class="text-slate-500 text-xs">/ je 30 Min.</span>
-                        </div>
-                        <ul class="text-xs sm:text-sm text-slate-600 space-y-2 mb-6">
-                            <li>✓ Keine Anfahrtskosten</li>
-                            <li>✓ Kurzfristige Termine oft noch am selben Tag</li>
-                            <li>✓ Ideal für E-Mail, Windows &amp; Softwarefehler</li>
-                        </ul>
-                    </div>
-                    <a href="#contact" class="block text-center font-bold text-xs py-3 px-4 rounded-xl bg-white border border-slate-300 hover:bg-slate-100 text-slate-800 transition">
-                        Fernwartung vereinbaren
-                    </a>
-                </div>
+body > header nav > div:first-child > div:last-child {
+  order: 1;
+  margin-left: auto;
+  gap: 26px;
+}
 
-                <!-- 2. Vor Ort & Reparatur -->
-                <div class="p-6 sm:p-7 rounded-2xl border-2 border-solux-blue bg-white text-left shadow-sm flex flex-col justify-between relative">
-                    <span class="absolute -top-3 right-5 bg-solux-blue text-white text-[10px] font-bold uppercase tracking-wider py-0.5 px-2.5 rounded-full">Häufig gewählt</span>
-                    <div>
-                        <div class="text-xs font-bold text-solux-blue uppercase tracking-wider mb-1">Bei Ihnen oder in der Werkstatt</div>
-                        <h3 class="text-lg font-bold text-solux-dark">Vor-Ort &amp; Reparatur</h3>
-                        <div class="my-4">
-                            <span class="text-3xl font-extrabold text-solux-blue">69 €</span>
-                            <span class="text-slate-500 text-xs">/ Stunde (im 15-Min.-Takt)</span>
-                        </div>
-                        <ul class="text-xs sm:text-sm text-slate-700 space-y-2 mb-6 font-medium">
-                            <li>✓ Tiefgehende Fehlerdiagnose &amp; Tausch</li>
-                            <li>✓ WLAN-Einrichtung, Drucker &amp; Router</li>
-                            <li>✓ Faire Anfahrt: Wiehl 10 €, Umkreis 15–25 €</li>
-                        </ul>
-                    </div>
-                    <a href="#contact" class="block text-center font-bold text-xs py-3 px-4 rounded-xl bg-solux-blue hover:bg-sky-700 text-white shadow-sm transition">
-                        Vor-Ort-Termin vereinbaren
-                    </a>
-                </div>
+body > header nav > div:first-child > div:last-child[class] > a {
+  margin-left: 0;
+}
 
-                <!-- 3. Projekt & Pauschale -->
-                <div class="p-6 sm:p-7 rounded-2xl border border-slate-200 bg-slate-50 text-left flex flex-col justify-between">
-                    <div>
-                        <div class="text-xs font-bold text-solux-blue uppercase tracking-wider mb-1">Für größere Vorhaben</div>
-                        <h3 class="text-lg font-bold text-solux-dark">Projekt &amp; Pauschale</h3>
-                        <div class="my-4">
-                            <span class="text-3xl font-extrabold text-solux-dark">Festpreis</span>
-                            <span class="text-slate-500 text-xs">/ nach Absprache</span>
-                        </div>
-                        <ul class="text-xs sm:text-sm text-slate-600 space-y-2 mb-6">
-                            <li>✓ Komplette Büro- oder Heimnetz-Planung</li>
-                            <li>✓ Arbeitsplatz- &amp; Hardwareaufbau</li>
-                            <li>✓ Verbindlicher Kostenvoranschlag vor Beginn</li>
-                        </ul>
-                    </div>
-                    <a href="#contact" class="block text-center font-bold text-xs py-3 px-4 rounded-xl bg-white border border-slate-300 hover:bg-slate-100 text-slate-800 transition">
-                        Projekt besprechen
-                    </a>
-                </div>
+body > header nav > div:first-child > a > svg {
+  width: 212px;
+  height: auto;
+  max-width: none;
+}
 
-            </div>
+body > header svg > rect:first-child {
+  fill: none;
+  stroke: none;
+}
 
-            <p class="text-center text-[11px] text-slate-400 mt-6">
-                Hinweis: Gemäß § 19 UStG wird keine Umsatzsteuer berechnet und ausgewiesen (Kleinunternehmerregelung).
-            </p>
-        </div>
-    </section>
+body > header svg text {
+  font-family: var(--sans);
+}
 
-    <!-- FAQ -->
-    <section id="faq" class="py-14 sm:py-18 bg-slate-50 border-b border-slate-200 px-4">
-        <div class="max-w-3xl mx-auto">
-            <h2 class="mb-8 text-2xl sm:text-3xl font-extrabold text-center text-solux-dark">Häufige Fragen</h2>
-            
-            <div class="space-y-3">
-                <details class="bg-white border border-slate-200 rounded-xl p-4 sm:p-5" open>
-                    <summary class="font-bold text-xs sm:text-sm text-solux-dark cursor-pointer list-none flex justify-between items-center">
-                        <span>Wie schnell bekomme ich Hilfe?</span>
-                        <span class="text-solux-blue">▾</span>
-                    </summary>
-                    <p class="mt-3 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
-                        Schreiben Sie mir am besten kurz per WhatsApp oder rufen Sie durch. Bei akuten Softwareproblemen kann ich oft innerhalb von 1–2 Stunden per Fernwartung draufschauen. Vor-Ort-Termine stimmen wir flexibel ab.
-                    </p>
-                </details>
+body > header svg text[fill='#0F172A'] {
+  fill: var(--forest);
+}
 
-                <details class="bg-white border border-slate-200 rounded-xl p-4 sm:p-5">
-                    <summary class="font-bold text-xs sm:text-sm text-solux-dark cursor-pointer list-none flex justify-between items-center">
-                        <span>Was ist, wenn sich der Rechner nicht mehr reparieren lässt?</span>
-                        <span class="text-solux-blue">▾</span>
-                    </summary>
-                    <p class="mt-3 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
-                        Sollte ein Mainboard-Schaden oder ein wirtschaftlicher Totalschaden vorliegen, sage ich Ihnen das ehrlich. Sie zahlen dann nur den geringen Diagnoseaufwand und ich helfe Ihnen auf Wunsch bei der Auswahl eines passenden Ersatzgeräts.
-                    </p>
-                </details>
+body > header svg text[fill='#0284C7'] {
+  fill: var(--accent);
+}
 
-                <details class="bg-white border border-slate-200 rounded-xl p-4 sm:p-5">
-                    <summary class="font-bold text-xs sm:text-sm text-solux-dark cursor-pointer list-none flex justify-between items-center">
-                        <span>Wie funktioniert die Fernwartung technisch?</span>
-                        <span class="text-solux-blue">▾</span>
-                    </summary>
-                    <p class="mt-3 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
-                        Ganz einfach: Sie laden das kleine, sichere Programm AnyDesk herunter und nennen mir den angezeigten Zahlencode am Telefon. Sie sehen jeden Schritt live auf Ihrem Bildschirm und können die Verbindung jederzeit mit einem Klick trennen.
-                    </p>
-                </details>
-            </div>
-        </div>
-    </section>
+body > header svg > rect:not(:first-child) {
+  fill: var(--line);
+}
 
-    <!-- KONTAKTFORMULAR -->
-    <section id="contact" class="py-16 sm:py-20 bg-white px-4">
-        <div class="max-w-2xl mx-auto">
-            <div class="bg-slate-50 rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-sm">
-                
-                <span class="text-xs font-bold text-solux-blue uppercase tracking-wider">Direkter Kontakt</span>
-                <h2 class="text-2xl sm:text-3xl font-extrabold text-solux-dark mt-1 mb-2">Problem kurz beschreiben</h2>
-                <p class="text-slate-600 text-xs sm:text-sm mb-6">
-                    Hinterlassen Sie mir eine Nachricht – ich melde mich schnellstmöglich bei Ihnen zurück.
-                </p>
+body > header svg circle[fill='#0F172A'] {
+  fill: var(--forest);
+}
 
-                <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
-                    <input type="hidden" name="access_key" value="adee34df-b7ac-4271-bcfc-11414bb70fb1">
-                    <input type="hidden" name="subject" value="Neue IT-Anfrage über Website (Solux-IT)">
-                    <input type="hidden" name="from_name" value="Solux-IT Website">
+body > header svg circle[stroke='#334155'] {
+  stroke: #486157;
+}
 
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <div>
-                            <label class="block text-xs font-bold text-slate-700 mb-1">Ihr Name *</label>
-                            <input type="text" name="name" required placeholder="Max Mustermann" class="w-full px-3.5 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:outline-none focus:border-solux-blue focus:ring-1 focus:ring-solux-blue transition">
-                        </div>
-                        <div>
-                            <label class="block text-xs font-bold text-slate-700 mb-1">Telefonnummer oder E-Mail *</label>
-                            <input type="text" name="kontakt" required placeholder="0170... oder name@mail.de" class="w-full px-3.5 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:outline-none focus:border-solux-blue focus:ring-1 focus:ring-solux-blue transition">
-                        </div>
-                    </div>
+body > header svg [stroke='#38BDF8'] {
+  stroke: #ddbd95;
+}
 
-                    <div>
-                        <label class="block text-xs font-bold text-slate-700 mb-1">Thema</label>
-                        <select name="kategorie" class="w-full px-3.5 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-700 text-sm focus:outline-none focus:border-solux-blue focus:ring-1 focus:ring-solux-blue transition">
-                            <option value="PC/Laptop Reparatur">PC oder Laptop defekt / streikt</option>
-                            <option value="WLAN & Netzwerk">WLAN, Internet oder Router-Problem</option>
-                            <option value="Fernwartung">Schnelle Softwarehilfe / Fernwartung</option>
-                            <option value="Projekt & Beratung">Projekt, Neuaufbau oder Beratung</option>
-                        </select>
-                    </div>
+body > header nav a {
+  font-size: 11px;
+  font-weight: 700;
+}
 
-                    <div>
-                        <label class="block text-xs font-bold text-slate-700 mb-1">Fehlerbeschreibung *</label>
-                        <textarea name="nachricht" rows="4" required placeholder="Was genau passiert? Gibt es eine Fehlermeldung?" class="w-full px-3.5 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:outline-none focus:border-solux-blue focus:ring-1 focus:ring-solux-blue transition"></textarea>
-                    </div>
+body > header nav a[href^='tel:'] {
+  color: var(--ink);
+  white-space: nowrap;
+}
 
-                    <div class="flex items-start gap-2 pt-1">
-                        <input type="checkbox" id="privacy-check" required class="mt-1 rounded border-slate-300 text-solux-blue focus:ring-solux-blue">
-                        <label for="privacy-check" class="text-xs text-slate-500">
-                            Ich habe die <a href="datenschutz.html" class="text-solux-blue hover:underline">Datenschutzerklärung</a> gelesen und stimme der Kontaktaufnahme zu.
-                        </label>
-                    </div>
+body > header nav a[href='#contact'] {
+  border-radius: 0;
+  padding: 12px 17px;
+  background: var(--forest);
+  color: var(--white);
+  white-space: nowrap;
+}
 
-                    <button type="submit" class="w-full py-3.5 rounded-xl font-bold text-xs sm:text-sm text-white bg-solux-dark hover:bg-slate-800 transition shadow-sm uppercase tracking-wider">
-                        Nachricht an Marcel Bux senden
-                    </button>
-                </form>
+body > header nav a[href='#contact']:hover {
+  background: var(--forest);
+  transform: translateY(-2px);
+}
 
-            </div>
-        </div>
-    </section>
+body > header nav > div:first-child > div:last-child > a,
+body footer a {
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: 5px;
+}
 
-    <!-- FOOTER -->
-    <footer class="bg-white border-t border-slate-200 py-8 px-4 text-center">
-        <div class="max-w-4xl mx-auto">
-            <div class="text-sm font-extrabold text-solux-dark mb-1">
-                Solux-IT Systeme &amp; Service • Marcel Bux
-            </div>
-            <p class="text-xs text-slate-500 mb-4">
-                Thalhauser Weg 6, 51674 Wiehl • Telefon: <a href="tel:+4917663769838" class="text-solux-blue hover:underline">0176 63769838</a> • E-Mail: <a href="mailto:soluxitsysteme@gmail.com" class="text-solux-blue hover:underline">soluxitsysteme@gmail.com</a>
-            </p>
-            <div class="flex justify-center gap-6 text-xs text-slate-600 font-semibold mb-4">
-                <a href="impressum.html" class="hover:text-solux-blue transition">Impressum</a>
-                <a href="datenschutz.html" class="hover:text-solux-blue transition">Datenschutzerklärung</a>
-            </div>
-            <p class="text-[11px] text-slate-400">
-                © 2026 Solux-IT. Alle Rechte vorbehalten.
-            </p>
-        </div>
-    </footer>
+body > header nav > div:first-child > div:last-child > a:hover,
+body footer a:hover {
+  color: var(--accent);
+  text-decoration-color: currentColor;
+}
 
-    <!-- SCHWEBENDER WHATSAPP-BUTTON UNTEN RECHTS -->
-    <a href="https://wa.me/4917663769838?text=Hallo%20Marcel,%20ich%20habe%20ein%20IT-Problem:" target="_blank" rel="noopener noreferrer" class="fixed bottom-5 right-5 z-50 flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-3 rounded-full shadow-lg transition transform hover:scale-105" aria-label="WhatsApp Direktkontakt">
-        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-        <span class="text-xs font-bold hidden sm:inline">WhatsApp</span>
-    </a>
+body #mobile-toggle-btn {
+  border-radius: 0;
+  color: var(--forest);
+}
 
-    <!-- JavaScript für Mobile Navigation -->
-    <script>
-        const mobileBtn = document.getElementById('mobile-toggle-btn');
-        const mobileMenu = document.getElementById('mobile-menu-dropdown');
-        const navLinks = document.querySelectorAll('.mobile-nav-link');
+body #mobile-toggle-btn:hover {
+  background: #e8e7dd;
+}
 
-        if (mobileBtn && mobileMenu) {
-            mobileBtn.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
+body #mobile-menu-dropdown {
+  margin-top: 18px;
+  padding: 22px var(--gutter) 8px;
+  background: var(--paper);
+  border-color: var(--line);
+  box-shadow: none;
+}
 
-            navLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    mobileMenu.classList.add('hidden');
-                });
-            });
-        }
-    </script>
-</body>
-</html>
+body #mobile-menu-dropdown a {
+  padding-block: 9px;
+}
+
+/* Einstieg: große Typografie und versetzte Textachsen */
+
+body > section:first-of-type {
+  position: relative;
+  overflow: hidden;
+  padding-top: clamp(152px, 16vw, 224px);
+  padding-bottom: 0;
+  background: var(--paper);
+}
+
+body > section:first-of-type::before {
+  content: '';
+  position: absolute;
+  width: clamp(260px, 38vw, 560px);
+  aspect-ratio: 1;
+  right: -15%;
+  top: 80px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 36px var(--paper),
+    0 0 0 37px var(--line);
+  pointer-events: none;
+}
+
+body > section:first-of-type > div {
+  position: relative;
+  text-align: left;
+}
+
+body > section:first-of-type > div > div:first-child {
+  max-width: 100%;
+  padding: 0 0 17px;
+  margin: 0 0 42px;
+  background: none;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: .035em;
+  line-height: 1.9;
+  color: var(--muted);
+  gap: 12px;
+}
+
+body > section:first-of-type > div > div:first-child > span {
+  background: var(--forest);
+  flex-shrink: 0;
+}
+
+body > section:first-of-type h1 {
+  max-width: 1120px;
+  margin: 0;
+  font-size: clamp(42px, 6.8vw, 96px);
+  line-height: 1.07;
+  letter-spacing: -.055em;
+  font-weight: 500;
+  overflow-wrap: anywhere;
+}
+
+body > section:first-of-type h1 > br {
+  display: none;
+}
+
+body > section:first-of-type h1 > span {
+  display: block;
+  max-width: 940px;
+  margin: 23px 0 0 13%;
+  color: var(--accent);
+  font-style: italic;
+}
+
+body > section:first-of-type > div > p {
+  max-width: 620px;
+  margin: 42px 0 0 36%;
+  font-size: 15px;
+  line-height: 1.95;
+}
+
+body > section:first-of-type > div > div:nth-of-type(2) {
+  width: auto;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 28px 0 0 36%;
+  gap: 26px;
+}
+
+body > section:first-of-type > div > div:nth-of-type(2) > a {
+  width: auto;
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+body > section:first-of-type a[href^='https://wa.me'] {
+  padding: 17px 22px;
+  background: var(--forest);
+  color: var(--white);
+}
+
+body > section:first-of-type a[href^='https://wa.me']:hover {
+  transform: translateY(-3px);
+}
+
+body > section:first-of-type a[href='#services'] {
+  background: none;
+  border: 0;
+  padding: 12px 0;
+  color: var(--ink);
+  box-shadow: inset 0 -1px 0 var(--ink);
+}
+
+body > section:first-of-type a[href='#services']:hover {
+  box-shadow: inset 0 -2px 0 var(--accent);
+}
+
+body > section:first-of-type > div > div:last-child {
+  grid-template-columns: 1.15fr 1fr 1fr .85fr;
+  gap: 24px;
+  padding: 32px 0;
+  margin-top: 88px;
+  border-color: var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+body > section:first-of-type > div > div:last-child > div {
+  gap: 13px;
+}
+
+body > section:first-of-type > div > div:last-child svg {
+  width: 18px;
+  height: 18px;
+  color: var(--forest);
+  stroke-width: 1.5;
+}
+
+body > section:first-of-type > div > div:last-child > div > div > div:first-child {
+  font-size: 11px;
+}
+
+body > section:first-of-type > div > div:last-child > div > div > div:last-child {
+  margin-top: 4px;
+  font-size: 10px;
+}
+
+/* Leistungen: offene Zeilen und freistehende Icons */
+
+body #services {
+  padding-block: clamp(96px, 11vw, 160px);
+  background: var(--paper);
+}
+
+body #services > div > div:first-child {
+  max-width: none;
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  column-gap: 12%;
+  margin-bottom: 68px;
+}
+
+body #services > div > div:first-child > span {
+  grid-column: 1 / -1;
+  margin-bottom: 18px;
+}
+
+body #services h2 {
+  margin: 0;
+  max-width: 600px;
+}
+
+body #services > div > div:first-child > p {
+  margin: 0;
+  align-self: end;
+  max-width: 330px;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+body #services > div > div:last-child {
+  display: block;
+  border-top: 1px solid var(--line);
+}
+
+body #services > div > div:last-child > div {
+  display: grid;
+  grid-template-columns: 40px minmax(0, 1fr) minmax(0, 1.45fr);
+  gap: 18px 38px;
+  padding: 40px 0;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+  transition: border-color .25s ease;
+}
+
+body #services > div > div:last-child > div:hover {
+  border-bottom-color: var(--accent);
+}
+
+body #services > div > div:last-child > div > div:first-child {
+  grid-column: 1;
+  grid-row: 1 / 3;
+  width: 34px;
+  height: 38px;
+  margin: 0;
+  background: none;
+  border-radius: 0;
+  color: var(--forest);
+  justify-content: flex-start;
+}
+
+body #services > div > div:last-child > div > div:first-child > svg {
+  width: 27px;
+  height: 27px;
+}
+
+body #services h3 {
+  grid-column: 2;
+  grid-row: 1 / 3;
+  max-width: 350px;
+  margin: 0;
+  font-size: clamp(25px, 2.4vw, 33px);
+}
+
+body #services > div > div:last-child > div > p {
+  grid-column: 3;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+body #services > div > div:last-child > div > div:last-child {
+  grid-column: 3;
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+body #services > div > div:last-child > div:nth-child(even) {
+  padding-left: 5%;
+}
+
+/* Einsatzgebiet: dunkle Fläche mit Überhang */
+
+body #region {
+  position: relative;
+  z-index: 1;
+  background: var(--forest);
+  padding-block: 78px 88px;
+}
+
+body #region > div {
+  position: relative;
+  max-width: 1120px;
+  padding: 0;
+  margin-bottom: -130px;
+  background: var(--forest);
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+body #region > div > div {
+  padding: 0 0 56px;
+  gap: 60px;
+}
+
+body #region > div::after {
+  content: '';
+  position: absolute;
+  inset: 0 calc(-1 * var(--gutter));
+  z-index: -1;
+  background: var(--forest);
+}
+
+body #region h2 {
+  color: var(--white);
+  margin-top: 18px;
+}
+
+body #region p {
+  max-width: 600px;
+  color: #d0d9cd;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+body #region > div > div > div:first-child > span {
+  color: #e1bf98;
+  font-size: 10px;
+  letter-spacing: .18em;
+}
+
+body #region > div > div > div:first-child > div {
+  gap: 8px 20px;
+  margin-top: 27px;
+}
+
+body #region > div > div > div:first-child > div > span {
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  color: var(--white);
+  font-weight: 500;
+  font-size: 12px;
+}
+
+body #region > div > div > div:first-child > p:last-child {
+  margin-top: 24px;
+  font-size: 11px;
+}
+
+body #region a {
+  color: var(--white);
+  border: 1px solid #9bad9f;
+  background: none;
+  border-radius: 0;
+  padding: 18px 27px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+body #region a:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, .06);
+}
+
+/* Preise: eine typografische Preisliste */
+
+body #pricing {
+  padding-block: clamp(150px, 16vw, 220px) 140px;
+  background: var(--white);
+}
+
+body #pricing > div > div:first-child {
+  max-width: 700px;
+  text-align: left;
+  margin: 0 0 65px 20%;
+}
+
+body #pricing h2 {
+  margin-top: 17px;
+}
+
+body #pricing > div > div:first-child > p {
+  font-size: 14px;
+  line-height: 1.9;
+  margin-top: 19px;
+}
+
+body #pricing > div > div:nth-child(2) {
+  display: block;
+}
+
+body #pricing > div > div:nth-child(2) > div {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 174px;
+  align-items: center;
+  gap: 38px;
+  padding: 44px 0;
+  border: 0;
+  border-top: 1px solid var(--line);
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+  position: relative;
+}
+
+body #pricing > div > div:nth-child(2) > div:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+body #pricing > div > div:nth-child(2) > div > div {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(0, .8fr)
+    minmax(0, 1.35fr);
+  column-gap: 28px;
+  align-items: center;
+}
+
+body #pricing > div > div:nth-child(2) > div > div > div:first-child {
+  grid-column: 1;
+  grid-row: 1;
+  align-self: end;
+  margin: 0 0 8px;
+  font-size: 9px;
+  line-height: 1.8;
+  letter-spacing: .12em;
+}
+
+body #pricing h3 {
+  grid-column: 1;
+  grid-row: 2;
+  align-self: start;
+  font-size: 26px;
+  margin: 0;
+}
+
+body #pricing > div > div:nth-child(2) > div > div > div:nth-of-type(2) {
+  grid-column: 2;
+  grid-row: 1 / 3;
+  margin: 0;
+}
+
+body #pricing > div > div:nth-child(2) > div > div > div:nth-of-type(2) > span:first-child {
+  display: block;
+  font-family: var(--serif);
+  font-size: clamp(32px, 3.6vw, 48px);
+  font-weight: 500;
+  letter-spacing: -.05em;
+  white-space: nowrap;
+}
+
+body #pricing > div > div:nth-child(2) > div > div > div:nth-of-type(2) > span:last-child {
+  font-size: 10px;
+  line-height: 1.6;
+  display: block;
+  margin-top: 5px;
+}
+
+body #pricing ul {
+  grid-column: 3;
+  grid-row: 1 / 3;
+  margin: 0;
+  padding: 0;
+  font-size: 11px;
+  line-height: 1.9;
+  font-weight: 500;
+}
+
+body #pricing a {
+  padding: 12px 0;
+  border: 0;
+  border-bottom: 1px solid currentColor;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+  color: var(--forest);
+  font-size: 11px;
+  text-align: left;
+  line-height: 1.8;
+}
+
+body #pricing a:hover {
+  transform: translateX(4px);
+  color: var(--accent);
+}
+
+body #pricing > div > div:nth-child(2) > div:nth-child(2) {
+  background: var(--forest);
+  padding: 52px 28px;
+  margin: 0 -28px;
+  border-color: var(--forest);
+}
+
+body #pricing > div > div:nth-child(2) > div:nth-child(2) > span {
+  top: 14px;
+  right: 28px;
+  padding: 0;
+  background: none;
+  color: #e1bf98;
+  border-radius: 0;
+  font-size: 8px;
+  letter-spacing: .16em;
+}
+
+body #pricing > div > div:nth-child(2) > div:nth-child(2) h3,
+body #pricing > div > div:nth-child(2) > div:nth-child(2) a,
+body #pricing > div > div:nth-child(2) > div:nth-child(2) > div > div:nth-of-type(2) > span:first-child {
+  color: var(--white);
+}
+
+body #pricing > div > div:nth-child(2) > div:nth-child(2) ul,
+body #pricing > div > div:nth-child(2) > div:nth-child(2) > div > div:nth-of-type(2) > span:last-child {
+  color: #d0d9cd;
+}
+
+body #pricing > div > div:nth-child(2) > div:nth-child(2) > div > div:first-child {
+  color: #e1bf98;
+}
+
+body #pricing > div > p:last-child {
+  text-align: left;
+  margin-top: 30px;
+  font-size: 10px;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+/* FAQ */
+
+body #faq {
+  padding-block: 120px 140px;
+  background: #e8e9df;
+}
+
+body #faq > div {
+  display: grid;
+  grid-template-columns: .8fr 1.4fr;
+  column-gap: 9%;
+  max-width: 1180px;
+}
+
+body #faq h2 {
+  text-align: left;
+  margin: 0;
+  max-width: 240px;
+}
+
+body #faq > div > div {
+  border-top: 1px solid #c2c8b9;
+}
+
+body #faq details {
+  padding: 26px 0;
+  margin: 0;
+  border: 0;
+  border-bottom: 1px solid #c2c8b9;
+  background: none;
+  border-radius: 0;
+}
+
+body #faq summary {
+  gap: 24px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.7;
+}
+
+body #faq summary::-webkit-details-marker {
+  display: none;
+}
+
+body #faq summary > span:last-child {
+  color: var(--forest);
+  transition: transform .25s ease;
+}
+
+body #faq details[open] summary > span:last-child {
+  transform: rotate(180deg);
+}
+
+body #faq details > p {
+  max-width: 620px;
+  border: 0;
+  padding: 0 28px 0 0;
+  margin-top: 18px;
+  font-size: 13px;
+  line-height: 1.95;
+}
+
+/* Kontakt */
+
+body #contact {
+  padding-block: 140px 160px;
+  background: var(--paper);
+}
+
+body #contact > div {
+  max-width: 900px;
+  margin-right: max(0px, calc((100% - 1280px) / 2));
+}
+
+body #contact > div > div {
+  padding: 0;
+  background: none;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+body #contact h2 {
+  margin-top: 18px;
+  margin-bottom: 22px;
+  max-width: 620px;
+}
+
+body #contact > div > div > p {
+  max-width: 460px;
+  margin-bottom: 50px;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+body #contact form {
+  border-top: 1px solid var(--line);
+  padding-top: 35px;
+}
+
+body #contact form > div {
+  margin-top: 28px;
+}
+
+body #contact form > div:first-of-type {
+  gap: 32px;
+  margin-top: 0;
+}
+
+body #contact label {
+  font-size: 11px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+body #contact input:not([type='hidden']):not([type='checkbox']),
+body #contact select,
+body #contact textarea {
+  padding: 14px 0;
+  border: 0;
+  border-bottom: 1px solid #979e90;
+  border-radius: 0;
+  background: transparent;
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 14px;
+  line-height: 1.7;
+  box-shadow: none;
+  transition: border-color .2s ease;
+}
+
+body #contact input::placeholder,
+body #contact textarea::placeholder {
+  color: var(--muted);
+  opacity: 1;
+}
+
+body #contact select {
+  padding-right: 22px;
+  cursor: pointer;
+}
+
+body #contact select option {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+body #contact textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+body #contact input:not([type='hidden']):not([type='checkbox']):focus,
+body #contact select:focus,
+body #contact textarea:focus {
+  outline: 0;
+  border-bottom: 2px solid var(--forest);
+  box-shadow: 0 2px 0 var(--forest);
+}
+
+body #contact input[type='checkbox'] {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  accent-color: var(--forest);
+  border-radius: 0;
+}
+
+body #contact label[for='privacy-check'] {
+  max-width: 590px;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1.9;
+}
+
+body #contact label a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+body #contact button[type='submit'] {
+  width: auto;
+  max-width: 100%;
+  margin-top: 34px;
+  padding: 20px 30px;
+  border-radius: 0;
+  box-shadow: none;
+  background: var(--forest);
+  color: var(--white);
+  font-size: 10px;
+  line-height: 1.8;
+  letter-spacing: .1em;
+}
+
+body #contact button[type='submit']:hover {
+  transform: translateY(-3px);
+}
+
+/* Footer und WhatsApp */
+
+body > footer[class] {
+  padding: 48px var(--gutter) 90px;
+  border-color: var(--line);
+  background: var(--paper);
+  text-align: left;
+}
+
+body > footer > div[class] {
+  max-width: 1280px;
+}
+
+body > footer > div > div:first-child {
+  font-size: 12px;
+  font-weight: 800;
+}
+
+body > footer p[class] {
+  font-size: 11px;
+  line-height: 2;
+  max-width: 680px;
+}
+
+body > footer > div > div:nth-of-type(2) {
+  justify-content: flex-start;
+  gap: 28px;
+  font-size: 11px;
+  margin-block: 22px;
+}
+
+body > footer > div > p:last-child {
+  font-size: 10px;
+}
+
+body > a[aria-label='WhatsApp Direktkontakt'] {
+  right: 24px;
+  bottom: 24px;
+  padding: 14px 18px;
+  border-radius: 0;
+  background: var(--forest);
+  color: var(--white);
+  box-shadow: 0 4px 20px rgba(23, 61, 53, .12);
+  border: 1px solid #718579;
+}
+
+body > a[aria-label='WhatsApp Direktkontakt']:hover {
+  background: var(--forest);
+  transform: translateY(-3px);
+}
+
+/* Tablet */
+
+@media (max-width: 1199px) {
+  body > header nav > div:first-child > div:first-of-type {
+    gap: 12px;
+  }
+
+  body > header nav > div:first-child > div:last-child {
+    gap: 18px;
+  }
+
+  body > header nav > div:first-child > div:first-of-type > a[href^='tel:'] {
+    display: none;
+  }
+
+  body #pricing > div > div:nth-child(2) > div {
+    grid-template-columns: minmax(0, 1fr) 145px;
+    gap: 26px;
+  }
+
+  body #pricing > div > div:nth-child(2) > div > div {
+    grid-template-columns: minmax(0, 1fr) minmax(0, .8fr);
+    gap: 14px 28px;
+  }
+
+  body #pricing ul {
+    grid-column: 1 / 3;
+    grid-row: 3;
+    margin-top: 12px;
+  }
+}
+
+/* Mobil */
+
+@media (max-width: 767px) {
+  html[class] {
+    scroll-padding-top: 86px;
+  }
+
+  body > header nav[class] {
+    padding-block: 13px;
+  }
+
+  body > header nav > div:first-child {
+    gap: 6px;
+    padding-inline: 16px;
+  }
+
+  body > header nav > div:first-child > a > svg {
+    width: 170px;
+  }
+
+  body > header nav > div:first-child > div:first-of-type {
+    gap: 5px;
+  }
+
+  body > header nav a[href='#contact'] {
+    padding: 10px 11px;
+    font-size: 10px;
+  }
+
+  body > section:first-of-type {
+    padding-top: 138px;
+  }
+
+  body > section:first-of-type::before {
+    right: -210px;
+    top: 110px;
+  }
+
+  body > section:first-of-type > div > div:first-child {
+    font-size: 9px;
+    gap: 10px;
+    margin-bottom: 30px;
+    align-items: baseline;
+  }
+
+  body > section:first-of-type h1 {
+    font-size: clamp(39px, 7.8vw, 59px);
+    line-height: 1.12;
+  }
+
+  body > section:first-of-type h1 > span {
+    margin: 20px 0 0 6%;
+  }
+
+  body > section:first-of-type > div > p {
+    margin: 35px 0 0;
+    max-width: 560px;
+    font-size: 14px;
+  }
+
+  body > section:first-of-type > div > div:nth-of-type(2) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-left: 0;
+    gap: 18px 24px;
+  }
+
+  body > section:first-of-type > div > div:last-child {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-top: 55px;
+    gap: 28px 20px;
+  }
+
+  body #services {
+    padding-block: 88px;
+  }
+
+  body #services > div > div:first-child {
+    grid-template-columns: 1fr;
+    margin-bottom: 44px;
+  }
+
+  body #services > div > div:first-child > p {
+    margin-top: 25px;
+    max-width: 420px;
+  }
+
+  body #services > div > div:last-child > div {
+    grid-template-columns: 30px minmax(0, 1fr);
+    gap: 18px 18px;
+    padding-block: 30px;
+  }
+
+  body #services > div > div:last-child > div:nth-child(even) {
+    padding-left: 0;
+  }
+
+  body #services > div > div:last-child > div > div:first-child {
+    grid-row: 1;
+  }
+
+  body #services h3 {
+    grid-column: 2;
+    grid-row: 1;
+    max-width: none;
+    font-size: 26px;
+  }
+
+  body #services > div > div:last-child > div > p,
+  body #services > div > div:last-child > div > div:last-child {
+    grid-column: 2;
+  }
+
+  body #region {
+    padding-block: 62px 65px;
+  }
+
+  body #region > div {
+    margin-bottom: -96px;
+  }
+
+  body #region > div > div {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+    padding-bottom: 42px;
+  }
+
+  body #region > div > div > div:last-child {
+    width: auto;
+  }
+
+  body #region h2 {
+    font-size: 36px;
+  }
+
+  body #region a {
+    width: auto;
+    padding: 14px 22px;
+  }
+
+  body #pricing {
+    padding-block: 130px 88px;
+  }
+
+  body #pricing > div > div:first-child {
+    margin-left: 0;
+    margin-bottom: 42px;
+  }
+
+  body #pricing > div > div:nth-child(2) > div {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding-block: 32px;
+  }
+
+  body #pricing > div > div:nth-child(2) > div > div {
+    grid-template-columns: minmax(0, 1fr) minmax(0, .8fr);
+    column-gap: 22px;
+  }
+
+  body #pricing h3 {
+    font-size: 24px;
+  }
+
+  body #pricing a {
+    justify-self: start;
+    max-width: 100%;
+    padding-block: 10px;
+  }
+
+  body #pricing > div > div:nth-child(2) > div:nth-child(2) {
+    margin-inline: -12px;
+    padding: 50px 12px 32px;
+  }
+
+  body #pricing > div > div:nth-child(2) > div:nth-child(2) > span {
+    right: 12px;
+  }
+
+  body #faq {
+    padding-block: 80px 90px;
+  }
+
+  body #faq > div {
+    grid-template-columns: 1fr;
+    gap: 38px;
+  }
+
+  body #faq h2 {
+    max-width: none;
+  }
+
+  body #faq summary {
+    font-size: 13px;
+  }
+
+  body #contact {
+    padding-block: 88px 95px;
+  }
+
+  body #contact form > div:first-of-type {
+    gap: 28px;
+  }
+
+  body #contact input:not([type='hidden']):not([type='checkbox']),
+  body #contact select,
+  body #contact textarea {
+    font-size: 16px;
+  }
+
+  body #contact button[type='submit'] {
+    width: 100%;
+    padding-inline: 16px;
+  }
+
+  body > footer[class] {
+    padding-bottom: 105px;
+  }
+
+  body > a[aria-label='WhatsApp Direktkontakt'] {
+    right: 16px;
+    bottom: 16px;
+    padding: 14px;
+  }
+}
+
+@media (max-width: 479px) {
+  body > header nav > div:first-child > a {
+    width: 118px;
+    overflow: hidden;
+  }
+
+  body > header nav > div:first-child > a > svg {
+    width: 176px;
+    flex-shrink: 0;
+  }
+
+  body > section:first-of-type h1 {
+    font-size: clamp(35px, 9.2vw, 44px);
+  }
+
+  body > section:first-of-type > div > div:last-child {
+    gap: 25px 14px;
+  }
+
+  body > section:first-of-type > div > div:last-child > div {
+    gap: 8px;
+  }
+
+  body > section:first-of-type > div > div:last-child > div > div > div:first-child {
+    font-size: 10px;
+  }
+
+  body > section:first-of-type > div > div:last-child > div > div > div:last-child {
+    font-size: 9px;
+  }
+
+  body #pricing > div > div:nth-child(2) > div > div {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  body #pricing > div > div:nth-child(2) > div > div > div:nth-of-type(2) {
+    grid-column: 1;
+    grid-row: 3;
+    margin-top: 19px;
+  }
+
+  body #pricing ul {
+    grid-column: 1;
+    grid-row: 4;
+    margin-top: 20px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html[class] {
+    scroll-behavior: auto;
+  }
+
+  *, *::before, *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}
