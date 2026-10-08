@@ -1,163 +1,120 @@
 <!DOCTYPE html>
 <html lang="de" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Impressum | Solux IT - Systems & Service</title>
-  
-  <!-- Original Favicon -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 70 70'><circle cx='35' cy='35' r='34' fill='%230F172A'/><path d='M35 16 A 18 18 0 0 1 49 42' stroke='%2338BDF8' stroke-width='5' stroke-linecap='round' fill='none'/><path d='M35 54 A 18 18 0 0 1 21 28' stroke='%23FFFFFF' stroke-width='5' stroke-linecap='round' fill='none'/><line x1='35' y1='23' x2='35' y2='47' stroke='%2338BDF8' stroke-width='4.5' stroke-linecap='round'/></svg>">
-  
-  <!-- Plus Jakarta Sans Font & Tailwind CDN -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
-          },
-          colors: {
-            solux: {
-              dark: '#0F172A',
-              blue: '#0284C7',
-              cyan: '#06B6D4',
-              sky: '#38BDF8',
-              soft: '#F0F9FF',
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Impressum | Solux-IT Systeme &amp; Service</title>
+    
+    <!-- Meta SEO -->
+    <meta name="robots" content="noindex, follow">
+    
+    <!-- Font & Tailwind via CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            },
+            colors: {
+              solux: {
+                dark: '#0F172A',
+                blue: '#0284C7',
+                soft: '#F0F9FF',
+              }
             }
           }
         }
       }
-    }
-  </script>
+    </script>
 </head>
-<body class="bg-white text-slate-800 font-sans antialiased selection:bg-solux-blue selection:text-white">
+<body class="bg-slate-50 text-slate-800 font-sans antialiased min-h-screen flex flex-col justify-between">
 
-  <!-- HEADER / NAVIGATION MIT ORIGINAL-LOGO -->
-  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-      
-      <a href="index.html" class="flex items-center">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 90" class="h-12 w-auto">
-          <defs>
-            <linearGradient id="softBg" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#FFFFFF" />
-              <stop offset="100%" stop-color="#F0F9FF" />
-            </linearGradient>
-          </defs>
-          <rect width="460" height="90" rx="12" fill="url(#softBg)" stroke="#E0F2FE" stroke-width="1" />
-          <g transform="translate(10, 10)">
-            <circle cx="35" cy="35" r="34" fill="#0F172A" />
-            <circle cx="35" cy="35" r="30.5" fill="none" stroke="#334155" stroke-width="1.5" />
-            <path d="M35 16 A 18 18 0 0 1 49 42" stroke="#38BDF8" stroke-width="5" stroke-linecap="round" fill="none" />
-            <path d="M35 54 A 18 18 0 0 1 21 28" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" fill="none" />
-            <line x1="35" y1="23" x2="35" y2="47" stroke="#38BDF8" stroke-width="4.5" stroke-linecap="round" />
-          </g>
-          <text x="100" y="51" font-family="'Plus Jakarta Sans', sans-serif" font-size="34" font-weight="800" fill="#0F172A" letter-spacing="0.5">SOLUX</text>
-          <rect x="242" y="27" width="2" height="30" fill="#BAE6FD" rx="1" />
-          <text x="258" y="51" font-family="'Plus Jakarta Sans', sans-serif" font-size="30" font-weight="800" fill="#0284C7" letter-spacing="1.5">IT</text>
-          <text x="101" y="70" font-family="'Plus Jakarta Sans', sans-serif" font-size="10.5" font-weight="700" fill="#0284C7" letter-spacing="3.2">SYSTEMS &amp; SERVICE</text>
-        </svg>
-      </a>
-
-      <a href="index.html" class="inline-flex items-center gap-2 text-sm font-semibold text-solux-blue hover:text-solux-cyan transition">
-        <span>←</span> Zurück zur Startseite
-      </a>
-    </div>
-  </header>
-
-  <!-- CONTENT -->
-  <main class="max-w-4xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
-    
-    <!-- Title Header -->
-    <div class="mb-10 pb-6 border-b border-slate-200">
-      <span class="text-xs font-bold uppercase tracking-wider text-solux-blue bg-solux-soft px-3 py-1 rounded-full border border-sky-100">Rechtliches</span>
-      <h1 class="text-3xl sm:text-4xl font-extrabold text-solux-dark mt-3 tracking-tight">Impressum</h1>
-      <p class="text-sm text-slate-500 mt-2">Gesetzliche Anbieterkennzeichnung gemäß § 5 Digitale-Dienste-Gesetz (DDG)</p>
-    </div>
-
-    <div class="space-y-8 text-sm leading-relaxed text-slate-700">
-
-      <!-- Angaben gemäß § 5 DDG -->
-      <section class="bg-slate-50 border border-slate-200 rounded-2xl p-6 sm:p-8">
-        <h2 class="text-lg font-bold text-solux-dark mb-4">Angaben gemäß § 5 DDG</h2>
-        <div class="pl-4 border-l-4 border-solux-blue text-slate-800 space-y-1 font-medium">
-          <p class="font-bold text-solux-dark text-base">[Dein Vor- und Nachname]</p>
-          <p>Solux IT - Systems & Service</p>
-          <p>[Deine Straße und Hausnummer]</p>
-          <p>[PLZ und Ort]</p>
+    <!-- HEADER / NAVIGATION -->
+    <header class="bg-white border-b border-gray-200 py-4">
+        <div class="max-w-screen-md px-4 mx-auto flex items-center justify-between">
+            <a href="index.html" class="flex items-center text-solux-dark font-extrabold text-lg tracking-tight hover:text-solux-blue transition">
+                ← Zurück zur Startseite
+            </a>
+            <span class="text-xs font-bold text-solux-blue uppercase tracking-wider bg-solux-soft px-3 py-1 rounded-full border border-sky-100">
+                Rechtliche Angaben
+            </span>
         </div>
-      </section>
+    </header>
 
-      <!-- Kontakt -->
-      <section>
-        <h2 class="text-lg font-bold text-solux-dark mb-3">Kontakt</h2>
-        <div class="space-y-2 text-slate-600">
-          <p><strong class="text-slate-800">Telefon:</strong> [Deine Telefonnummer]</p>
-          <p><strong class="text-slate-800">E-Mail:</strong> <a href="mailto:[Deine E-Mail-Adresse]" class="text-solux-blue hover:underline">[Deine E-Mail-Adresse]</a></p>
+    <!-- HAUPTINHALT -->
+    <main class="max-w-screen-md px-4 py-12 mx-auto w-full">
+        <div class="bg-white rounded-3xl p-6 sm:p-10 border border-gray-200 shadow-sm space-y-8">
+            
+            <div>
+                <h1 class="text-3xl font-extrabold text-solux-dark tracking-tight mb-2">Impressum</h1>
+                <p class="text-xs text-slate-500">Angaben gemäß § 5 Digitale-Dienste-Gesetz (DDG)</p>
+            </div>
+
+            <!-- UNTERNEHMENSANGABEN -->
+            <section class="space-y-2 border-b border-gray-100 pb-6 text-sm">
+                <h2 class="text-base font-bold text-solux-dark">Diensteanbieter</h2>
+                <p class="text-slate-700 leading-relaxed font-medium">
+                    Solux-IT Systeme &amp; Service<br>
+                    Inhaber: Marcel Bux<br>
+                    Thalhauser Weg 6<br>
+                    51674 Wiehl<br>
+                    Deutschland
+                </p>
+            </section>
+
+            <!-- KONTAKT -->
+            <section class="space-y-2 border-b border-gray-100 pb-6 text-sm">
+                <h2 class="text-base font-bold text-solux-dark">Kontakt</h2>
+                <p class="text-slate-700 leading-relaxed">
+                    E-Mail: <a href="mailto:soluxitsysteme@gmail.com" class="text-solux-blue font-semibold hover:underline">soluxitsysteme@gmail.com</a>
+                </p>
+            </section>
+
+            <!-- UMSATZSTEUER -->
+            <section class="space-y-2 border-b border-gray-100 pb-6 text-sm">
+                <h2 class="text-base font-bold text-solux-dark">Umsatzsteuer</h2>
+                <p class="text-slate-600 leading-relaxed text-xs sm:text-sm">
+                    Gemäß § 19 UStG wird keine Umsatzsteuer berechnet und ausgewiesen (Kleinunternehmerregelung).
+                </p>
+            </section>
+
+            <!-- VERANTWORTLICH FÜR INHALTE -->
+            <section class="space-y-2 border-b border-gray-100 pb-6 text-sm">
+                <h2 class="text-base font-bold text-solux-dark">Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
+                <p class="text-slate-700 leading-relaxed">
+                    Marcel Bux<br>
+                    Thalhauser Weg 6<br>
+                    51674 Wiehl
+                </p>
+            </section>
+
+            <!-- VERBRAUCHERSTREITBEILEGUNG -->
+            <section class="space-y-2 text-xs text-slate-500 leading-relaxed">
+                <h2 class="text-sm font-bold text-solux-dark">Verbraucherstreitbeilegung / Universalschlichtungsstelle</h2>
+                <p>
+                    Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
+                </p>
+            </section>
+
         </div>
-      </section>
+    </main>
 
-      <!-- Berufsbezeichnung & Gewerbe -->
-      <section>
-        <h2 class="text-lg font-bold text-solux-dark mb-3">Angaben zur Tätigkeit</h2>
-        <p class="text-slate-600">
-          <strong class="text-slate-800">Berufsbezeichnung / Tätigkeit:</strong> IT-Dienstleistungen &amp; EDV-Services (Bundesrepublik Deutschland)
-        </p>
-      </section>
-
-      <!-- Umsatzsteuer -->
-      <section>
-        <h2 class="text-lg font-bold text-solux-dark mb-3">Umsatzsteuer</h2>
-        <p class="text-slate-600">
-          Gemäß <strong class="text-slate-800">§ 19 UStG</strong> wird als Kleinunternehmer keine Umsatzsteuer erhoben und folglich nicht auf Rechnungen ausgewiesen (Kleinunternehmerregelung).
-        </p>
-      </section>
-
-      <!-- Redaktionell Verantwortlicher -->
-      <section>
-        <h2 class="text-lg font-bold text-solux-dark mb-3">Redaktionell verantwortlich</h2>
-        <p class="text-slate-600">
-          [Dein Vor- und Nachname]<br>
-          [Deine Straße und Hausnummer]<br>
-          [PLZ und Ort]
-        </p>
-      </section>
-
-      <!-- EU-Streitschlichtung -->
-      <section>
-        <h2 class="text-lg font-bold text-solux-dark mb-3">EU-Streitschlichtung</h2>
-        <p class="text-slate-600">
-          Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: 
-          <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener noreferrer" class="text-solux-blue hover:underline">https://ec.europa.eu/consumers/odr/</a>.<br>
-          Unsere E-Mail-Adresse finden Sie oben im Impressum.
-        </p>
-      </section>
-
-      <!-- Verbraucherstreitbeilegung -->
-      <section>
-        <h2 class="text-lg font-bold text-solux-dark mb-3">Verbraucherstreitbeilegung / Universalschlichtungsstelle</h2>
-        <p class="text-slate-600">
-          Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
-        </p>
-      </section>
-
-    </div>
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="bg-white border-t border-slate-200 py-10">
-    <div class="max-w-7xl mx-auto px-4 text-center text-slate-500 text-xs">
-      <p>© 2026 Solux IT - Systems & Service. Alle Rechte vorbehalten.</p>
-      <div class="mt-3 flex justify-center gap-6 text-xs text-slate-600">
-        <a href="impressum.html" class="hover:underline text-solux-blue font-semibold">Impressum</a>
-        <a href="datenschutz.html" class="hover:underline">Datenschutz</a>
-      </div>
-    </div>
-  </footer>
+    <!-- FOOTER -->
+    <footer class="bg-white border-t border-gray-200 py-6 text-center text-xs text-slate-400">
+        <div class="max-w-screen-md px-4 mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
+            <span>© 2026 Solux-IT Systeme &amp; Service</span>
+            <div class="space-x-4">
+                <a href="index.html" class="hover:text-solux-blue transition">Startseite</a>
+                <a href="datenschutz.html" class="hover:text-solux-blue transition">Datenschutzerklärung</a>
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>
