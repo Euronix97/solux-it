@@ -2,6 +2,68 @@
 (() => {
   "use strict";
   const EN = {
+  "Fernwartung": "Remote support",
+  "Hilfe bei Software, E-Mail und Einstellungen. Abrechnung in 30-Minuten-Einheiten.": "Help with software, email and settings. Billed in 30-minute units.",
+  "je 30 Minuten": "per 30 minutes",
+  "Anfragen →": "Enquire →",
+  "Vor Ort & Reparatur": "On-site support & repairs",
+  "Reparatur, Einrichtung und WLAN-Hilfe. Abrechnung im 15-Minuten-Takt, zuzüglich vereinbarter Anfahrt.": "Repairs, setup and Wi-Fi support. Billed in 15-minute increments, plus agreed travel costs.",
+  "pro Stunde": "per hour",
+  "ab 590 €": "from €590",
+  "Websites": "Websites",
+  "Für eine kompakte Website mit einer Seite. Weitere Pakete und Leistungsgrenzen finden Sie unten.": "For a compact single-page website. More packages and scope details are listed below.",
+  "vereinbarter Projektumfang": "agreed project scope",
+  "Individuell": "By agreement",
+  "Apps, Shops & Automatisierung": "Apps, shops & automation",
+  "Apps und Webanwendungen nach Angebot; kleine Shops ab 1.990 €, einfache Workflows ab 290 €.": "Apps and web applications quoted individually; small shops from €1,990, simple workflows from €290.",
+  "nach Anforderung": "based on requirements",
+  "PREISE & LEISTUNGSUMFANG": "PRICES & SCOPE",
+  "Klarheit, bevor": "Clarity before",
+  "es losgeht.": "we get started.",
+  "Sie wissen vorher, womit Sie rechnen können. Aufwand, Leistungsumfang und mögliche Zusatzkosten besprechen wir vor dem Start. Eine Anfrage ist noch kein Auftrag.": "Know what to expect in advance. We agree the effort, scope and any additional costs before starting. An enquiry does not place an order.",
+  "IT-Service: Leistungen & Anfahrt": "IT support: services & travel",
+  "Werkstattdiagnose · 29 €": "Workshop diagnosis · €29",
+  "Erste Fehlerprüfung nach Absprache. Bei beauftragter Reparatur wird die Diagnosepauschale angerechnet. Sie fällt auch an, wenn eine Reparatur nicht möglich oder nicht wirtschaftlich ist; weitergehende Prüfungen stimmen wir vorher ab.": "Initial fault assessment by agreement. The diagnosis fee is credited if you commission the repair. It also applies if repair is impossible or uneconomical; further testing is agreed in advance.",
+  "WLAN & Router · 59 € / Stunde": "Wi-Fi & router · €59 / hour",
+  "Einrichtung und Fehlersuche im 15-Minuten-Takt. Router, Repeater und weitere Hardware sind nicht enthalten.": "Setup and troubleshooting in 15-minute increments. Routers, repeaters and other hardware are not included.",
+  "Neugeräte einrichten · ab 89 €": "New device setup · from €89",
+  "Basiseinrichtung eines funktionsfähigen PCs oder Laptops: vorhandenes Betriebssystem einrichten, Updates und bis zu drei Standardprogramme installieren. Datenumzug, Neuinstallation, Lizenzen und zusätzliche Geräte werden separat angeboten.": "Basic setup of one working PC or laptop: configure the existing operating system, install updates and up to three standard applications. Data migration, operating system reinstallation, licences and additional devices are quoted separately.",
+  "Datenumzug · nach Prüfung": "Data migration · after assessment",
+  "Der Preis richtet sich nach Datenmenge, Zustand der Geräte und gewünschtem Umfang. Sie erhalten vor dem Start eine Einschätzung. Keine Datenrettung oder Datensicherung als eigenständige Leistung.": "The price depends on data volume, device condition and the agreed scope. You receive an estimate before work starts. Data recovery and backup are not offered as standalone services.",
+  "IT-Kaufberatung · 29 € / 30 Minuten": "IT purchasing advice · €29 / 30 minutes",
+  "Beratung zu passenden Geräten und sinnvollen Aufrüstungen. Abrechnung in 30-Minuten-Einheiten.": "Advice on suitable devices and worthwhile upgrades. Billed in 30-minute units.",
+  "Anfahrt · Wiehl 10 €": "Travel · Wiehl €10",
+  "Pauschale pro vereinbartem Vor-Ort-Termin innerhalb von Wiehl. Außerhalb von Wiehl stimmen wir die Anfahrt abhängig von der Entfernung vorher ab. Ersatzteile, Softwarelizenzen und zusätzliche Arbeiten werden gesondert vereinbart.": "Flat travel fee per agreed on-site appointment within Wiehl. Outside Wiehl, travel costs are agreed in advance based on distance. Replacement parts, software licences and additional work are agreed separately.",
+  "Digitale Projekte: Pakete & Grenzen": "Digital projects: packages & scope",
+  "Onepager · ab 590 €": "One-page website · from €590",
+  "Eine responsive Seite mit bis zu fünf Inhaltsabschnitten, einem Gestaltungsentwurf und zwei gebündelten Korrekturrunden. Sie liefern fertige Texte, Bilder und rechtliche Inhalte. Keine individuellen Schnittstellen oder Anwendungsfunktionen.": "One responsive page with up to five content sections, one design proposal and two consolidated revision rounds. You provide final copy, images and legal content. Custom integrations and application features are not included.",
+  "Unternehmenswebsite · ab 990 €": "Business website · from €990",
+  "Bis zu fünf Seiten auf einer gemeinsamen Gestaltung, responsive Umsetzung, ein Entwurf und zwei gebündelte Korrekturrunden. Inhalte werden von Ihnen bereitgestellt; zusätzliche Seiten und Funktionen werden separat vereinbart.": "Up to five pages using a shared design, responsive implementation, one proposal and two consolidated revision rounds. You provide the content; extra pages and features are agreed separately.",
+  "Kleiner Onlineshop · ab 1.990 €": "Small online shop · from €1,990",
+  "Einrichtung auf einer bestehenden Shop-Plattform mit Standard-Design, bis zu fünf gelieferten Produkten und jeweils einer unterstützten Zahlungs- und Versandoption. Zwei gebündelte Korrekturrunden. Keine individuelle Warenwirtschaft oder Sonderentwicklung.": "Setup on an existing shop platform using a standard theme, up to five supplied products and one supported payment and shipping option each. Two consolidated revision rounds. Custom inventory systems and bespoke development are not included.",
+  "n8n & Make · ab 290 €": "n8n & Make · from €290",
+  "Ein einfacher Workflow zwischen zwei bestehenden Diensten: ein Auslöser, bis zu drei Verarbeitungsschritte und ein gemeinsam geprüfter Testfall. Zugänge werden von Ihnen bereitgestellt; komplexe Logik und individuelle Schnittstellen nach Angebot.": "One simple workflow between two existing services: one trigger, up to three processing steps and one jointly reviewed test case. You provide account access; complex logic and custom integrations are quoted separately.",
+  "Apps & Webanwendungen · individuelles Angebot": "Apps & web applications · individual quote",
+  "Zuerst klären wir Funktionen, Nutzer, Plattformen und Datenverarbeitung. Danach erhalten Sie ein Angebot mit definiertem Umfang und Meilensteinen.": "We first clarify features, users, platforms and data processing. You then receive a quote with a defined scope and milestones.",
+  "Projektpreise gelten für den beschriebenen Basisumfang. Hosting, Domains, laufende Pflege, Plattformgebühren, Erweiterungen, API-Nutzung und App-Store-Gebühren sind nicht enthalten. Zusätzliche Leistungen werden vorab angeboten.": "Project prices cover the basic scope described above. Hosting, domains, ongoing maintenance, platform fees, extensions, API usage and app store fees are not included. Additional work is quoted in advance.",
+  "Alle genannten Preise sind Endpreise. Gemäß § 19 UStG wird keine Umsatzsteuer berechnet und ausgewiesen.": "All stated prices are final prices. No VAT is charged or shown under Section 19 of the German VAT Act.",
+  "Preise": "Prices",
+  "Unverbindlich": "No obligation",
+  "Automatisierung mit n8n & Make": "Automation with n8n & Make",
+  "Fernwartung kostet 29 € je 30 Minuten, Vor-Ort-Hilfe und Reparaturen 59 € pro Stunde im 15-Minuten-Takt. Anfahrt, Material und zusätzliche Leistungen besprechen wir vorher. Bei Projekten legen wir Umfang und Preis im Angebot fest.": "Remote support costs €29 per 30 minutes; on-site support and repairs cost €59 per hour, billed in 15-minute increments. Travel, materials and additional work are agreed in advance. Project scope and pricing are defined in the quote.",
+  "TRANSPARENTE PREISE": "TRANSPARENT PRICES",
+  "Reparaturen · 59 € / Stunde": "Repairs · €59 / hour",
+  "Abrechnung im 15-Minuten-Takt. Werkstattdiagnose 29 €, bei beauftragter Reparatur angerechnet. Anfahrt und Ersatzteile nach vorheriger Absprache.": "Billed in 15-minute increments. Workshop diagnosis €29, credited if you commission the repair. Travel and replacement parts agreed in advance.",
+  "Endpreise gemäß § 19 UStG, ohne Ausweis von Umsatzsteuer.": "Final prices under Section 19 of the German VAT Act, no VAT shown.",
+  "Preise & Leistungsumfang →": "Prices & scope →",
+  "Abrechnung im 15-Minuten-Takt. Anfahrt in Wiehl 10 € pro Termin; weitere Strecken und benötigte Hardware nach Absprache.": "Billed in 15-minute increments. Travel within Wiehl €10 per appointment; longer distances and hardware agreed separately.",
+  "Fernwartung · 29 € / 30 Minuten": "Remote support · €29 / 30 minutes",
+  "Abrechnung in 30-Minuten-Einheiten ohne Anfahrtskosten. Umfang und voraussichtlichen Aufwand klären wir vor der Verbindung.": "Billed in 30-minute units, with no travel costs. Scope and estimated effort are agreed before connecting.",
+  "Basiseinrichtung eines PCs oder Laptops. Datenumzug wird nach Prüfung separat angeboten. Den genauen Basisumfang finden Sie in der Preisübersicht.": "Basic setup of one PC or laptop. Data migration is quoted separately after assessment. See the price overview for the exact basic scope.",
+  "Unabhängige Empfehlungen für Ihren Bedarf. Abrechnung in 30-Minuten-Einheiten; Anschaffung und Einrichtung sind nicht enthalten.": "Independent recommendations for your needs. Billed in 30-minute units; purchasing and setup are not included.",
+  "Websites ab 590 € · Shops ab 1.990 €": "Websites from €590 · shops from €1,990",
+  "Unternehmenswebsite bis zu fünf Seiten ab 990 €, einfacher n8n- oder Make-Workflow ab 290 €. Apps und Webanwendungen nach individuellem Angebot. Basisumfang und laufende Kosten finden Sie in der Preisübersicht.": "Business websites with up to five pages from €990, simple n8n or Make workflows from €290. Apps and web applications quoted individually. See the price overview for basic scope and recurring costs.",
+
   "Seite nicht gefunden | Solux IT": "Page not found | Solux IT",
   "FEHLER 404": "ERROR 404",
   "Hier geht es nicht weiter.": "This page could not be found.",
@@ -388,3 +450,14 @@
   }
   apply(language === "en" ? "en" : "de", false);
 })();
+
+// Price enquiry links keep the normal anchor fallback when JavaScript is off.
+document.addEventListener('click', event => {
+  const link = event.target.closest('a[data-enquiry]');
+  if (!link) return;
+  const select = document.getElementById('kategorie');
+  if (select && [...select.options].some(option => option.value === link.dataset.enquiry)) {
+    select.value = link.dataset.enquiry;
+    select.dispatchEvent(new Event('change', {bubbles:true}));
+  }
+});
