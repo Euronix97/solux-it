@@ -2305,3 +2305,8 @@ a img.button-image-icon,button img.button-image-icon{display:inline-block;width:
 .service-photo-hero .eyebrow-light{color:#acd4e7}
 @media(max-width:900px){.service-photo-hero{min-height:570px;padding-bottom:72px}.service-photo-hero::before{background:linear-gradient(90deg,#030e1bf5 0%,#030e1bdb 55%,#030e1b80 100%)}.service-photo-hero .inner-hero-grid{max-width:680px}}
 @media(max-width:600px){.service-photo-hero{min-height:560px;padding-top:28px;padding-bottom:64px}.service-photo-hero .back-link{margin-bottom:45px}.service-photo-hero .service-hero-image{object-position:72% center}.service-photo-hero::before{background:linear-gradient(90deg,#030e1bf2,#030e1bd9)}.service-photo-hero h1{font-size:clamp(40px,10.5vw,60px)}.service-photo-hero p{font-size:16px;line-height:1.75}}
+
+/* Tiny embedded previews are visible before the full photographic asset arrives. */
+.service-photo-hero .service-hero-picture{background-size:cover;background-position:68% 48%;background-repeat:no-repeat}
+.hero>.embedded-picture{display:block;position:absolute;inset:0;z-index:0;background-size:cover;background-position:center 48%;background-repeat:no-repeat}
+@media(max-width:600px){.service-photo-hero .service-hero-picture,.hero>.embedded-picture{background-position:72% center}}
