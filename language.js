@@ -732,7 +732,7 @@
   "Der passende PC beginnt bei Ihnen.": "The right PC starts with you.",
   "Wählen Sie ein Nutzungsprofil. Wir zeigen, welche Kriterien bei der Beratung in den Vordergrund rücken.": "Choose a usage profile to see which criteria matter most in our advice.",
   "Die Beispiele sind keine konkrete Kaufempfehlung. Gerätewahl, Anforderungen und Budget besprechen wir individuell.": "These examples are not specific purchase recommendations. We discuss devices, requirements and budget individually.",
-  "Website": "Website",
+  "Website": "website",
   "Onlineshop": "Online shop",
   "Webanwendung": "Web application",
   "Welche digitale Lösung passt zu Ihrer Idee?": "Which digital solution fits your idea?",
@@ -870,7 +870,132 @@
   "Hier liegen Ihre Dateien.": "Your files are here.",
   "Für die Übernahme vorbereitet.": "Prepared for the transfer.",
   "Dateien übernommen und geprüft.": "Files transferred and checked.",
-  "Illustrative, KI-generierte Fotoszene. Voraussetzung sind zugängliche, funktionsfähige Geräte. Keine Datenrettung oder Datensicherung als eigenständige Leistung.": "Illustrative AI-generated photographic scene. Devices must be accessible and functioning. No data recovery or backup as a standalone service."
+  "Illustrative, KI-generierte Fotoszene. Voraussetzung sind zugängliche, funktionsfähige Geräte. Keine Datenrettung oder Datensicherung als eigenständige Leistung.": "Illustrative AI-generated photographic scene. Devices must be accessible and functioning. No data recovery or backup as a standalone service.",
+  "Gerät startet nicht": "Device will not start",
+  "Stromversorgung prüfen": "Check power supply",
+  "Bereit zum Arbeiten": "Ready to work",
+  "Start gemeinsam prüfen": "Check startup together",
+  "Anschluss sitzt nicht vollständig": "Connector is not fully seated",
+  "Anschluss korrigiert": "Connection corrected",
+  "Wohnbereich": "Living area",
+  "Arbeitsplatz": "Workspace",
+  "Verbindung instabil": "Unstable connection",
+  "Ein zusätzlicher Standort verbindet die Bereiche.": "An additional location connects the areas.",
+  "E-Mail-Einstellungen": "Email settings",
+  "Serveradresse": "Server address",
+  "imap.strato.d": "imap.strato.d",
+  "imap.strato.de": "imap.strato.de",
+  "Eine Angabe stimmt noch nicht.": "One detail is not correct yet.",
+  "Funktion gemeinsam testen": "Test the function together",
+  "Ihr Zugriff bleibt unter Ihrer Kontrolle.": "Access remains under your control.",
+  "Projekt.pdf": "Project.pdf",
+  "Quelldatei bleibt erhalten": "Source file remains available",
+  "Zielordner": "Destination folder",
+  "Projektunterlagen": "Project documents",
+  "Was Sie brauchen": "What you need",
+  "Gewicht & Akku": "Weight & battery",
+  "Büro & E-Mail": "Office & email",
+  "Passende Leistung": "Suitable performance",
+  "Vereinbartes Budget": "Agreed budget",
+  "Sinnvolle Ausstattung": "Useful specifications",
+  "Passend zur Nutzung": "Fits the intended use",
+  "Website-Entwurf": "Website draft",
+  "Ihre Leistungen.": "Your services.",
+  "Klar präsentiert.": "Presented clearly.",
+  "Informationen und Kontakt an einem Ort.": "Information and contact in one place.",
+  "Ihr Unternehmen": "Your business",
+  "Neue Kundenanfrage": "New customer enquiry",
+  "Wir brauchen eine neue": "We need a new",
+  "mit Kontaktformular.": "with a contact form.",
+  "Lena · Beispielanfrage": "Lena · example enquiry",
+  "Hallo Lena, gerne besprechen": "Hello Lena, we would be happy",
+  "wir Ihre neue Website.": "to discuss your new website.",
+  "Welche Inhalte wünschen Sie?": "What content would you like?",
+  "Noch nicht versendet": "Not sent",
+  "Webprojekt": "Web project",
+  "Ihre Prüfung und Freigabe": "Your review and approval",
+  "Problem ansehen": "See the problem",
+  "Anschluss prüfen": "Check connection",
+  "Gezielt korrigieren": "Make a targeted correction",
+  "Ergebnis testen": "Test the result",
+  "Der Laptop startet nicht.": "The laptop will not start.",
+  "Wir grenzen die Ursache ein und prüfen den Anschluss.": "We narrow down the cause and check the connection.",
+  "Im Beispiel wird der Anschluss richtig eingesetzt.": "In this example, the connector is seated correctly.",
+  "Wir prüfen gemeinsam, ob das Gerät wieder startet.": "We check together whether the device starts again.",
+  "UNSERE ARBEIT SICHTBAR GEMACHT": "OUR WORK MADE VISIBLE",
+  "Erst die Ursache. Dann die Lösung.": "First the cause. Then the solution.",
+  "Beispiel: Ein Laptop startet nicht, weil der Stromanschluss nicht richtig sitzt.": "Example: a laptop will not start because its power connection is not seated correctly.",
+  "Ablauf ansehen": "Watch the process",
+  "Schritt für Schritt": "Step by step",
+  "Illustratives Beispiel, keine Diagnose Ihres Geräts. Prüfungen, weitere Arbeiten und Kosten stimmen wir vorab ab.": "Illustrative example, not a diagnosis of your device. We agree on checks, further work and costs in advance.",
+  "Ausgangslage": "Starting point",
+  "Räume prüfen": "Review the rooms",
+  "Standort ergänzen": "Add a location",
+  "Verbindung prüfen": "Check the connection",
+  "Am Arbeitsplatz kommt keine stabile Verbindung an.": "The workspace does not receive a stable connection.",
+  "Wir betrachten Standort, Wände und den Verbindungsweg.": "We examine placement, walls and the connection path.",
+  "Ein passender Mesh-Punkt wird eingeplant.": "A suitable mesh point is planned.",
+  "Der zusätzliche Standort verbindet die Bereiche im Beispiel.": "In this example, the additional location connects the areas.",
+  "Sehen, wo die Verbindung fehlt.": "See where the connection is missing.",
+  "Beispiel: Der Arbeitsplatz ist vom Router zu weit entfernt.": "Example: the workspace is too far from the router.",
+  "Schematische Darstellung, keine gemessene Reichweite. Ob Mesh, Kabel oder eine andere Lösung passt, prüfen wir vor Ort.": "Schematic illustration, not a measured range. We check on site whether mesh, a cable or another solution fits.",
+  "Ihr Einverständnis": "Your consent",
+  "Fehler finden": "Find the error",
+  "Angabe korrigieren": "Correct the detail",
+  "Gemeinsam testen": "Test together",
+  "Sie geben die gemeinsame Fernwartung bewusst frei.": "You explicitly authorise the remote support session.",
+  "Wir erkennen die unvollständige Serveradresse.": "We identify the incomplete server address.",
+  "Die Adresse wird im Beispiel vervollständigt.": "The address is completed in this example.",
+  "Wir testen die E-Mail-Funktion und beenden die Sitzung.": "We test the email function and end the session.",
+  "Eine Einstellung. Ein sichtbarer Unterschied.": "One setting. A visible difference.",
+  "Beispiel: In einem E-Mail-Konto fehlt ein Zeichen in der Serveradresse.": "Example: an email account has a missing character in its server address.",
+  "Nur eine Veranschaulichung. Es wird kein Zugriff hergestellt und keine E-Mail gesendet. Zugangsdaten werden nie im Formular abgefragt.": "Illustration only. No access is established and no email is sent. Credentials are never requested in the form.",
+  "Auswählen": "Select",
+  "Übernahme vorbereiten": "Prepare the transfer",
+  "Datei übernehmen": "Transfer the file",
+  "Am Ziel prüfen": "Check at the destination",
+  "Wir legen fest, welche zugänglichen Dateien mitkommen.": "We agree which accessible files to transfer.",
+  "Die Beispieldatei wird für die Übernahme ausgewählt.": "The example file is selected for transfer.",
+  "Dieselbe Datei erscheint im vereinbarten Zielordner.": "The same file appears in the agreed destination folder.",
+  "Die übernommene Datei wird auf dem neuen PC geöffnet.": "The transferred file is opened on the new PC.",
+  "Dieselbe Datei. Am neuen Arbeitsplatz.": "The same file. At your new workspace.",
+  "Verfolgen Sie eine Beispieldatei vom bisherigen PC bis zum Öffnen auf dem neuen Gerät.": "Follow an example file from the previous PC to opening it on the new device.",
+  "Nur eine animierte Veranschaulichung, keine echte Übertragung. Zugängliche, funktionsfähige Geräte sind Voraussetzung. Keine Datenrettung oder Datensicherung als eigenständige Leistung.": "Animated illustration only, not an actual transfer. Accessible, functioning devices are required. No data recovery or backup as a standalone service.",
+  "Wünsche klären": "Clarify needs",
+  "Mobilität betrachten": "Review mobility",
+  "Ausstattung vergleichen": "Compare specifications",
+  "Empfehlung begründen": "Explain the recommendation",
+  "Wir beginnen bei Ihrer Nutzung und Ihrem Budget.": "We start with your usage and budget.",
+  "Für unterwegs betrachten wir Gewicht und Akku.": "For mobile work, we consider weight and battery life.",
+  "Büroaufgaben und Budget bestimmen die sinnvolle Ausstattung.": "Office tasks and budget determine useful specifications.",
+  "Wir besprechen, warum ein Gerät zu Ihrer Nutzung passt.": "We discuss why a device fits your usage.",
+  "Ihre Wünsche werden zur Auswahl.": "Your needs become selection criteria.",
+  "Beispiel: Ein Laptop soll unterwegs und im Büro gut passen.": "Example: a laptop needs to suit mobile and office work.",
+  "Die Geräte sind illustrative Beispiele, keine konkrete Modell- oder Preisempfehlung. Wir beraten passend zu Ihren Anforderungen.": "Devices are illustrative examples, not specific model or price recommendations. Advice is tailored to your requirements.",
+  "Struktur planen": "Plan the structure",
+  "Auftritt gestalten": "Design the presence",
+  "Kontakt ermöglichen": "Enable contact",
+  "Mobil anpassen": "Adapt for mobile",
+  "Wir ordnen Inhalte und Funktionen sinnvoll an.": "We arrange content and features clearly.",
+  "Typografie und Bilder geben dem Entwurf eine klare Gestaltung.": "Typography and images give the draft a clear design.",
+  "Eine verständliche Kontaktmöglichkeit wird ergänzt.": "A clear way to get in touch is added.",
+  "Dieselben Inhalte werden auch auf einem schmalen Bildschirm dargestellt.": "The same content is displayed on a narrow screen too.",
+  "Vom Entwurf zum klaren Auftritt.": "From a draft to a clear presence.",
+  "Dieselben Inhalte erhalten Gestaltung, eine Kontaktmöglichkeit und eine mobile Darstellung.": "The same content gains design, a way to get in touch and a mobile presentation.",
+  "Gestaltungsbeispiel ohne echte Anfrage-, Shop- oder App-Funktion. Den konkreten Umfang planen wir gemeinsam.": "Design example without actual enquiry, shop or app functionality. We plan the specific scope together.",
+  "Nachricht kommt an": "Message arrives",
+  "Thema erkennen": "Identify the topic",
+  "Antwort vorbereiten": "Prepare a reply",
+  "Sie geben frei": "You approve",
+  "Eine neue Website-Anfrage liegt vor.": "A new website enquiry arrives.",
+  "Der Begriff Website führt zur Zuordnung Webprojekt.": "The word website leads to the web project category.",
+  "Die erkannten Angaben fließen in einen passenden Entwurf ein.": "The identified details feed into a suitable reply draft.",
+  "Der Ablauf wartet auf Ihre Prüfung und Freigabe.": "The workflow waits for your review and approval.",
+  "Eine Anfrage wird zum nächsten Schritt.": "An enquiry becomes the next step.",
+  "Sehen Sie, wie aus derselben Nachricht eine Zuordnung und ein Antwortentwurf entstehen.": "See how the same message leads to a category and a reply draft.",
+  "Lokale Beispielanimation: keine echte KI-Auswertung und kein Versand. KI-Agenten und automatische Antworten werden nach benötigtem Umfang separat angeboten.": "Local example animation: no actual AI processing or sending. AI agents and automatic replies are quoted separately according to the required scope.",
+  "Informationen und Kontakt": "Information and contact",
+  "an einem Ort.": "in one place."
 };
   const normalize = value => value.replace(/\s+/g, " ").trim();
   const translated = value => {
@@ -1312,96 +1437,49 @@ document.addEventListener('click', event => {
   update();
 })();
 
-// Editorial workflow workspace: fictional data, manual tabs, no network calls.
+// Seven authored scenes: a single state controls the visible action and its explanation.
 (() => {
-  document.querySelectorAll('.workflow-demo').forEach(demo => {
-    const tabs = [...demo.querySelectorAll('.wf-tab')];
-    const panels = [...demo.querySelectorAll('.wf-panel')];
-    const tablist = demo.querySelector('.wf-tabs');
-    const footer = demo.querySelector('.wf-footer');
-    const back = demo.querySelector('.wf-back');
-    const next = demo.querySelector('.wf-next');
-    const caption = demo.querySelector('.wf-stage-caption');
-    const approve = demo.querySelector('.wf-approve');
-    const approval = demo.querySelector('.wf-approval-status');
-    if (tabs.length !== 4 || panels.length !== 4 || !footer || !back || !next || !approve) return;
-    let current = 0, approved = false, animation = null;
-    const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
-    const text = {
-      de: {next:['Weiter zur Zuordnung','Antwortentwurf ansehen','Zur Freigabe','Beispiel neu starten'], caption:['Die ursprüngliche Nachricht','Die Angaben auf einen Blick','Eine passende Rückmeldung','Ihre Prüfung und Freigabe'], approve:'Freigabe simulieren', approved:'Freigabe simuliert', status:'Im Beispiel freigegeben. Es wurde keine E-Mail versendet.'},
-      en: {next:['Continue to classification','View reply draft','Review and approve','Restart example'], caption:['The original message','Key details at a glance','A suitable reply','Your review and approval'], approve:'Simulate approval', approved:'Approval simulated', status:'Approved in this example. No email has been sent.'}
-    };
-    const render = (animate = false) => {
-      if (animation) { animation.cancel(); animation = null; }
-      const copy = text[document.documentElement.lang === 'en' ? 'en' : 'de'];
-      tabs.forEach((tab,index) => {
-        tab.setAttribute('aria-selected',String(index === current));
-        tab.tabIndex = index === current ? 0 : -1;
-      });
-      panels.forEach((panel,index) => { panel.hidden = index !== current; });
-      back.disabled = current === 0;
-      next.querySelector('span').textContent = copy.next[current];
-      caption.textContent = copy.caption[current];
-      approve.querySelector('span').textContent = approved ? copy.approved : copy.approve;
-      approve.disabled = approved;
-      approval.textContent = approved ? copy.status : '';
-      approve.classList.toggle('is-approved', approved);
-      if (animate && !motion.matches && panels[current].animate) animation = panels[current].animate([{opacity:.35,transform:'translateY(8px)'},{opacity:1,transform:'translateY(0)'}],{duration:180,easing:'ease-out'});
-    };
-    const choose = index => { current = index; render(true); };
-    tabs.forEach((tab,index) => {
-      tab.addEventListener('click',() => choose(index));
-      tab.addEventListener('keydown',event => {
-        let target;
-        if(event.key === 'ArrowRight') target=(index+1)%tabs.length;
-        else if(event.key === 'ArrowLeft') target=(index+tabs.length-1)%tabs.length;
-        else if(event.key === 'Home') target=0;
-        else if(event.key === 'End') target=tabs.length-1;
-        else return;
-        event.preventDefault(); choose(target); tabs[target].focus();
-      });
-    });
-    back.addEventListener('click',() => { if(current>0) { choose(current-1); if(current===0) next.focus(); } });
-    next.addEventListener('click',() => { if(current===3) { approved=false; choose(0); } else choose(current+1); });
-    approve.addEventListener('click',() => { approved=true; render(); panels[3].focus({preventScroll:true}); });
-    document.addEventListener('solux:languagechange',() => render());
-    if(motion.addEventListener) motion.addEventListener('change',()=>render());
-    demo.classList.add('wf-enhanced');
-    tablist.hidden=false; footer.hidden=false; approve.hidden=false;
-    render();
-  });
-})();
-// Explain a concrete before/action/result; a started illustration never contacts a service.
-(() => {
- document.querySelectorAll('[data-clear-demo]').forEach(demo => {
-  const stage=demo.querySelector('.cd-stage'),captions=[...demo.querySelectorAll('[data-cd-caption]')],controls=demo.querySelector('.cd-controls'),action=demo.querySelector('.cd-action'),pause=demo.querySelector('.cd-pause'),status=demo.querySelector('.cd-status');
-  if(!stage||!action||!pause||!status||captions.length!==3)return;
-  const motion=window.matchMedia('(prefers-reduced-motion: reduce)');
-  let state='before',paused=false,timer=null,remaining=3200,due=0;
-  const copy={de:{start:'Beispiel starten',skip:'Ergebnis anzeigen',restart:'Zum Anfang',pause:'Anhalten',resume:'Fortsetzen',paused:'Animation angehalten.'},en:{start:'Start example',skip:'Show result',restart:'Back to start',pause:'Pause',resume:'Resume',paused:'Animation paused.'}};
+ document.querySelectorAll('[data-ax-demo]').forEach(demo => {
+  const captions=[...demo.querySelectorAll('[data-ax-caption]')],stages=[...demo.querySelectorAll('[data-ax-stage]')];
+  const controls=demo.querySelector('.ax-controls'),play=demo.querySelector('.ax-play'),manual=demo.querySelector('.ax-manual'),pause=demo.querySelector('.ax-pause'),status=demo.querySelector('.ax-status'),art=demo.querySelector('.ax-art');
+  if(captions.length!==4||!controls||!play||!manual||!pause||!art)return;
+  const motion=window.matchMedia('(prefers-reduced-motion: reduce)'),small=window.matchMedia('(max-width:650px)');
+  let step=0,timer=null,paused=false,automatic=false,approved=false,remaining=2800,due=0;
+  const words={de:{start:'Ablauf ansehen',next:'Weiter',replay:'Noch einmal',manual:'Schritt für Schritt',pause:'Anhalten',resume:'Fortsetzen',approve:'Freigabe simulieren',approved:'Im Beispiel freigegeben. Es wurde nichts versendet.',paused:'Animation angehalten.'},en:{start:'Watch the process',next:'Next',replay:'Play again',manual:'Step by step',pause:'Pause',resume:'Resume',approve:'Simulate approval',approved:'Approved in this example. Nothing has been sent.',paused:'Animation paused.'}};
   const stop=()=>{if(timer!==null){clearTimeout(timer);timer=null;}};
+  const visualAnimations=()=>art.getAnimations?art.getAnimations({subtree:true}):[];
+  const resumeVisuals=()=>visualAnimations().forEach(animation=>{if(animation.playState==='paused')animation.play();});
+  const resize=()=>{art.setAttribute('viewBox',small.matches?art.dataset.mobileViewbox:'0 0 1000 480');};
   const render=(announce=false)=>{
-   const c=copy[document.documentElement.lang==='en'?'en':'de'];
-   stage.dataset.state=state;stage.classList.toggle('is-paused',paused);
-   captions.forEach(el=>el.hidden=el.dataset.cdCaption!==state);
-   action.textContent=state==='before'?c.start:state==='after'?c.restart:paused?c.resume:c.skip;
-   pause.hidden=state!=='working'||paused||motion.matches;
-   pause.textContent=c.pause;
-   if(announce)status.textContent=paused?c.paused:captions.find(el=>el.dataset.cdCaption===state).querySelector('h3').textContent;
+   const w=words[document.documentElement.lang==='en'?'en':'de'];
+   demo.dataset.step=String(step);demo.classList.toggle('ax-paused',paused);demo.classList.toggle('ax-approved',approved);
+   captions.forEach((caption,index)=>caption.hidden=index!==step);
+   stages.forEach((stage,index)=>{if(index===step)stage.setAttribute('aria-current','step');else stage.removeAttribute('aria-current');stage.classList.toggle('ax-done',index<step);});
+   play.textContent=paused?w.resume:step===0?w.start:step===3?(demo.dataset.axDemo==='automation'&&!approved?w.approve:w.replay):w.next;
+   manual.textContent=w.manual;manual.hidden=step!==0;pause.textContent=w.pause;pause.hidden=!automatic||paused||step===0||step===3||motion.matches;
+   if(announce)status.textContent=paused?w.paused:approved?w.approved:captions[step].querySelector('p').textContent;
+   if(approved)captions[3].querySelector('p').textContent=w.approved;
   };
-  const finish=()=>{stop();state='after';paused=false;render(true);};
-  const schedule=()=>{stop();if(motion.matches||paused)return;due=Date.now()+remaining;timer=setTimeout(finish,remaining);};
-  action.addEventListener('click',()=>{
-   if(state==='before'){state='working';paused=false;remaining=3200;render(true);schedule();}
-   else if(state==='after'){stop();state='before';paused=false;render(true);}
-   else if(paused){paused=false;render(true);schedule();}
-   else finish();
+  // Keep the original approval sentence independently of the language text walker.
+  const approvalCopy={de:'Der Ablauf wartet auf Ihre Prüfung und Freigabe.',en:'The workflow waits for your review and approval.'};
+  const restoreApproval=()=>{if(demo.dataset.axDemo==='automation')captions[3].querySelector('p').textContent=approvalCopy[document.documentElement.lang==='en'?'en':'de'];};
+  const schedule=()=>{stop();if(!automatic||paused||motion.matches||step===0||step===3)return;due=Date.now()+remaining;timer=setTimeout(()=>advance(),remaining);};
+  const advance=()=>{stop();if(step<3){step++;paused=false;remaining=step===2?3200:2800;render(true);schedule();}};
+  const start=auto=>{automatic=auto&&!motion.matches;approved=false;restoreApproval();step=1;paused=false;remaining=2800;render(true);schedule();};
+  play.addEventListener('click',()=>{
+   if(step===0)start(true);
+   else if(paused){paused=false;resumeVisuals();render(true);schedule();}
+   else if(step<3)advance();
+   else if(demo.dataset.axDemo==='automation'&&!approved){approved=true;render(true);}
+   else{stop();step=0;approved=false;paused=false;automatic=false;restoreApproval();render(true);}
   });
-  const hold=()=>{if(state!=='working'||paused)return;if(timer!==null)remaining=Math.max(0,due-Date.now());stop();paused=true;render(true);};
-  pause.addEventListener('click',()=>{hold();action.focus();});
+  manual.addEventListener('click',()=>{start(false);play.focus();});
+  const hold=()=>{if(step===0||step===3||paused||!automatic)return;if(timer!==null)remaining=Math.max(0,due-Date.now());stop();paused=true;visualAnimations().forEach(animation=>animation.pause());render(true);};
+  pause.addEventListener('click',()=>{hold();play.focus();});
   document.addEventListener('visibilitychange',()=>{if(document.hidden)hold();});
-  document.addEventListener('solux:languagechange',()=>render(Boolean(status.textContent)));
-  if(motion.addEventListener)motion.addEventListener('change',()=>{stop();if(state==='working'){paused=false;render(true);if(!motion.matches)schedule();}});
-  demo.classList.add('cd-enhanced');controls.hidden=false;render();
+  document.addEventListener('solux:languagechange',()=>{if(!approved)restoreApproval();render(Boolean(status.textContent));});
+  if(motion.addEventListener)motion.addEventListener('change',()=>{hold();if(motion.matches){automatic=false;paused=false;resumeVisuals();render(true);if(document.activeElement===pause)play.focus();}});
+  if(small.addEventListener)small.addEventListener('change',resize);
+  demo.classList.add('ax-enhanced');controls.hidden=false;resize();render();
  });
 })();
