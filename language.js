@@ -617,7 +617,128 @@
   "Beispieldaten · keine echte E-Mail": "Example data · not a real email",
   "Zurück": "Back",
   "Weiter zur Zuordnung": "Continue to classification",
-  "Dies ist eine interaktive Veranschaulichung. Es wird keine KI aufgerufen und keine E-Mail versendet. Den tatsächlichen Ablauf, erforderliche Dienste und Kosten stimmen wir für Ihr Projekt ab.": "This is an interactive illustration. No AI is called and no email is sent. We agree on the actual workflow, required services and costs for your project."
+  "Dies ist eine interaktive Veranschaulichung. Es wird keine KI aufgerufen und keine E-Mail versendet. Den tatsächlichen Ablauf, erforderliche Dienste und Kosten stimmen wir für Ihr Projekt ab.": "This is an interactive illustration. No AI is called and no email is sent. We agree on the actual workflow, required services and costs for your project.",
+  "BEISPIEL EINER FEHLERPRÜFUNG": "EXAMPLE TROUBLESHOOTING",
+  "Erst prüfen. Dann gezielt verbessern.": "Check first. Then improve.",
+  "Autostart & Hintergrundprogramme": "Startup & background programs",
+  "Freier Speicher & Laufwerkszustand": "Available storage & drive condition",
+  "Temperaturen & Systemauslastung": "Temperatures & system load",
+  "Wir unterscheiden zwischen Softwareproblemen und möglichen Hardwareursachen. Erst nach der Prüfung empfehlen wir die passenden nächsten Schritte.": "We distinguish software problems from possible hardware causes. After checking, we recommend suitable next steps.",
+  "Die Ursache Schritt für Schritt eingrenzen.": "Narrow down the cause step by step.",
+  "Stromversorgung & Anschlüsse": "Power supply & connections",
+  "Startverhalten & Fehlermeldungen": "Startup behaviour & error messages",
+  "Hardwareprüfung nach Absprache": "Hardware checks by agreement",
+  "Ein schwarzer Bildschirm bedeutet nicht automatisch einen Defekt. Wir prüfen zunächst die einfachen Ursachen und besprechen weitere Arbeiten vorab.": "A black screen does not automatically mean a fault. We check simple causes first and discuss further work in advance.",
+  "Kühlung und Belastung betrachten.": "Review cooling and workload.",
+  "Lüftungswege & sichtbare Verschmutzung": "Airflow & visible dust",
+  "Lüfterverhalten & Temperaturen": "Fan behaviour & temperatures",
+  "Auslastung bei typischer Nutzung": "Load during typical use",
+  "Wir prüfen, ob Einstellungen, Reinigung oder weitere Arbeiten sinnvoll sind. Ob eine Reparatur wirtschaftlich ist, klären wir gemeinsam.": "We check whether settings, cleaning or further work would help. We discuss whether a repair is worthwhile together.",
+  "Schematische Wohnung, kein gemessener WLAN-Plan": "Schematic home, not a measured Wi-Fi map",
+  "Wohnzimmer": "Living room",
+  "Router": "Router",
+  "Arbeitszimmer": "Office",
+  "Beispielbereich": "Example area",
+  "Flur": "Hallway",
+  "Schlafzimmer": "Bedroom",
+  "Entfernung und Wände können stören.": "Distance and walls can interfere.",
+  "Ein Router im Wohnzimmer erreicht nicht jeden Raum gleich gut. Wir prüfen Aufstellort, bauliche Gegebenheiten und die tatsächlichen Verbindungen.": "A router in the living room may not reach every room equally well. We check its position, the building layout and the actual connections.",
+  "Mesh-Punkt": "Mesh point",
+  "Abdeckung passend zur Wohnung planen.": "Plan coverage for your home.",
+  "Ein sinnvoll platzierter Mesh-Punkt kann die Reichweite verbessern. Anzahl, Standort und eine mögliche Kabelverbindung hängen von Ihren Räumen und Geräten ab.": "A well-placed mesh point can improve coverage. The number, position and possible wired connections depend on your rooms and devices.",
+  "BEISPIEL EINER SITZUNG": "EXAMPLE SESSION",
+  "Freigabe durch Sie": "Permission from you",
+  "Sie geben den Zugriff bewusst frei.": "You explicitly allow access.",
+  "Wir vereinbaren einen Termin und erklären den Verbindungsaufbau. Die Sitzung beginnt erst mit Ihrer Zustimmung. Passwörter senden Sie uns nicht per E-Mail.": "We arrange a time and explain how to connect. The session starts only with your agreement. Do not send passwords by email.",
+  "Problem gemeinsam ansehen": "Review the problem together",
+  "Sie sehen, was wir machen.": "You can see what we do.",
+  "Wir besprechen die Fehlermeldung und prüfen gemeinsam die passenden Einstellungen. Sie bleiben dabei und können den Zugriff beenden.": "We discuss the error and check relevant settings together. You remain present and can end access.",
+  "Ergebnis prüfen & Sitzung beenden": "Check the result & end the session",
+  "Zum Schluss testen wir gemeinsam.": "We test together at the end.",
+  "Wir prüfen, ob die vereinbarten Schritte geholfen haben, erklären das Ergebnis und beenden die Fernwartung. Falls mehr nötig ist, besprechen wir die nächsten Schritte.": "We check whether the agreed steps helped, explain the result and end the remote session. If more work is needed, we discuss next steps.",
+  "Bisheriger PC": "Previous PC",
+  "Neuer PC": "New PC",
+  "Mitnehmen, was Sie benötigen.": "Bring the files you need.",
+  "Dokumente, Fotos und ausgewählte Ordner können von zugänglichen, funktionsfähigen Geräten übernommen werden. Was mitkommt und wohin es gehört, legen wir vorher fest.": "Documents, photos and selected folders can be transferred from accessible, functioning devices. We agree beforehand what to transfer and where it belongs.",
+  "Programme brauchen oft eine neue Installation.": "Programs often need a fresh installation.",
+  "Installierte Programme lassen sich nicht immer einfach kopieren. Wir prüfen benötigte Installationen, vorhandene Lizenzen und passende Einstellungen.": "Installed programs cannot always simply be copied. We check required installations, available licences and appropriate settings.",
+  "Sie behalten die Kontrolle über Ihre Zugänge.": "You keep control of account access.",
+  "E-Mail, Browser und weitere Konten richten wir nach Absprache ein. Anmeldungen und Zwei-Faktor-Freigaben nehmen Sie selbst vor. Passwörter gehören nicht ins Anfrageformular.": "We set up email, browsers and other accounts as agreed. You sign in and complete two-factor approvals yourself. Do not put passwords in the enquiry form.",
+  "DARAUF ACHTEN WIR": "WHAT WE LOOK FOR",
+  "Zuverlässig für die täglichen Aufgaben.": "Reliable for daily tasks.",
+  "Flüssiges Arbeiten im Browser & Office": "Smooth browsing & office work",
+  "SSD und ausreichend Arbeitsspeicher": "SSD and sufficient memory",
+  "Passende Anschlüsse & guter Bildschirm": "Suitable ports & a good display",
+  "Wir achten auf sinnvolle Ausstattung statt auf die größte Zahl im Datenblatt. Auch Lautstärke, Bedienkomfort und Ihr Budget spielen eine Rolle.": "We focus on useful specifications rather than the biggest numbers on a spec sheet. Noise, comfort and your budget matter too.",
+  "Ein Gerät, das zu Ihrem Alltag passt.": "A device that fits your day.",
+  "Gewicht & Größe": "Weight & size",
+  "Akkulaufzeit bei Ihrer Nutzung": "Battery life for your use",
+  "Tastatur, Ladegerät & Anschlüsse": "Keyboard, charger & ports",
+  "Ein mobiler Rechner muss nicht nur schnell sein. Wir vergleichen Ausstattung und praktische Eigenschaften anhand Ihrer typischen Nutzung.": "A mobile computer needs more than speed. We compare specifications and practical qualities against your typical use.",
+  "Mehr Spielraum für anspruchsvolle Aufgaben.": "More headroom for demanding tasks.",
+  "Anforderungen Ihrer Programme": "Requirements of your software",
+  "Arbeitsspeicher & Erweiterbarkeit": "Memory & upgrade options",
+  "Leistung, Kühlung & Speicherplatz": "Performance, cooling & storage",
+  "Ob Entwicklung, virtuelle Maschinen oder andere Projekte: Wir klären erst die Anforderungen. Danach empfehlen wir eine passende Ausstattung.": "Whether development, virtual machines or other projects, we clarify the requirements first, then recommend suitable specifications.",
+  "KLAR. PERSÖNLICH. DIGITAL.": "CLEAR. PERSONAL. DIGITAL.",
+  "Ihr Unternehmen.\nEin klarer Auftritt.": "Your business.\nA clear presence.",
+  "GESTALTUNGSBEISPIEL": "DESIGN EXAMPLE",
+  "Kollektion": "Collection",
+  "Leuchte": "Lamp",
+  "Vase": "Vase",
+  "Stuhl": "Chair",
+  "Produkte übersichtlich präsentieren": "Present products clearly",
+  "Ihre Projekte": "Your projects",
+  "Website planen": "Plan website",
+  "In Arbeit": "In progress",
+  "Inhalte abstimmen": "Agree on content",
+  "Offen": "Open",
+  "Entwurf prüfen": "Review design",
+  "Geplant": "Planned",
+  "Ein Auftritt mit klarer Orientierung.": "A presence with clear navigation.",
+  "Leistungen, Informationen und Kontaktmöglichkeiten werden verständlich angeordnet. Gestaltung und Inhalte richten sich nach Ihrem Unternehmen.": "Services, information and ways to get in touch are arranged clearly. Design and content are tailored to your business.",
+  "Produkte zeigen. Kaufwege durchdenken.": "Show products. Plan the buying journey.",
+  "Wir besprechen Produktdarstellung, die passende Shop-Plattform sowie benötigte Zahlungs- und Versandoptionen. Der konkrete Umfang wird vorher vereinbart.": "We discuss product presentation, the right shop platform and required payment and shipping options. The specific scope is agreed beforehand.",
+  "Eine Oberfläche für Ihre Aufgaben.": "An interface for your tasks.",
+  "Wenn eine klassische Website nicht reicht, planen wir passende Anwendungsfunktionen. Nutzer, Daten und Schnittstellen klären wir vor der Umsetzung.": "When a standard website is not enough, we plan suitable application features. We clarify users, data and integrations before implementation.",
+  "PC ist langsam": "Slow PC",
+  "PC startet nicht": "PC will not start",
+  "Gerät wird heiß": "Device runs hot",
+  "EINBLICK IN UNSERE ARBEIT": "A LOOK AT OUR WORK",
+  "Was macht Ihr PC gerade?": "What is your PC doing?",
+  "Wählen Sie ein typisches Problem und sehen Sie, wie wir eine Prüfung angehen.": "Choose a typical problem and see how we approach troubleshooting.",
+  "Beispiel auswählen": "Choose an example",
+  "Die Beispiele ersetzen keine Diagnose. Arbeiten und mögliche Kosten stimmen wir vorab ab.": "These examples do not replace a diagnosis. We agree on work and possible costs in advance.",
+  "Nur ein Router": "One router",
+  "Mit geplantem Mesh": "With planned mesh",
+  "Gutes WLAN beginnt mit dem Standort.": "Good Wi-Fi starts with placement.",
+  "Vergleichen Sie zwei schematische Situationen. So wird verständlich, weshalb ein zusätzlicher Punkt sinnvoll sein kann.": "Compare two schematic situations to see why an additional access point may help.",
+  "Die Darstellung ist eine Illustration, keine Messung oder Zusage für eine bestimmte Reichweite.": "This is an illustration, not a measurement or a promise of a specific range.",
+  "Verbindung": "Connection",
+  "Gemeinsam prüfen": "Check together",
+  "Abschluss": "Finish",
+  "So läuft eine Fernwartung ab.": "How a remote session works.",
+  "Gehen Sie den Ablauf in Ruhe durch – von Ihrer Freigabe bis zum gemeinsamen Abschlusstest.": "Explore the process at your pace, from granting access to testing together at the end.",
+  "Dies ist eine Veranschaulichung. Es wird keine Verbindung hergestellt und kein Gerät geprüft.": "This is an illustration. No connection is established and no device is checked.",
+  "Dateien": "Files",
+  "Programme": "Programs",
+  "Konten & Zugänge": "Accounts & access",
+  "Was zieht auf Ihren neuen PC mit?": "What moves to your new PC?",
+  "Dateien, Programme und Konten brauchen unterschiedliche Schritte. Sehen Sie, worauf es jeweils ankommt.": "Files, programs and accounts need different steps. Explore what matters for each.",
+  "Umzug zugänglicher Daten nach Prüfung. Keine Datenrettung oder Datensicherung als eigenständige Leistung.": "Transfer of accessible data after review. No data recovery or backup as a standalone service.",
+  "Alltag & Büro": "Everyday & office",
+  "Unterwegs": "On the go",
+  "Entwicklung & Projekte": "Development & projects",
+  "Der passende PC beginnt bei Ihnen.": "The right PC starts with you.",
+  "Wählen Sie ein Nutzungsprofil. Wir zeigen, welche Kriterien bei der Beratung in den Vordergrund rücken.": "Choose a usage profile to see which criteria matter most in our advice.",
+  "Die Beispiele sind keine konkrete Kaufempfehlung. Gerätewahl, Anforderungen und Budget besprechen wir individuell.": "These examples are not specific purchase recommendations. We discuss devices, requirements and budget individually.",
+  "Website": "Website",
+  "Onlineshop": "Online shop",
+  "Webanwendung": "Web application",
+  "Welche digitale Lösung passt zu Ihrer Idee?": "Which digital solution fits your idea?",
+  "Wechseln Sie zwischen drei Gestaltungsbeispielen. So sehen Sie, wie sich Website, Shop und Anwendung unterscheiden.": "Switch between three design examples to see how websites, shops and applications differ.",
+  "Die Vorschauen sind Gestaltungsbeispiele ohne echte Shop- oder Anwendungsfunktionen. Individuelle Funktionen erhalten ein abgestimmtes Angebot.": "These are design examples without actual shop or application features. Individual features are covered by an agreed quote.",
+  "Ihr Unternehmen. Ein klarer Auftritt.": "Your business.\nA clear presence."
 };
   const normalize = value => value.replace(/\s+/g, " ").trim();
   const translated = value => {
@@ -1115,6 +1236,34 @@ document.addEventListener('click', event => {
     if(motion.addEventListener) motion.addEventListener('change',()=>render());
     demo.classList.add('wf-enhanced');
     tablist.hidden=false; footer.hidden=false; approve.hidden=false;
+    render();
+  });
+})();
+// Service-specific illustrations: local choices only, no diagnostics or remote access.
+(() => {
+  document.querySelectorAll('[data-service-demo]').forEach(example => {
+    const choices = [...example.querySelectorAll('.sx-choice')];
+    const panels = [...example.querySelectorAll('.sx-panel')];
+    const controls = example.querySelector('.sx-controls');
+    const announcement = example.querySelector('.sx-announcement');
+    if (!controls || choices.length !== panels.length || !choices.length) return;
+    let selected = 0, animation = null;
+    const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const render = (announce = false) => {
+      if (animation) {animation.cancel();animation=null;}
+      choices.forEach((choice,index) => choice.setAttribute('aria-pressed',String(index === selected)));
+      panels.forEach((panel,index) => {panel.hidden = index !== selected;});
+      if (announce && announcement) announcement.textContent = panels[selected].querySelector('h3').textContent;
+      if (announce && !motion.matches && panels[selected].animate) animation=panels[selected].animate([{opacity:.4,transform:'translateY(6px)'},{opacity:1,transform:'translateY(0)'}],{duration:180,easing:'ease-out'});
+    };
+    choices.forEach((choice,index) => choice.addEventListener('click',() => {
+      if (selected === index) return;
+      selected=index;render(true);
+    }));
+    document.addEventListener('solux:languagechange',()=>render(Boolean(announcement && announcement.textContent)));
+    if (motion.addEventListener) motion.addEventListener('change',()=>render());
+    example.classList.add('sx-enhanced');
+    controls.hidden=false;
     render();
   });
 })();
