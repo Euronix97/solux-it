@@ -81,9 +81,9 @@
   "Endpreise gemäß § 19 UStG, ohne Ausweis von Umsatzsteuer.": "Final prices under Section 19 of the German VAT Act, no VAT shown.",
   "Workflow anfragen →": "Enquire about a workflow →",
   "GUT ZU WISSEN": "GOOD TO KNOW",
-  "Häufige Fragen.": "Common questions.",
+  "Häufige Fragen.": "Frequently asked questions.",
   "Klare Antworten.": "Clear answers.",
-  "Welchen Arbeitsschritt würden Sie gerne vereinfachen? Beschreiben Sie uns Ihren Ablauf.": "Which task would you like to simplify? Tell me about your process.",
+  "Welchen Arbeitsschritt würden Sie gerne vereinfachen? Beschreiben Sie uns Ihren Ablauf.": "Which task would you like to simplify? Tell us about your process.",
   "Ablauf besprechen →": "Discuss your process →",
   "Was kann automatisiert werden?": "What can be automated?",
   "Wiederkehrende Aufgaben mit klaren Eingaben und Regeln eignen sich besonders gut. Ob E-Mail, Formular, Tabelle oder CRM: Entscheidend sind die verfügbaren Schnittstellen. Wir prüfen den konkreten Ablauf vorab.": "Recurring tasks with clear inputs and rules are particularly suitable. Whether email, forms, spreadsheets or a CRM, available interfaces are key. We review the specific process in advance.",
@@ -995,7 +995,24 @@
   "Sehen Sie, wie aus derselben Nachricht eine Zuordnung und ein Antwortentwurf entstehen.": "See how the same message leads to a category and a reply draft.",
   "Lokale Beispielanimation: keine echte KI-Auswertung und kein Versand. KI-Agenten und automatische Antworten werden nach benötigtem Umfang separat angeboten.": "Local example animation: no actual AI processing or sending. AI agents and automatic replies are quoted separately according to the required scope.",
   "Informationen und Kontakt": "Information and contact",
-  "an einem Ort.": "in one place."
+  "an einem Ort.": "in one place.",
+  "IT-Hilfe oder ein digitales Projekt?": "IT help or a digital project?",
+  "So geht es nach Ihrer Anfrage weiter.": "What happens after your enquiry.",
+  "Preise und Leistungsumfang.": "Prices and scope of services.",
+  "IT-Service in Wiehl und Umgebung. Wir helfen bei Computer- und Netzwerkproblemen, entwickeln Websites, Apps und Onlineshops und vereinfachen wiederkehrende Aufgaben. Persönlich und verständlich – vor Ort oder per Fernwartung nach Absprache.": "IT support in Wiehl and the surrounding area. We help with computer and network problems, develop websites, apps and online shops, and simplify recurring tasks. Personal, clear support – on site or remotely by arrangement.",
+  "Wir klären zuerst Ihr Anliegen und erklären die nächsten Schritte samt Aufwand.": "We first clarify your needs and explain the next steps and the work involved.",
+  "Geräte und Aufrüstungen passend zu Ihrer Nutzung und Ihrem Budget auswählen.": "Choose devices and upgrades to suit your usage and budget.",
+  "Technik auswählen, die zu Ihnen passt.": "Choose technology that suits your needs.",
+  "Ihr Anliegen klären und das Vorgehen abstimmen.": "Clarify your needs and agree on the next steps.",
+  "Computerprobleme gezielt prüfen.": "Check computer problems carefully.",
+  "Ein langsamer oder ausgefallener Rechner muss nicht sofort ersetzt werden. Wir prüfen die Ursache und besprechen mit Ihnen, ob Reparatur, Aufrüstung oder ein neues Gerät sinnvoll ist.": "A slow or failed computer does not necessarily need replacing. We check the cause and discuss whether repair, an upgrade or a new device makes sense.",
+  "Wiederkehrende Aufgaben einfacher erledigen.": "Make recurring tasks easier.",
+  "KI-Agenten verständlich erklärt.": "AI agents explained clearly.",
+  "Was ein KI-Agent übernehmen kann": "What an AI agent can handle",
+  "IT-Hilfe direkt am Bildschirm.": "IT help directly on your screen.",
+  "WLAN und Netzwerk passend einrichten.": "Set up Wi-Fi and networking to suit your needs.",
+  "Websites, Apps und Shops nach Ihrem Bedarf.": "Websites, apps and shops tailored to your needs.",
+  "Den neuen PC startklar machen.": "Get your new PC ready to use."
 };
   const normalize = value => value.replace(/\s+/g, " ").trim();
   const translated = value => {
