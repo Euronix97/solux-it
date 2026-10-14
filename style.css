@@ -2866,3 +2866,27 @@ a img.button-image-icon,button img.button-image-icon{display:inline-block;width:
 .site-refined .tech-source-footer p{font-size:12px;line-height:1.8;color:#b4c8d7;margin:0}
 .site-refined .tech-source-footer p+p{margin-top:6px}
 .site-refined .tech-source-footer a{text-decoration:underline;text-underline-offset:3px}
+
+/* Homepage entrance refinement only; service pages and team page keep their design. */
+.home-entry-refined .hero-grid{min-height:0;padding-top:72px;padding-bottom:80px}
+.home-entry-refined .hero-copy{max-width:700px;min-width:0;padding-bottom:0}
+.home-entry-refined .hero-copy>.hero-location{max-width:100%;margin:0;color:#b7ddec;font-size:14px;font-weight:600;line-height:1.6;letter-spacing:.025em}
+.home-entry-refined .hero h1{font-size:clamp(44px,5.2vw,70px);line-height:1.1;letter-spacing:-.045em;font-weight:750;margin:18px 0 24px;overflow-wrap:normal}
+.home-entry-refined .hero-copy>p:not(.hero-location){max-width:560px;color:#d2e2ec;font-size:17px;line-height:1.8;margin:0 0 30px}
+.home-entry-refined .hero-actions{gap:14px}
+.home-entry-refined .hero-actions .button{min-height:48px;font-size:14px;font-weight:650}
+.home-entry-refined .proof-inner>div{padding-top:22px;padding-bottom:24px;row-gap:5px}
+.home-entry-refined .hero-actions a:focus-visible{outline:3px solid #fff;outline-offset:5px}
+@media(max-width:1100px){
+ .home-entry-refined .hero-grid{padding-top:60px;padding-bottom:64px}
+ .home-entry-refined .hero-copy{max-width:650px}
+}
+@media(max-width:650px){
+ .home-entry-refined .hero-grid{padding-top:44px;padding-bottom:52px}
+ .home-entry-refined .hero-copy>.hero-location{font-size:13px;letter-spacing:.015em}
+ .home-entry-refined .hero h1{font-size:clamp(38px,9.7vw,60px);line-height:1.1;margin:16px 0 22px}
+ .home-entry-refined .hero-copy>p:not(.hero-location){font-size:16px;line-height:1.75;margin-bottom:26px}
+ .home-entry-refined .hero-actions{gap:12px}
+ .home-entry-refined .hero-actions .button{padding:14px 17px}
+ .home-entry-refined .proof-inner>div{padding-top:16px;padding-bottom:18px}
+}

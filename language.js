@@ -1015,7 +1015,11 @@
   "Den neuen PC startklar machen.": "Get your new PC ready to use.",
   "monochrom angepasst": "adapted to monochrome",
   "Hilfe bei Software, E-Mail und Einstellungen. Abrechnung in 30-Minuten-Einheiten – kurze Einsätze werden nicht pauschal als volle Stunde berechnet.": "Help with software, email and settings. Billed in 30-minute units – short sessions are not automatically charged as a full hour.",
-  "Reparatur, Einrichtung und WLAN-Hilfe. Abrechnung im 15-Minuten-Takt – kurze Einsätze werden nicht pauschal als volle Stunde berechnet. Zuzüglich vereinbarter Anfahrt.": "Repairs, setup and Wi-Fi support. Billed in 15-minute units – short visits are not automatically charged as a full hour. Agreed travel charges apply separately."
+  "Reparatur, Einrichtung und WLAN-Hilfe. Abrechnung im 15-Minuten-Takt – kurze Einsätze werden nicht pauschal als volle Stunde berechnet. Zuzüglich vereinbarter Anfahrt.": "Repairs, setup and Wi-Fi support. Billed in 15-minute units – short visits are not automatically charged as a full hour. Agreed travel charges apply separately.",
+  "IT-Service & digitale Lösungen in Wiehl": "IT support & digital solutions in Wiehl",
+  "Wir helfen bei PC- und WLAN-Problemen und setzen Websites, Apps und Automatisierungen um. Persönlich, verständlich und nach Absprache vor Ort oder per Fernwartung.": "We help with PC and Wi-Fi problems and build websites, apps and automations. Personal, clear support – on site or remotely by arrangement.",
+  "Vorher abgestimmt": "Agreed beforehand",
+  "Vorgehen und mögliche Kosten klären wir mit Ihnen.": "We agree the approach and potential costs with you."
 };
   const normalize = value => value.replace(/\s+/g, " ").trim();
   const translated = value => {
