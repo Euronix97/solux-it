@@ -738,7 +738,80 @@
   "Welche digitale Lösung passt zu Ihrer Idee?": "Which digital solution fits your idea?",
   "Wechseln Sie zwischen drei Gestaltungsbeispielen. So sehen Sie, wie sich Website, Shop und Anwendung unterscheiden.": "Switch between three design examples to see how websites, shops and applications differ.",
   "Die Vorschauen sind Gestaltungsbeispiele ohne echte Shop- oder Anwendungsfunktionen. Individuelle Funktionen erhalten ein abgestimmtes Angebot.": "These are design examples without actual shop or application features. Individual features are covered by an agreed quote.",
-  "Ihr Unternehmen. Ein klarer Auftritt.": "Your business.\nA clear presence."
+  "Ihr Unternehmen. Ein klarer Auftritt.": "Your business.\nA clear presence.",
+  "Autostart – schematisches Beispiel": "Startup – schematic example",
+  "Benötigte Programme": "Required programs",
+  "Starten automatisch": "Start automatically",
+  "Bleiben aktiv": "Remain enabled",
+  "Unnötige Zusatzprogramme": "Unnecessary extra programs",
+  "Starten ebenfalls mit": "Also start automatically",
+  "Autostart deaktiviert": "Startup disabled",
+  "Router im Wohnzimmer": "Router in living room",
+  "Wände & Entfernung": "Walls & distance",
+  "Verbindung schwach": "Weak connection",
+  "Besser angebunden": "Better connected",
+  "Mesh-Punkt passend platziert": "Mesh point positioned appropriately",
+  "E-Mail-Einrichtung – Beispiel": "Email setup – example",
+  "Ihr E-Mail-Konto": "Your email account",
+  "Einrichtung unvollständig": "Setup incomplete",
+  "Einstellungen korrigiert": "Settings corrected",
+  "Gemeinsamer Funktionstest": "Test together",
+  "Ausgewählte Dateien": "Selected files",
+  "Dateien liegen noch auf dem alten PC": "Files are still on the old PC",
+  "Dateien am vereinbarten Ort übernommen": "Files transferred to the agreed location",
+  "Unterwegs arbeiten": "Work on the go",
+  "Gewicht & Akku vergleichen": "Compare weight & battery",
+  "Office & E-Mail nutzen": "Use office tools & email",
+  "Leistung passend auswählen": "Choose suitable performance",
+  "Eigene Wünsche & Budget": "Your needs & budget",
+  "Passende Auswahl besprechen": "Discuss suitable options",
+  "Ihr Logo": "Your logo",
+  "IHR UNTERNEHMEN": "YOUR BUSINESS",
+  "Ihre Texte": "Your copy",
+  "Leistungen klar präsentieren": "Present services clearly",
+  "Ihre Kontaktdaten": "Your contact details",
+  "AUSGANGSLAGE": "STARTING POINT",
+  "Viele Programme starten gleichzeitig.": "Many programs start at once.",
+  "UNSER ANSATZ": "OUR APPROACH",
+  "Wir prüfen, welche Programme wirklich gebraucht werden.": "We check which programs are actually needed.",
+  "BEISPIELERGEBNIS": "EXAMPLE RESULT",
+  "Unnötige Autostarts sind reduziert.": "Unnecessary startup programs are reduced.",
+  "SO KANN UNSERE HILFE AUSSEHEN": "WHAT OUR HELP CAN LOOK LIKE",
+  "Was bringt eine gezielte PC-Prüfung?": "What does targeted troubleshooting do?",
+  "Beispiel: Unnötige Programme bremsen den Start.": "Example: unnecessary programs slow startup.",
+  "Beispiel starten": "Start example",
+  "Anhalten": "Pause",
+  "Ein mögliches Beispiel, keine Diagnose Ihres PCs und keine Zusage für eine bestimmte Geschwindigkeit.": "One possible example, not a diagnosis of your PC or a promise of a specific speed.",
+  "Ein Router erreicht nicht jeden Raum gleich gut.": "One router does not reach every room equally well.",
+  "Wir prüfen Räume und planen einen passenden Standort.": "We review the rooms and plan a suitable location.",
+  "Ein Mesh-Punkt ergänzt die Verbindung.": "A mesh point supplements the connection.",
+  "Warum kann ein Mesh-Punkt helfen?": "Why can a mesh point help?",
+  "Beispiel: Im Arbeitszimmer kommt wenig WLAN an.": "Example: Wi-Fi coverage in the office is weak.",
+  "Schematische Darstellung. Die tatsächliche Abdeckung hängt von Räumen, Geräten und Messungen vor Ort ab.": "Schematic illustration. Actual coverage depends on rooms, devices and on-site measurements.",
+  "Die Einrichtung ist noch unvollständig.": "Setup is incomplete.",
+  "Mit Ihrer Freigabe prüfen wir gemeinsam die Einstellungen.": "With your permission, we check the settings together.",
+  "Die Einrichtung ist angepasst und wird gemeinsam getestet.": "Setup is adjusted and tested together.",
+  "Wie hilft Fernwartung konkret?": "How does remote support help?",
+  "Beispiel: Ein E-Mail-Konto ist nicht richtig eingerichtet.": "Example: an email account is not set up correctly.",
+  "Nur eine Veranschaulichung: Es wird keine Verbindung hergestellt. Manche Probleme benötigen einen Vor-Ort-Termin.": "Illustration only: no connection is established. Some issues require an on-site appointment.",
+  "Die Dateien befinden sich auf dem bisherigen Gerät.": "Files are on the previous device.",
+  "Wir übernehmen die vorher vereinbarten, zugänglichen Dateien.": "We transfer the accessible files agreed beforehand.",
+  "Die übernommenen Dateien werden am neuen PC geprüft.": "Transferred files are checked on the new PC.",
+  "Wie kommen Ihre Dateien auf den neuen PC?": "How do your files reach the new PC?",
+  "Beispiel: Ausgewählte Dokumente sollen mit umziehen.": "Example: selected documents need to move with you.",
+  "Voraussetzung sind zugängliche, funktionsfähige Geräte. Keine Datenrettung oder Datensicherung als eigenständige Leistung.": "Devices must be accessible and functioning. No data recovery or backup as a standalone service.",
+  "Sie bringen Wünsche und ein Budget mit.": "You bring your needs and budget.",
+  "Wir übersetzen Ihre Nutzung in passende Auswahlkriterien.": "We turn your usage into suitable selection criteria.",
+  "Sie erhalten eine nachvollziehbare Empfehlung.": "You receive a clear, reasoned recommendation.",
+  "Wie finden wir ein passendes Gerät?": "How do we find a suitable device?",
+  "Beispiel: Sie suchen einen Laptop für unterwegs und Büroarbeit.": "Example: you need a laptop for mobile and office work.",
+  "Eine beispielhafte Beratung, keine automatische Geräteempfehlung. Die Auswahl besprechen wir individuell.": "An example consultation, not an automatic device recommendation. We discuss the choice individually.",
+  "Ihre Inhalte sind noch nicht als Website angeordnet.": "Your content is not yet arranged as a website.",
+  "Wir gestalten eine klare Struktur und passende Darstellung.": "We design a clear structure and suitable presentation.",
+  "Ein verständlicher Website-Entwurf entsteht.": "A clear website draft takes shape.",
+  "Wie wird aus Inhalten eine Website?": "How does content become a website?",
+  "Beispiel: Logo, Texte und Kontakt brauchen einen klaren Auftritt.": "Example: your logo, copy and contact details need a clear presentation.",
+  "Die Vorschau ist ein Gestaltungsbeispiel. Apps und Onlineshops planen wir entsprechend ihren eigenen Funktionen.": "This preview is a design example. Apps and online shops are planned around their own features."
 };
   const normalize = value => value.replace(/\s+/g, " ").trim();
   const translated = value => {
@@ -1239,31 +1312,37 @@ document.addEventListener('click', event => {
     render();
   });
 })();
-// Service-specific illustrations: local choices only, no diagnostics or remote access.
+// Explain a concrete before/action/result; a started illustration never contacts a service.
 (() => {
-  document.querySelectorAll('[data-service-demo]').forEach(example => {
-    const choices = [...example.querySelectorAll('.sx-choice')];
-    const panels = [...example.querySelectorAll('.sx-panel')];
-    const controls = example.querySelector('.sx-controls');
-    const announcement = example.querySelector('.sx-announcement');
-    if (!controls || choices.length !== panels.length || !choices.length) return;
-    let selected = 0, animation = null;
-    const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
-    const render = (announce = false) => {
-      if (animation) {animation.cancel();animation=null;}
-      choices.forEach((choice,index) => choice.setAttribute('aria-pressed',String(index === selected)));
-      panels.forEach((panel,index) => {panel.hidden = index !== selected;});
-      if (announce && announcement) announcement.textContent = panels[selected].querySelector('h3').textContent;
-      if (announce && !motion.matches && panels[selected].animate) animation=panels[selected].animate([{opacity:.4,transform:'translateY(6px)'},{opacity:1,transform:'translateY(0)'}],{duration:180,easing:'ease-out'});
-    };
-    choices.forEach((choice,index) => choice.addEventListener('click',() => {
-      if (selected === index) return;
-      selected=index;render(true);
-    }));
-    document.addEventListener('solux:languagechange',()=>render(Boolean(announcement && announcement.textContent)));
-    if (motion.addEventListener) motion.addEventListener('change',()=>render());
-    example.classList.add('sx-enhanced');
-    controls.hidden=false;
-    render();
+ document.querySelectorAll('[data-clear-demo]').forEach(demo => {
+  const stage=demo.querySelector('.cd-stage'),captions=[...demo.querySelectorAll('[data-cd-caption]')],controls=demo.querySelector('.cd-controls'),action=demo.querySelector('.cd-action'),pause=demo.querySelector('.cd-pause'),status=demo.querySelector('.cd-status');
+  if(!stage||!action||!pause||!status||captions.length!==3)return;
+  const motion=window.matchMedia('(prefers-reduced-motion: reduce)');
+  let state='before',paused=false,timer=null,remaining=3200,due=0;
+  const copy={de:{start:'Beispiel starten',skip:'Ergebnis anzeigen',restart:'Zum Anfang',pause:'Anhalten',resume:'Fortsetzen',paused:'Animation angehalten.'},en:{start:'Start example',skip:'Show result',restart:'Back to start',pause:'Pause',resume:'Resume',paused:'Animation paused.'}};
+  const stop=()=>{if(timer!==null){clearTimeout(timer);timer=null;}};
+  const render=(announce=false)=>{
+   const c=copy[document.documentElement.lang==='en'?'en':'de'];
+   stage.dataset.state=state;stage.classList.toggle('is-paused',paused);
+   captions.forEach(el=>el.hidden=el.dataset.cdCaption!==state);
+   action.textContent=state==='before'?c.start:state==='after'?c.restart:paused?c.resume:c.skip;
+   pause.hidden=state!=='working'||paused||motion.matches;
+   pause.textContent=c.pause;
+   if(announce)status.textContent=paused?c.paused:captions.find(el=>el.dataset.cdCaption===state).querySelector('h3').textContent;
+  };
+  const finish=()=>{stop();state='after';paused=false;render(true);};
+  const schedule=()=>{stop();if(motion.matches||paused)return;due=Date.now()+remaining;timer=setTimeout(finish,remaining);};
+  action.addEventListener('click',()=>{
+   if(state==='before'){state='working';paused=false;remaining=3200;render(true);schedule();}
+   else if(state==='after'){stop();state='before';paused=false;render(true);}
+   else if(paused){paused=false;render(true);schedule();}
+   else finish();
   });
+  const hold=()=>{if(state!=='working'||paused)return;if(timer!==null)remaining=Math.max(0,due-Date.now());stop();paused=true;render(true);};
+  pause.addEventListener('click',()=>{hold();action.focus();});
+  document.addEventListener('visibilitychange',()=>{if(document.hidden)hold();});
+  document.addEventListener('solux:languagechange',()=>render(Boolean(status.textContent)));
+  if(motion.addEventListener)motion.addEventListener('change',()=>{stop();if(state==='working'){paused=false;render(true);if(!motion.matches)schedule();}});
+  demo.classList.add('cd-enhanced');controls.hidden=false;render();
+ });
 })();
