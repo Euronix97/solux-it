@@ -557,7 +557,8 @@
   "ANFRAGEN": "GET IN TOUCH",
   "EINORDNEN": "ASSESS",
   "LÖSEN": "RESOLVE",
-  "LEISTUNG": "SERVICE"
+  "LEISTUNG": "SERVICE",
+  "Illustratives Motiv: Automatisierung von E-Mail-Anfragen am Computer": "Illustrative image: automating email enquiries at a computer"
 };
   const normalize = value => value.replace(/\s+/g, " ").trim();
   const translated = value => {
