@@ -813,7 +813,7 @@ document.addEventListener('click', event => {
   window.addEventListener('pageshow', update);
 })();
 
-// Gentle, one-time scroll entry; never hide hero photographs or already visible content.
+// Repeat scroll entry after a block has fully left the viewport, with a buffer against flicker.
 (() => {
   if (!('IntersectionObserver' in window) || !window.matchMedia) return;
   const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -831,7 +831,6 @@ document.addEventListener('click', event => {
   const candidates = [...main.querySelectorAll(selectors)].filter(element =>
     !element.closest('.hero, .inner-hero, .legal-hero, .tech-track')
   );
-  // Animate the outer selected block only, avoiding two transforms on one piece of content.
   const set = new Set(candidates);
   const targets = candidates.filter(element => {
     let parent = element.parentElement;
@@ -841,6 +840,7 @@ document.addEventListener('click', event => {
     }
     return true;
   });
+  const delays = new Map();
   const show = (element, instant = false) => {
     if (instant) {
       element.style.setProperty('--scroll-reveal-delay', '0ms');
@@ -848,26 +848,32 @@ document.addEventListener('click', event => {
     }
     element.dataset.scrollState = 'visible';
   };
+  const arm = element => {
+    element.style.removeProperty('transition');
+    element.style.setProperty('--scroll-reveal-delay', delays.get(element) || '0ms');
+    element.dataset.scrollState = 'pending';
+  };
   let observer;
   try {
     observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
-        show(entry.target);
-        observer.unobserve(entry.target);
+        if (motion.matches || !entry.isIntersecting || entry.intersectionRatio <= 0) return;
+        if (entry.target.dataset.scrollState === 'pending') show(entry.target);
       });
-    }, {rootMargin: '0px 0px -32px 0px', threshold: 0.01});
+    }, {rootMargin: '0px', threshold: [0, 0.01]});
     const groupCounts = new Map();
     targets.forEach(element => {
       const bounds = element.getBoundingClientRect();
-      // Hidden accordion descendants and layout-less elements stay visible by default.
-      if (!bounds.width || !bounds.height || bounds.top < window.innerHeight - 24) return;
+      if (!bounds.width || !bounds.height) return;
       const parent = element.parentElement;
       const index = groupCounts.get(parent) || 0;
       groupCounts.set(parent, index + 1);
-      element.style.setProperty('--scroll-reveal-delay', Math.min(index * 65, 160) + 'ms');
+      const delay = Math.min(index * 65, 160) + 'ms';
+      delays.set(element, delay);
+      element.style.setProperty('--scroll-reveal-delay', delay);
       element.classList.add('scroll-reveal');
-      element.dataset.scrollState = 'pending';
+      if (bounds.top < window.innerHeight && bounds.bottom > 0) show(element);
+      else arm(element);
       observer.observe(element);
     });
   } catch (_) {
@@ -875,6 +881,26 @@ document.addEventListener('click', event => {
     if (observer) observer.disconnect();
     return;
   }
+  let scheduled = false;
+  const resetOutside = () => {
+    scheduled = false;
+    if (motion.matches) return;
+    const reset = [];
+    // Read first, then mutate; the 40px buffer is larger than the 28px animation offset.
+    // This prevents the animation itself from continually entering/leaving the observer.
+    targets.forEach(element => {
+      if (element.dataset.scrollState !== 'visible') return;
+      if (document.activeElement && element.contains(document.activeElement)) return;
+      const bounds = element.getBoundingClientRect();
+      if (bounds.width && bounds.height && (bounds.bottom < -40 || bounds.top > window.innerHeight + 40)) reset.push(element);
+    });
+    reset.forEach(arm);
+  };
+  window.addEventListener('scroll', () => {
+    if (scheduled || motion.matches) return;
+    scheduled = true;
+    window.requestAnimationFrame(resetOutside);
+  }, {passive: true});
   const reduced = () => {
     if (!motion.matches) return;
     targets.forEach(element => show(element, true));
@@ -885,19 +911,13 @@ document.addEventListener('click', event => {
   document.addEventListener('focusin', event => {
     if (!event.target.closest) return;
     const element = event.target.closest('.scroll-reveal');
-    if (element && element.dataset.scrollState === 'pending') {
-      show(element, true);
-      observer.unobserve(element);
-    }
+    if (element && element.dataset.scrollState === 'pending') show(element, true);
   });
   window.addEventListener('pageshow', () => {
     targets.forEach(element => {
-      if (element.dataset.scrollState !== 'pending') return;
       const bounds = element.getBoundingClientRect();
-      if (bounds.top < window.innerHeight && bounds.bottom > 0) {
-        show(element, true);
-        observer.unobserve(element);
-      }
+      if (bounds.top < window.innerHeight && bounds.bottom > 0) show(element, true);
     });
+    resetOutside();
   });
 })();
