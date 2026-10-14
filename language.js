@@ -863,7 +863,14 @@
   "Mobil: Gewicht & Akku": "Mobile: weight & battery",
   "Büro: Leistung & Bildschirm": "Office: performance & display",
   "Budget: sinnvolle Ausstattung": "Budget: useful specifications",
-  "Wünsche und Anforderungen gemeinsam klären …": "Clarifying needs and requirements together …"
+  "Wünsche und Anforderungen gemeinsam klären …": "Clarifying needs and requirements together …",
+  "Illustrative Fotoszene: zwei Laptops bei einem Datenumzug": "Illustrative photographic scene: two laptops during file migration",
+  "BISHERIGER PC": "PREVIOUS PC",
+  "NEUER PC": "NEW PC",
+  "Hier liegen Ihre Dateien.": "Your files are here.",
+  "Für die Übernahme vorbereitet.": "Prepared for the transfer.",
+  "Dateien übernommen und geprüft.": "Files transferred and checked.",
+  "Illustrative, KI-generierte Fotoszene. Voraussetzung sind zugängliche, funktionsfähige Geräte. Keine Datenrettung oder Datensicherung als eigenständige Leistung.": "Illustrative AI-generated photographic scene. Devices must be accessible and functioning. No data recovery or backup as a standalone service."
 };
   const normalize = value => value.replace(/\s+/g, " ").trim();
   const translated = value => {
