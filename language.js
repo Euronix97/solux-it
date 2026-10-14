@@ -812,3 +812,92 @@ document.addEventListener('click', event => {
   window.addEventListener('scroll', update, {passive: true});
   window.addEventListener('pageshow', update);
 })();
+
+// Gentle, one-time scroll entry; never hide hero photographs or already visible content.
+(() => {
+  if (!('IntersectionObserver' in window) || !window.matchMedia) return;
+  const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  if (motion.matches) return;
+  const main = document.querySelector('main');
+  if (!main) return;
+  const selectors = [
+    '.section-heading', '.service-group-heading', '.service-card',
+    '.proof-inner > div', '.detail-grid > div', '.process-card',
+    '.process-photo-wrap', '.statement-grid > div', '.price-intro > *',
+    '.rate-row', '.rate-details', '.faq-grid > div:first-child', '.faq-item',
+    '.contact-copy', '.contact-form', '.service-guidance',
+    '.workflow-route > li', '.service-rate > .container > div', '.workflow-related'
+  ].join(',');
+  const candidates = [...main.querySelectorAll(selectors)].filter(element =>
+    !element.closest('.hero, .inner-hero, .legal-hero, .tech-track')
+  );
+  // Animate the outer selected block only, avoiding two transforms on one piece of content.
+  const set = new Set(candidates);
+  const targets = candidates.filter(element => {
+    let parent = element.parentElement;
+    while (parent && parent !== main) {
+      if (set.has(parent)) return false;
+      parent = parent.parentElement;
+    }
+    return true;
+  });
+  const show = (element, instant = false) => {
+    if (instant) {
+      element.style.setProperty('--scroll-reveal-delay', '0ms');
+      element.style.transition = 'none';
+    }
+    element.dataset.scrollState = 'visible';
+  };
+  let observer;
+  try {
+    observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        show(entry.target);
+        observer.unobserve(entry.target);
+      });
+    }, {rootMargin: '0px 0px -32px 0px', threshold: 0.01});
+    const groupCounts = new Map();
+    targets.forEach(element => {
+      const bounds = element.getBoundingClientRect();
+      // Hidden accordion descendants and layout-less elements stay visible by default.
+      if (!bounds.width || !bounds.height || bounds.top < window.innerHeight - 24) return;
+      const parent = element.parentElement;
+      const index = groupCounts.get(parent) || 0;
+      groupCounts.set(parent, index + 1);
+      element.style.setProperty('--scroll-reveal-delay', Math.min(index * 65, 160) + 'ms');
+      element.classList.add('scroll-reveal');
+      element.dataset.scrollState = 'pending';
+      observer.observe(element);
+    });
+  } catch (_) {
+    targets.forEach(element => show(element, true));
+    if (observer) observer.disconnect();
+    return;
+  }
+  const reduced = () => {
+    if (!motion.matches) return;
+    targets.forEach(element => show(element, true));
+    observer.disconnect();
+  };
+  if (motion.addEventListener) motion.addEventListener('change', reduced);
+  else if (motion.addListener) motion.addListener(reduced);
+  document.addEventListener('focusin', event => {
+    if (!event.target.closest) return;
+    const element = event.target.closest('.scroll-reveal');
+    if (element && element.dataset.scrollState === 'pending') {
+      show(element, true);
+      observer.unobserve(element);
+    }
+  });
+  window.addEventListener('pageshow', () => {
+    targets.forEach(element => {
+      if (element.dataset.scrollState !== 'pending') return;
+      const bounds = element.getBoundingClientRect();
+      if (bounds.top < window.innerHeight && bounds.bottom > 0) {
+        show(element, true);
+        observer.unobserve(element);
+      }
+    });
+  });
+})();
