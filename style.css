@@ -2858,3 +2858,11 @@ a img.button-image-icon,button img.button-image-icon{display:inline-block;width:
  .site-refined .footer-bottom{align-items:flex-start;flex-wrap:wrap;padding-top:20px;padding-bottom:20px}
 }
 @media(prefers-reduced-motion:reduce){.site-refined .agent-background summary>span{transition:none}}
+
+/* Clean homepage logo strip; attribution stays readable in the footer. */
+.site-refined .tech-stack-heading{grid-template-columns:1fr;margin-bottom:32px}
+.site-refined .tech-stack{padding-bottom:40px}
+.site-refined .tech-source-footer{padding-top:12px;padding-bottom:24px;border-top:1px solid #1d3243}
+.site-refined .tech-source-footer p{font-size:12px;line-height:1.8;color:#b4c8d7;margin:0}
+.site-refined .tech-source-footer p+p{margin-top:6px}
+.site-refined .tech-source-footer a{text-decoration:underline;text-underline-offset:3px}
