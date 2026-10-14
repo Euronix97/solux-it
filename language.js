@@ -572,7 +572,52 @@
   "Sie prüfen den Entwurf und geben die Antwort frei. Es wird nichts ohne Ihre Freigabe verschickt.": "You review the draft and approve the reply. Nothing is sent without your approval.",
   "Demo starten": "Start demo",
   "Zurücksetzen": "Reset",
-  "Dies ist ein Beispiel mit menschlicher Freigabe. Funktionen, Zugänge und Kosten stimmen wir für Ihr Projekt gemeinsam ab.": "This example includes human approval. We agree on features, access and costs together for your project."
+  "Dies ist ein Beispiel mit menschlicher Freigabe. Funktionen, Zugänge und Kosten stimmen wir für Ihr Projekt gemeinsam ab.": "This example includes human approval. We agree on features, access and costs together for your project.",
+  "Eingang": "Inbox",
+  "Zuordnung": "Classification",
+  "Antwortentwurf": "Reply draft",
+  "Ihre Freigabe": "Your approval",
+  "E-MAIL EINGEGANGEN": "EMAIL RECEIVED",
+  "Eine neue Anfrage.": "A new enquiry.",
+  "Die Nachricht kommt wie gewohnt in Ihrem Postfach an. Ab hier kann der eingerichtete Ablauf übernehmen.": "The message arrives in your inbox as usual. The configured workflow can take over from here.",
+  "Auslöser: eine neue Kundenanfrage": "Trigger: a new customer enquiry",
+  "WICHTIGE ANGABEN ERKANNT": "KEY DETAILS IDENTIFIED",
+  "Aus Text wird Übersicht.": "Text becomes a clear overview.",
+  "Der KI-Helfer ordnet das Anliegen ein und bereitet die Angaben für den nächsten Schritt vor.": "The AI assistant categorises the request and prepares the details for the next step.",
+  "Anliegen": "Request",
+  "Neue Unternehmenswebsite": "New business website",
+  "Gewünschte Inhalte": "Requested content",
+  "Leistungen & Kontaktformular": "Services & contact form",
+  "Noch zu klären": "To clarify",
+  "Umfang, Zeitplan & Budget": "Scope, timeline & budget",
+  "ZUR PRÜFUNG VORBEREITET": "PREPARED FOR REVIEW",
+  "Die erste Antwort steht.": "The first reply is ready.",
+  "Entwurf · noch nicht versendet": "Draft · not sent",
+  "Hallo Lena, vielen Dank für Ihre Anfrage. Gerne besprechen wir Ihre neue Website. Wie viele Seiten planen Sie und wann möchten Sie starten?": "Hello Lena, thank you for your enquiry. We would be happy to discuss your new website. How many pages are you planning, and when would you like to start?",
+  "Sie ergänzen persönliche Details, bevor eine Antwort verschickt wird.": "You add personal details before a reply is sent.",
+  "DIE ENTSCHEIDUNG BLEIBT BEI IHNEN": "YOU KEEP CONTROL",
+  "Sie haben das letzte Wort.": "You have the final say.",
+  "Prüfen, anpassen, freigeben: Der Helfer bereitet vor. Sie entscheiden, ob die Antwort passt.": "Review, edit, approve: the assistant prepares the work. You decide whether the reply is right.",
+  "Anliegen nachvollziehbar zugeordnet": "Request categorised clearly",
+  "Antwort als Entwurf vorbereitet": "Reply prepared as a draft",
+  "Kein Angebot ohne Ihre Entscheidung": "No quote without your decision",
+  "Freigabe simulieren": "Simulate approval",
+  "WENIGER ROUTINE. MEHR ÜBERBLICK.": "LESS ROUTINE. MORE CLARITY.",
+  "Eine Anfrage.": "One enquiry.",
+  "Ein klarer nächster Schritt.": "A clear next step.",
+  "Erleben Sie an einem Beispiel, wie ein KI-Helfer aus einer Nachricht eine vorbereitete Antwort macht. Ihre Freigabe bleibt der entscheidende Schritt.": "See how an AI assistant turns a message into a prepared reply. Your approval remains the decisive step.",
+  "Kundenanfragen organisieren": "Organise customer enquiries",
+  "Interaktives Beispiel": "Interactive example",
+  "Schritte der Beispielanfrage": "Example enquiry steps",
+  "Beispielnachricht": "Example message",
+  "DIE ANFRAGE": "THE ENQUIRY",
+  "Fiktive Kundin": "Fictional customer",
+  "Website für unser Unternehmen": "Website for our business",
+  "Hallo, wir möchten eine neue Website mit unseren Leistungen und einem Kontaktformular. Können Sie uns dabei helfen?": "Hello, we would like a new website with our services and a contact form. Can you help us with that?",
+  "Beispieldaten · keine echte E-Mail": "Example data · not a real email",
+  "Zurück": "Back",
+  "Weiter zur Zuordnung": "Continue to classification",
+  "Dies ist eine interaktive Veranschaulichung. Es wird keine KI aufgerufen und keine E-Mail versendet. Den tatsächlichen Ablauf, erforderliche Dienste und Kosten stimmen wir für Ihr Projekt ab.": "This is an interactive illustration. No AI is called and no email is sent. We agree on the actual workflow, required services and costs for your project."
 };
   const normalize = value => value.replace(/\s+/g, " ").trim();
   const translated = value => {
@@ -1014,33 +1059,62 @@ document.addEventListener('click', event => {
   update();
 })();
 
-// Deliberately stepped fictional example: no timer, API call or email sending.
+// Editorial workflow workspace: fictional data, manual tabs, no network calls.
 (() => {
   document.querySelectorAll('.workflow-demo').forEach(demo => {
-    const stages = [...demo.querySelectorAll('.demo-stage')];
-    const controls = demo.querySelector('.demo-controls');
-    const next = demo.querySelector('.demo-next');
-    const reset = demo.querySelector('.demo-reset');
-    const status = demo.querySelector('.demo-status');
-    if (!stages.length || !controls || !next || !reset || !status) return;
-    let current = -1;
-    demo.classList.add('demo-ready');
-    controls.hidden = false;
-    const render = (announce = false) => {
-      const en = document.documentElement.lang === 'en';
-      stages.forEach((stage,index) => {
-        stage.classList.toggle('is-active', index === current);
-        stage.classList.toggle('is-complete', index < current);
-      });
-      next.textContent = current < 0 ? (en ? 'Start demo' : 'Demo starten') : current === stages.length - 1 ? (en ? 'Play again' : 'Noch einmal ansehen') : (en ? 'Next step' : 'Nächster Schritt');
-      reset.textContent = en ? 'Reset' : 'Zurücksetzen';
-      reset.hidden = current < 0;
-      if (announce && current >= 0) status.textContent = stages[current].querySelector('h3').textContent + '. ' + stages[current].querySelector('p').textContent;
-      else if (current < 0) status.textContent = '';
+    const tabs = [...demo.querySelectorAll('.wf-tab')];
+    const panels = [...demo.querySelectorAll('.wf-panel')];
+    const tablist = demo.querySelector('.wf-tabs');
+    const footer = demo.querySelector('.wf-footer');
+    const back = demo.querySelector('.wf-back');
+    const next = demo.querySelector('.wf-next');
+    const caption = demo.querySelector('.wf-stage-caption');
+    const approve = demo.querySelector('.wf-approve');
+    const approval = demo.querySelector('.wf-approval-status');
+    if (tabs.length !== 4 || panels.length !== 4 || !footer || !back || !next || !approve) return;
+    let current = 0, approved = false, animation = null;
+    const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const text = {
+      de: {next:['Weiter zur Zuordnung','Antwortentwurf ansehen','Zur Freigabe','Beispiel neu starten'], caption:['Die ursprüngliche Nachricht','Die Angaben auf einen Blick','Eine passende Rückmeldung','Ihre Prüfung und Freigabe'], approve:'Freigabe simulieren', approved:'Freigabe simuliert', status:'Im Beispiel freigegeben. Es wurde keine E-Mail versendet.'},
+      en: {next:['Continue to classification','View reply draft','Review and approve','Restart example'], caption:['The original message','Key details at a glance','A suitable reply','Your review and approval'], approve:'Simulate approval', approved:'Approval simulated', status:'Approved in this example. No email has been sent.'}
     };
-    next.addEventListener('click', () => { current = current >= stages.length - 1 ? 0 : current + 1; render(true); });
-    reset.addEventListener('click', () => { current = -1; render(); next.focus(); });
-    document.addEventListener('solux:languagechange', () => render(current >= 0));
+    const render = (animate = false) => {
+      if (animation) { animation.cancel(); animation = null; }
+      const copy = text[document.documentElement.lang === 'en' ? 'en' : 'de'];
+      tabs.forEach((tab,index) => {
+        tab.setAttribute('aria-selected',String(index === current));
+        tab.tabIndex = index === current ? 0 : -1;
+      });
+      panels.forEach((panel,index) => { panel.hidden = index !== current; });
+      back.disabled = current === 0;
+      next.querySelector('span').textContent = copy.next[current];
+      caption.textContent = copy.caption[current];
+      approve.querySelector('span').textContent = approved ? copy.approved : copy.approve;
+      approve.disabled = approved;
+      approval.textContent = approved ? copy.status : '';
+      approve.classList.toggle('is-approved', approved);
+      if (animate && !motion.matches && panels[current].animate) animation = panels[current].animate([{opacity:.35,transform:'translateY(8px)'},{opacity:1,transform:'translateY(0)'}],{duration:180,easing:'ease-out'});
+    };
+    const choose = index => { current = index; render(true); };
+    tabs.forEach((tab,index) => {
+      tab.addEventListener('click',() => choose(index));
+      tab.addEventListener('keydown',event => {
+        let target;
+        if(event.key === 'ArrowRight') target=(index+1)%tabs.length;
+        else if(event.key === 'ArrowLeft') target=(index+tabs.length-1)%tabs.length;
+        else if(event.key === 'Home') target=0;
+        else if(event.key === 'End') target=tabs.length-1;
+        else return;
+        event.preventDefault(); choose(target); tabs[target].focus();
+      });
+    });
+    back.addEventListener('click',() => { if(current>0) { choose(current-1); if(current===0) next.focus(); } });
+    next.addEventListener('click',() => { if(current===3) { approved=false; choose(0); } else choose(current+1); });
+    approve.addEventListener('click',() => { approved=true; render(); panels[3].focus({preventScroll:true}); });
+    document.addEventListener('solux:languagechange',() => render());
+    if(motion.addEventListener) motion.addEventListener('change',()=>render());
+    demo.classList.add('wf-enhanced');
+    tablist.hidden=false; footer.hidden=false; approve.hidden=false;
     render();
   });
 })();
