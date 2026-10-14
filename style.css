@@ -2700,3 +2700,49 @@ a img.button-image-icon,button img.button-image-icon{display:inline-block;width:
 .ax-automation[data-step="3"] .ax-ai-connector .ax-route{stroke-dashoffset:0}
 .ax-web[data-step="3"] .ax-site-title{fill:#153d55;font-weight:600!important}
 .ax-web[data-step="3"] .ax-site-brand{fill:#17394e}
+
+/* Demo → service price → FAQ: one connected decision path, service pages only. */
+.ax-demo.section-pad{padding-bottom:48px}
+.ax-demo .ax-explanation{justify-content:flex-start;gap:28px;flex-wrap:wrap}
+.ax-demo .ax-caption{width:560px;max-width:100%;flex:0 1 auto}
+.ax-demo .ax-controls{flex:0 1 auto;max-width:340px}
+.ax-demo + .service-rate{background:#f5f8fa;padding:0 0 36px}
+.ax-demo + .service-rate > .container{border-top:1px solid #dce6ed;padding-top:32px;grid-template-columns:minmax(0,760px) auto;justify-content:start;gap:32px;align-items:center}
+.ax-demo + .service-rate h2{font-size:clamp(26px,2.7vw,34px);font-weight:600;line-height:1.3;letter-spacing:-.035em;margin:12px 0}
+.ax-demo + .service-rate .eyebrow{margin-bottom:0}
+.ax-demo + .service-rate p{max-width:720px;line-height:1.8}
+.ax-demo + .service-rate small{display:block;margin-top:12px;font-size:12px;line-height:1.7}
+.ax-demo + .service-rate > .container > a{justify-self:start;white-space:normal}
+.ax-demo ~ .faq-section.section-pad{padding-top:72px;padding-bottom:80px}
+.ax-demo ~ .faq-section .faq-grid{grid-template-columns:minmax(0,.72fr) minmax(0,1.28fr);gap:64px;align-items:start}
+.ax-demo ~ .faq-section .faq-grid h2{font-size:clamp(30px,3vw,40px);font-weight:650;line-height:1.15;letter-spacing:-.045em;margin-bottom:18px}
+.ax-demo ~ .faq-section .faq-grid > div:first-child .eyebrow{margin-bottom:16px}
+.ax-demo ~ .faq-section .faq-item summary{min-height:68px;line-height:1.55}
+@media(max-width:1050px){
+ .ax-demo .ax-explanation{gap:22px}
+ .ax-demo + .service-rate > .container{grid-template-columns:minmax(0,1fr);gap:18px}
+ .ax-demo ~ .faq-section .faq-grid{gap:40px;grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr)}
+}
+@media(max-width:900px){
+ .ax-demo .ax-explanation{align-items:flex-start;flex-direction:column;gap:18px}
+ .ax-demo .ax-caption,.ax-demo .ax-controls{width:auto;flex:none;max-width:100%}
+ .ax-demo ~ .faq-section .faq-grid{grid-template-columns:1fr;gap:28px}
+ .ax-demo ~ .faq-section .faq-grid h2{font-size:34px;max-width:560px}
+}
+@media(max-width:600px){
+ .ax-demo.section-pad{padding-bottom:32px}
+ .ax-demo .ax-explanation{padding-bottom:18px}
+ .ax-demo + .service-rate{padding-bottom:28px}
+ .ax-demo + .service-rate > .container{padding-top:24px;gap:16px}
+ .ax-demo + .service-rate h2{font-size:27px}
+ .ax-demo ~ .faq-section.section-pad{padding-top:48px;padding-bottom:56px}
+ .ax-demo ~ .faq-section .faq-grid{gap:24px}
+ .ax-demo ~ .faq-section .faq-grid h2{font-size:31px}
+ .ax-demo ~ .faq-section .faq-item summary{font-size:14px;min-height:64px}
+}
+
+/* Two services include essential guidance before their FAQ. */
+.ax-demo + .service-rate + .container > .service-guidance{margin:24px 0 0;padding:0;border-top:0;max-width:850px}
+.ax-demo + .service-rate + .container > .service-guidance h3{font-size:22px;line-height:1.4;font-weight:600}
+.ax-demo + .service-rate + .container > .service-guidance p{font-size:14px;line-height:1.8}
+@media(max-width:600px){.ax-demo + .service-rate + .container > .service-guidance{margin-top:20px}.ax-demo + .service-rate + .container > .service-guidance h3{font-size:20px}}
