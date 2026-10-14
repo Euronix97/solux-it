@@ -67,7 +67,7 @@
   "BEISPIEL: KUNDENANFRAGE": "EXAMPLE: CUSTOMER ENQUIRY",
   "Von der Nachricht": "From a message",
   "zum nächsten Schritt.": "to the next step.",
-  "Anfrage kommt an": "An enquiry arrives",
+  "Anfrage kommt an": "Enquiry arrives",
   "Ein Formular oder eine E-Mail startet den Ablauf.": "A form or email triggers the workflow.",
   "Regeln ordnen zu": "Rules categorise it",
   "Bekannte Themen werden zugeordnet; KI kann bei freiem Text unterstützen.": "Known topics are categorised; AI can assist with free text.",
@@ -558,7 +558,21 @@
   "EINORDNEN": "ASSESS",
   "LÖSEN": "RESOLVE",
   "LEISTUNG": "SERVICE",
-  "Illustratives Motiv: Automatisierung von E-Mail-Anfragen am Computer": "Illustrative image: automating email enquiries at a computer"
+  "Illustratives Motiv: Automatisierung von E-Mail-Anfragen am Computer": "Illustrative image: automating email enquiries at a computer",
+  "INTERAKTIVES BEISPIEL": "INTERACTIVE EXAMPLE",
+  "So hilft ein": "How an",
+  "KI-Agent.": "AI agent helps.",
+  "Eine erfundene Kundenanfrage – Schritt für Schritt. Es werden keine Nachrichten versendet.": "A fictional customer enquiry, step by step. No messages are sent.",
+  "„Wir möchten eine neue Website. Können Sie uns helfen?“": "“We would like a new website. Can you help us?”",
+  "Anfrage wird zugeordnet": "Enquiry is categorised",
+  "Der Helfer erkennt das Thema Website und sammelt die wichtigen Angaben.": "The assistant identifies the website topic and collects the important details.",
+  "Antwortentwurf entsteht": "A reply is drafted",
+  "„Gerne. Welche Inhalte und Funktionen wünschen Sie sich?“": "“Of course. What content and features would you like?”",
+  "Sie prüfen und entscheiden": "You review and decide",
+  "Sie prüfen den Entwurf und geben die Antwort frei. Es wird nichts ohne Ihre Freigabe verschickt.": "You review the draft and approve the reply. Nothing is sent without your approval.",
+  "Demo starten": "Start demo",
+  "Zurücksetzen": "Reset",
+  "Dies ist ein Beispiel mit menschlicher Freigabe. Funktionen, Zugänge und Kosten stimmen wir für Ihr Projekt gemeinsam ab.": "This example includes human approval. We agree on features, access and costs together for your project."
 };
   const normalize = value => value.replace(/\s+/g, " ").trim();
   const translated = value => {
@@ -920,5 +934,113 @@ document.addEventListener('click', event => {
       if (bounds.top < window.innerHeight && bounds.bottom > 0) show(element, true);
     });
     resetOutside();
+  });
+})();
+
+// Solux motion update: native details fallback, interruptible open AND close.
+(() => {
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+  document.querySelectorAll('details.faq-item, details.rate-details').forEach(details => {
+    const summary = details.querySelector('summary');
+    if (!summary) return;
+    let animation = null;
+    let expanded = details.open;
+    const settle = () => {
+      if (animation) animation.cancel();
+      animation = null;
+      details.open = expanded;
+      details.style.overflow = '';
+      summary.setAttribute('aria-expanded', String(expanded));
+      const icon = summary.querySelector('[aria-hidden="true"]');
+      if (icon && /^[+−–-]$/.test(icon.textContent.trim())) icon.textContent = expanded ? '−' : '+';
+    };
+    settle();
+    summary.addEventListener('click', event => {
+      event.preventDefault();
+      const from = details.getBoundingClientRect().height;
+      if (animation) animation.cancel();
+      expanded = !expanded;
+      details.open = true;
+      summary.setAttribute('aria-expanded', String(expanded));
+      const icon = summary.querySelector('[aria-hidden="true"]');
+      if (icon && /^[+−–-]$/.test(icon.textContent.trim())) icon.textContent = expanded ? '−' : '+';
+      const to = expanded ? details.getBoundingClientRect().height : summary.getBoundingClientRect().height + (parseFloat(getComputedStyle(details).borderTopWidth) || 0) + (parseFloat(getComputedStyle(details).borderBottomWidth) || 0);
+      if (reduce.matches || !details.animate) { settle(); return; }
+      details.style.overflow = 'hidden';
+      animation = details.animate([{height: `${from}px`}, {height: `${to}px`}], {duration: 240, easing: 'cubic-bezier(.2,.7,.2,1)'});
+      animation.onfinish = settle;
+    });
+    const preferenceChanged = () => { if (reduce.matches) settle(); };
+    if (reduce.addEventListener) reduce.addEventListener('change', preferenceChanged);
+    document.addEventListener('solux:languagechange', settle);
+    window.addEventListener('resize', settle);
+  });
+})();
+
+// Only local sections participate; cross-page navigation remains ordinary links.
+(() => {
+  const links = [...document.querySelectorAll('.main-nav a[href]')];
+  const local = [];
+  const canonical = path => path.replace(/\/index\.html$/, '/');
+  links.forEach(link => {
+    const url = new URL(link.href, location.href);
+    if (url.origin !== location.origin || canonical(url.pathname) !== canonical(location.pathname)) return;
+    if (!url.hash) { link.setAttribute('aria-current', 'page'); return; }
+    let section;
+    try { section = document.getElementById(decodeURIComponent(url.hash.slice(1))); } catch (_) { return; }
+    if (section) local.push({link, section});
+  });
+  if (!local.length) return;
+  let queued = false;
+  const update = () => {
+    queued = false;
+    const header = document.querySelector('.site-header');
+    const edge = (header ? header.getBoundingClientRect().bottom : 0) + 100;
+    let current = null;
+    local.forEach(({section}) => {
+      const bounds = section.getBoundingClientRect();
+      if (bounds.top <= edge && bounds.bottom > edge) current = section;
+    });
+    local.forEach(({link,section}) => {
+      if (section === current) link.setAttribute('aria-current', 'location');
+      else link.removeAttribute('aria-current');
+    });
+  };
+  const schedule = () => { if (!queued) { queued = true; requestAnimationFrame(update); } };
+  window.addEventListener('scroll', schedule, {passive:true});
+  window.addEventListener('resize', schedule);
+  window.addEventListener('pageshow', schedule);
+  document.addEventListener('solux:languagechange', schedule);
+  update();
+})();
+
+// Deliberately stepped fictional example: no timer, API call or email sending.
+(() => {
+  document.querySelectorAll('.workflow-demo').forEach(demo => {
+    const stages = [...demo.querySelectorAll('.demo-stage')];
+    const controls = demo.querySelector('.demo-controls');
+    const next = demo.querySelector('.demo-next');
+    const reset = demo.querySelector('.demo-reset');
+    const status = demo.querySelector('.demo-status');
+    if (!stages.length || !controls || !next || !reset || !status) return;
+    let current = -1;
+    demo.classList.add('demo-ready');
+    controls.hidden = false;
+    const render = (announce = false) => {
+      const en = document.documentElement.lang === 'en';
+      stages.forEach((stage,index) => {
+        stage.classList.toggle('is-active', index === current);
+        stage.classList.toggle('is-complete', index < current);
+      });
+      next.textContent = current < 0 ? (en ? 'Start demo' : 'Demo starten') : current === stages.length - 1 ? (en ? 'Play again' : 'Noch einmal ansehen') : (en ? 'Next step' : 'Nächster Schritt');
+      reset.textContent = en ? 'Reset' : 'Zurücksetzen';
+      reset.hidden = current < 0;
+      if (announce && current >= 0) status.textContent = stages[current].querySelector('h3').textContent + '. ' + stages[current].querySelector('p').textContent;
+      else if (current < 0) status.textContent = '';
+    };
+    next.addEventListener('click', () => { current = current >= stages.length - 1 ? 0 : current + 1; render(true); });
+    reset.addEventListener('click', () => { current = -1; render(); next.focus(); });
+    document.addEventListener('solux:languagechange', () => render(current >= 0));
+    render();
   });
 })();
