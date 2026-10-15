@@ -2922,27 +2922,25 @@ a img.button-image-icon,button img.button-image-icon{display:inline-block;width:
  .site-refined .button:active,.site-refined .header-cta:active,.site-refined .form-submit:not(:disabled):active,.site-refined .ax-controls button:active{transform:none}
 }
 
-/* Service links: raise the whole clickable card, independently of scroll entry. */
+/* Service links: actual pointer hover also works on touch-first tablets with a mouse. */
 .site-refined .service-card{position:relative;isolation:isolate;z-index:0;transform-origin:center center}
-.site-refined .service-card::before{content:"";position:absolute;inset:-12px;z-index:-1;pointer-events:none;border:1px solid #c1dfeb;border-radius:10px;background:#fff;box-shadow:0 14px 34px #123c521c;opacity:0}
-.site-refined .service-card:focus-visible{z-index:5}
-.site-refined .service-card:focus-visible::before,.site-refined .service-card:active::before{opacity:1}
-/* Keep a single zoom layer; icons and photos stay aligned with the full card. */
-.site-refined .service-card:is(:hover,:focus-visible) .service-card-media img{transform:none!important}
+.site-refined .service-card::before{content:"";position:absolute;inset:-12px;z-index:-1;pointer-events:none;border:1px solid #b8dce9;border-radius:10px;background:#fff;box-shadow:0 16px 38px #123c5226;opacity:0}
+.site-refined .service-card:is(.is-pointer-hovered,:focus-visible){z-index:5}
+.site-refined .service-card:is(.is-pointer-hovered,:focus-visible,:active)::before{opacity:1}
+.site-refined .service-card:is(:hover,.is-pointer-hovered,:focus-visible) .service-card-media img{transform:none!important}
 @media(prefers-reduced-motion:no-preference){
  .site-refined .service-card{transition:opacity .55s ease var(--scroll-reveal-delay,0ms),translate .6s cubic-bezier(.2,.7,.25,1) var(--scroll-reveal-delay,0ms),transform .22s ease-out 0s}
  .site-refined .service-card::before{transition:opacity .2s ease-out}
- .site-refined .service-card:focus-visible{transform:translateY(-4px) scale(1.018)}
+ .site-refined .service-card:is(.is-pointer-hovered,:focus-visible){transform:translateY(-6px) scale(1.035)}
 }
-@media(hover:hover) and (pointer:fine){
- .site-refined .service-card:hover{z-index:5}
- .site-refined .service-card:hover::before{opacity:1}
+@media(any-hover:hover) and (any-pointer:fine){
+ .site-refined .service-card:not(.service-pointer-ready):hover{z-index:5}
+ .site-refined .service-card:not(.service-pointer-ready):hover::before{opacity:1}
 }
-@media(hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference){
- .site-refined .service-card:hover{transform:translateY(-4px) scale(1.018)}
- .site-refined .service-card:active{transform:translateY(-1px) scale(1.008)}
+@media(any-hover:hover) and (any-pointer:fine) and (prefers-reduced-motion:no-preference){
+ .site-refined .service-card:not(.service-pointer-ready):hover{transform:translateY(-6px) scale(1.035)}
 }
 @media(prefers-reduced-motion:reduce){
- .site-refined .service-card:is(:hover,:focus-visible,:active){transform:none!important}
+ .site-refined .service-card:is(:hover,.is-pointer-hovered,:focus-visible,:active){transform:none!important}
  .site-refined .service-card::before{transition:none}
 }

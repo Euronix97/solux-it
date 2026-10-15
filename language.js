@@ -1019,7 +1019,15 @@
   "IT-Service & digitale Lösungen in Wiehl": "IT support & digital solutions in Wiehl",
   "Wir helfen bei PC- und WLAN-Problemen und setzen Websites, Apps und Automatisierungen um. Persönlich, verständlich und nach Absprache vor Ort oder per Fernwartung.": "We help with PC and Wi-Fi problems and build websites, apps and automations. Personal, clear support – on site or remotely by arrangement.",
   "Vorher abgestimmt": "Agreed beforehand",
-  "Vorgehen und mögliche Kosten klären wir mit Ihnen.": "We agree the approach and potential costs with you."
+  "Vorgehen und mögliche Kosten klären wir mit Ihnen.": "We agree the approach and potential costs with you.",
+  "Ihr Ergebnis": "Your result",
+  "Sie erhalten eine verständliche Einschätzung der Ursache und der sinnvollen nächsten Schritte. Vereinbarte Reparaturen prüfen wir anschließend gemeinsam mit Ihnen.": "You receive a clear assessment of the cause and sensible next steps. After agreed repairs, we check the result together with you.",
+  "Sie wissen, welche Maßnahmen für Ihren Standort sinnvoll sind. Nach vereinbarten Änderungen prüfen wir die Verbindung am betroffenen Arbeitsplatz.": "You know which measures make sense for your location. After agreed changes, we check the connection at the affected workspace.",
+  "Wir erklären die vorgenommenen Änderungen, testen die bearbeitete Funktion mit Ihnen und beenden den Fernzugriff. Falls weitere Schritte nötig sind, besprechen wir diese mit Ihnen.": "We explain the changes made, test the function with you and end remote access. If further steps are needed, we discuss them with you.",
+  "Sie erhalten den vereinbarten, eingerichteten Arbeitsplatz. Übernommene Dateien prüfen wir mit Ihnen am neuen Gerät. Nicht übertragbare Programme oder Einstellungen besprechen wir gesondert.": "You receive the agreed, configured workspace. We check transferred files with you on the new device. We discuss any programs or settings that cannot be transferred separately.",
+  "Sie erhalten eine nachvollziehbare Empfehlung passend zu Ihrer Nutzung und Ihrem Budget. Wir erklären die Unterschiede und ob eine Aufrüstung eine sinnvolle Alternative zum Neukauf ist.": "You receive a reasoned recommendation suited to your use and budget. We explain the differences and whether an upgrade is a sensible alternative to buying a new device.",
+  "Sie erhalten die vereinbarte Website, Anwendung oder Shop-Lösung. Zur Übergabe erklären wir die Nutzung und prüfen die abgestimmten Funktionen sowie die vorgesehenen Geräteansichten.": "You receive the agreed website, application or shop solution. At handover, we explain its use and check the agreed functions and intended device layouts.",
+  "Sie erhalten den vereinbarten, getesteten Ablauf und eine Erklärung der verbundenen Dienste. Freigaben und den Umgang mit Fehlerfällen legen wir gemeinsam fest, damit Sie den Ablauf nachvollziehen können.": "You receive the agreed, tested workflow and an explanation of the connected services. We agree approval steps and error handling together so you can understand the workflow."
 };
   const normalize = value => value.replace(/\s+/g, " ").trim();
   const translated = value => {
@@ -1506,4 +1514,24 @@ document.addEventListener('click', event => {
   if(small.addEventListener)small.addEventListener('change',resize);
   demo.classList.add('ax-enhanced');controls.hidden=false;resize();render();
  });
+})();
+
+// Use the actual input device: a tablet's primary pointer may still be touch.
+(() => {
+  if (!('PointerEvent' in window)) return;
+  const cards = [...document.querySelectorAll('.site-refined .service-card')];
+  const clear = () => cards.forEach(card => card.classList.remove('is-pointer-hovered'));
+  cards.forEach(card => {
+    card.classList.add('service-pointer-ready');
+    const update = event => {
+      card.classList.toggle('is-pointer-hovered', event.pointerType === 'mouse' || event.pointerType === 'pen');
+    };
+    card.addEventListener('pointerenter', update);
+    card.addEventListener('pointermove', update);
+    card.addEventListener('pointerdown', update);
+    card.addEventListener('pointerleave', () => card.classList.remove('is-pointer-hovered'));
+    card.addEventListener('pointercancel', () => card.classList.remove('is-pointer-hovered'));
+  });
+  window.addEventListener('blur', clear);
+  document.addEventListener('visibilitychange', () => { if (document.hidden) clear(); });
 })();
