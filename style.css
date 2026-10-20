@@ -2985,3 +2985,78 @@ a img.button-image-icon,button img.button-image-icon{display:inline-block;width:
 .care-smallprint{font-size:12px;line-height:1.8;color:#526b7b;margin:22px 0 0}
 @media(max-width:900px){.care-card{padding:28px}.care-grid{gap:22px}.care-service-grid{gap:32px}.care-detail-content{grid-template-columns:1fr;gap:24px}.care-section,.care-service{padding-top:76px;padding-bottom:76px}}
 @media(max-width:700px){.care-grid,.care-service-grid{grid-template-columns:1fr;gap:24px}.care-section,.care-service{padding-top:60px;padding-bottom:60px}.care-heading{margin-bottom:28px}.care-card,.care-service-offer{padding:26px}.care-price{margin-top:18px}.care-heading h2{font-size:32px}.care-details summary{font-size:14px}.care-service .care-heading{margin-bottom:8px}.care-card h3,.care-service-offer h3{font-size:24px}}
+
+/* Care offers follow the site's existing open pricing ledger, rather than boxed plans. */
+.site-refined .care-section,.site-refined .care-service{border-top:0;background:#fff;padding:80px 0}
+.site-refined .care-heading{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:64px;row-gap:0;max-width:none;align-items:end;margin-bottom:40px}
+.site-refined .care-heading>.eyebrow{grid-column:1/-1;margin-bottom:20px}
+.site-refined .care-heading>h2{grid-column:1;grid-row:2;margin:0;font-size:clamp(30px,3.1vw,44px);line-height:1.17;letter-spacing:-.04em;font-weight:650}
+.site-refined .care-heading>p:not(.care-service-note){grid-column:2;grid-row:2;max-width:560px;font-size:15px;line-height:1.85;margin:0}
+.site-refined .care-heading>.care-service-note{grid-column:2;grid-row:3;margin:16px 0 0;font-size:13px;line-height:1.8}
+.site-refined .care-grid{display:block;border-top:2px solid #102c40}
+.site-refined .care-card,.site-refined .care-service-offer{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.5fr) minmax(185px,.7fr);column-gap:38px;row-gap:14px;align-items:start;padding:34px 0;margin:0;border:0;border-bottom:1px solid #d7e1e6;border-radius:0;background:transparent;box-shadow:none}
+.site-refined .care-card-intro{grid-column:1;grid-row:1/4;min-width:0}
+.site-refined .care-card .care-icon{display:none}
+.site-refined .care-card h3,.site-refined .care-service-offer>h3{font-size:22px;line-height:1.35;font-weight:650;letter-spacing:-.025em;margin:0 0 12px;overflow-wrap:break-word}
+.site-refined .care-card-intro>p{font-size:14px;line-height:1.8;margin:0 0 12px;max-width:290px;color:#526677}
+.site-refined .care-card-intro>.care-target{font-size:12px;line-height:1.75;margin-bottom:10px;color:#526677}
+.site-refined .care-card>.care-price,.site-refined .care-service-offer>.care-price{display:flex;flex-direction:column;align-items:flex-start;gap:8px;grid-column:3;grid-row:1;justify-self:start;margin:0;padding:0;border:0}
+.site-refined .care-price strong{font-size:32px;line-height:1.2;letter-spacing:-.04em;font-weight:650;white-space:nowrap}
+.site-refined .care-price>span{font-size:12px;line-height:1.7;color:#526677}
+.site-refined .care-card>.care-list,.site-refined .care-service-offer>.care-list{grid-column:2;grid-row:1;list-style:none;margin:0;padding:0;font-size:14px;line-height:1.8;color:#496579}
+.site-refined .care-list li{padding:0;margin:0 0 9px}
+.site-refined .care-list li:last-child{margin-bottom:0}
+.site-refined .care-card>.care-allowance,.site-refined .care-service-offer>.care-allowance{grid-column:2;grid-row:2;font-size:13px;line-height:1.8;font-weight:600;margin:0;color:#23485e}
+.site-refined .care-card>.care-scope,.site-refined .care-service-offer>.care-scope{grid-column:2;grid-row:3;font-size:12px;line-height:1.85;margin:0;color:#526677}
+.site-refined .care-card>.care-request,.site-refined .care-service-offer>.care-request{grid-column:3;grid-row:2;align-self:start;justify-self:start;margin:0}
+.site-refined .care-section .care-request,.site-refined .care-service .care-request{display:inline-flex;align-items:center;justify-content:flex-start;gap:8px;min-height:44px;padding:10px 0;border:0;border-bottom:1px solid #a8c7d4;border-radius:0;background:transparent;color:#087fa4;box-shadow:none;font-size:13px;font-weight:650;line-height:1.5;letter-spacing:0;white-space:normal;transform:none}
+.site-refined .care-section .care-request:hover,.site-refined .care-service .care-request:hover{color:#07536d;border-bottom-color:#07536d;background:transparent;transform:none}
+.site-refined .care-section .care-request .button-image-icon,.site-refined .care-service .care-request .button-image-icon{filter:none}
+.site-refined .care-request:focus-visible,.site-refined .care-details-link:focus-visible{outline:3px solid #087fa4;outline-offset:5px}
+.site-refined .care-conditions{margin-top:8px;border-top:0}
+.site-refined .care-details summary{padding:23px 0;font-size:14px;font-weight:600;color:#173f55}
+.site-refined .care-detail-content{column-gap:38px;padding-bottom:26px}
+.site-refined .care-detail-content p{font-size:13px;line-height:1.85}
+.site-refined .care-tax{font-size:11px;line-height:1.8;margin-top:20px}
+.site-refined .care-service-grid{display:block}
+.site-refined .care-service .care-heading{margin-bottom:40px}
+.site-refined .care-service-offer{border-top:2px solid #102c40;padding-bottom:30px}
+.site-refined .care-service-offer>h3{grid-column:1;grid-row:1/4}
+.site-refined .care-service-offer>.care-details-link{grid-column:3;grid-row:3;align-self:start;justify-self:start;margin:0;max-width:100%;font-size:12px;line-height:1.7}
+.site-refined .care-service-offer>.care-smallprint{grid-column:2;grid-row:4;font-size:12px;line-height:1.85;margin:0;color:#526677}
+.site-refined .care-service-offer>.care-tax{grid-column:2;grid-row:5;margin:0}
+@media(max-width:1000px){
+ .site-refined .care-heading{column-gap:36px}
+ .site-refined .care-card,.site-refined .care-service-offer{grid-template-columns:minmax(0,1fr) minmax(180px,.5fr);column-gap:36px;row-gap:14px}
+ .site-refined .care-card-intro{grid-column:1;grid-row:1}
+ .site-refined .care-card-intro>p{max-width:540px}
+ .site-refined .care-card>.care-price,.site-refined .care-service-offer>.care-price{grid-column:2;grid-row:1}
+ .site-refined .care-card>.care-list,.site-refined .care-service-offer>.care-list{grid-column:1;grid-row:2}
+ .site-refined .care-card>.care-allowance,.site-refined .care-service-offer>.care-allowance{grid-column:1;grid-row:3}
+ .site-refined .care-card>.care-scope,.site-refined .care-service-offer>.care-scope{grid-column:1;grid-row:4}
+ .site-refined .care-card>.care-request,.site-refined .care-service-offer>.care-request{grid-column:2;grid-row:2}
+ .site-refined .care-service-offer>h3{grid-column:1;grid-row:1}
+ .site-refined .care-service-offer>.care-details-link{grid-column:2;grid-row:3}
+ .site-refined .care-service-offer>.care-smallprint{grid-column:1;grid-row:5}
+ .site-refined .care-service-offer>.care-tax{grid-column:1;grid-row:6}
+}
+@media(max-width:700px){
+ .site-refined .care-section,.site-refined .care-service{padding:60px 0}
+ .site-refined .care-heading{display:block;margin-bottom:30px}
+ .site-refined .care-heading>.eyebrow{margin-bottom:16px}
+ .site-refined .care-heading>h2{font-size:31px;line-height:1.2;margin-bottom:20px}
+ .site-refined .care-heading>p:not(.care-service-note){font-size:14px;line-height:1.85}
+ .site-refined .care-heading>.care-service-note{margin-top:16px}
+ .site-refined .care-card,.site-refined .care-service-offer{display:flex;flex-direction:column;gap:0;padding:28px 0}
+ .site-refined .care-card h3,.site-refined .care-service-offer>h3{font-size:22px}
+ .site-refined .care-card>.care-price,.site-refined .care-service-offer>.care-price{flex-direction:row;align-items:baseline;flex-wrap:wrap;gap:8px 12px;margin:10px 0 22px}
+ .site-refined .care-card>.care-list,.site-refined .care-service-offer>.care-list{margin-bottom:18px}
+ .site-refined .care-card>.care-allowance,.site-refined .care-service-offer>.care-allowance{margin-bottom:12px}
+ .site-refined .care-card>.care-scope,.site-refined .care-service-offer>.care-scope{margin-bottom:16px}
+ .site-refined .care-card>.care-request,.site-refined .care-service-offer>.care-request{margin-top:0}
+ .site-refined .care-service-offer>.care-details-link{margin-top:14px}
+ .site-refined .care-service-offer>.care-smallprint{margin-top:22px}
+ .site-refined .care-service-offer>.care-tax{margin-top:14px}
+ .site-refined .care-service .care-heading{margin-bottom:30px}
+ .site-refined .care-detail-content{grid-template-columns:1fr;gap:24px}
+}
