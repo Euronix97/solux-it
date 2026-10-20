@@ -1077,13 +1077,7 @@
   "Ein fertiger Ablauf.": "A completed workflow.",
   "Weiterhin begleitet.": "Ongoing support.",
   "Verbundene Dienste können sich verändern. Wir prüfen Ihren vereinbarten Ablauf regelmäßig und besprechen mit Ihnen, wenn eine Anpassung nötig wird.": "Connected services can change. We regularly check the agreed workflow and discuss any adjustments that may be needed.",
-  "Notfall- & Wochenendeinsätze": "Urgent & weekend support",
-  "Kurzfristige Notfallhilfe sowie Einsätze am Samstag oder Sonntag nach Verfügbarkeit. Einsatz und Zuschlag werden vor Beginn ausdrücklich vereinbart. Kein durchgehend besetzter Notdienst.": "Urgent assistance and appointments on Saturdays or Sundays, subject to availability. The appointment and surcharge are expressly agreed before work begins. This is not a continuously staffed emergency service.",
-  "auf zeitabhängige IT-Servicepreise": "on time-based IT support rates",
-  "Notfall & Wochenende · Zuschlag einmalig 50 %": "Urgent & weekend support · one 50% surcharge",
-  "Für ausdrücklich vereinbarte kurzfristige Notfalleinsätze oder Termine am Samstag bzw. Sonntag gilt ein Zuschlag von 50 % auf den regulären zeitabhängigen IT-Servicepreis. Treffen beide Gründe zu, wird der Zuschlag nur einmal berechnet. Beispiel: Vor-Ort-Arbeit 88,50 € pro Stunde statt 59 €; Fernwartung 43,50 € je 30 Minuten statt 29 €. Der vereinbarte Abrechnungstakt bleibt erhalten.": "An expressly agreed urgent appointment or work on a Saturday or Sunday carries a 50% surcharge on the regular time-based IT support rate. If both conditions apply, the surcharge is charged only once. Example: on-site work €88.50 per hour instead of €59; remote support €43.50 per 30 minutes instead of €29. The agreed billing intervals remain unchanged.",
-  "Der Zuschlag bezieht sich ausschließlich auf zeitabhängige IT-Arbeit. Anfahrt, Material, Lizenzen, Projektpauschalen und monatliche Betreuungspakete sind davon ausgenommen. Verfügbarkeit und voraussichtliche Kosten bestätigen wir vor Ihrem Auftrag. Eine Formularanfrage ist noch keine Terminbestätigung.": "The surcharge applies only to time-based IT work. Travel, materials, licences, fixed-price projects and monthly care plans are excluded. We confirm availability and expected costs before you commission the work. Submitting the form does not confirm an appointment.",
-  "Notfall / Wochenende": "Urgent / weekend support"
+  "Notfall- und Wochenendeinsätze nach Verfügbarkeit und vorheriger Absprache: einmalig +50 % auf die Arbeitszeit.": "Urgent and weekend appointments are subject to availability and prior agreement: a single 50% surcharge applies to labour."
 };
   const normalize = value => value.replace(/\s+/g, " ").trim();
   const translated = value => {
