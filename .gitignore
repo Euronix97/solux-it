@@ -1,0 +1,16 @@
+﻿# Internal documents & planning (private business data)
+00_START-HIER.txt
+02_Logo/
+03_Visitenkarten_Freigegeben/
+04_Flyer_Freigegeben/
+05_Businessplan/
+06_Gestaltung_und_Bildmaterial/
+07_Planung_und_Dokumentation/
+08_Archiv_Fruehere_Druckentwuerfe/
+09_Entwuerfe_Neu/
+DATEILISTE-SHA256.csv
+HINWEIS-ZUR-WEBSITE.txt
+*.zip
+*.log
+Thumbs.db
+.DS_Store
